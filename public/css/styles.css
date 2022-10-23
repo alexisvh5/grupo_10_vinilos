@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body { 
+    background-color: rgb(1, 1, 33);
+}
+
+
+/* CARDS INDEX*/
+
+.index-section {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.index-card {
+
+    width: 300px;
+    height: 350px;
+    background-color: rgb(1, 1, 70);
+    border: 1px solid rgb(123, 232, 172);
+    margin-bottom: 15px;
+
+}
+
+.index-card img {
+    width: 100%;
+  
+}
+
+.index-card-text {
+
+    font-size: 18px;
+    color: aliceblue;
+
+}
+
+/* FIN CARDS INDEX*/

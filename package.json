@@ -1,0 +1,23 @@
+{
+  "name": "grupo_10_vinilos",
+  "version": "1.0.0",
+  "description": "Trabajo integrador de e-commerce  de  vinilos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexisvh5/grupo_10_vinilos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexisvh5/grupo_10_vinilos/issues"
+  },
+  "homepage": "https://github.com/alexisvh5/grupo_10_vinilos#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
