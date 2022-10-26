@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title> Detalle de producto</title>
+</head>
+<body>
+    <header></header>
+    <form class="cart-container"action="/shopping-cart"method="GET">
+        <h3>Mi carrito</h3>
+        <div class="container">
+<!--para agregar productos al carrito,imagen,descripcion,precio unitario con contador ,precio final y un remove por si quiere borrarlo-->
+            <div class="cart-items">
+              <div class="product-image">
+                <img src="static/imagen/darksideportada.jpg" width="100px" heigth="100px"/>
+              </div>
+            
+              <div class="description">
+                <p class="title">AAAAA</p>
+                <p class="autor">BBBBB</p>
+                <p class="año">XXXX</p>
+              </div>
+             <div class="counter">
+               <div class="variacion">-</div>
+               <div class="cantidad"> CANT </div>
+               <div class="variacion">+</div>
+             </div> 
+            
+             <div class="precio">PRECIO</div>
+
+             <div class="borrar-seleccion">
+               <i class ="fas fa-trash icon"></i>
+               <span class="btn">Remove</span>
+             </div>
+         
+            </div>
+         <hr/>
+        </div>  
+        <div class="right-bar">
+            <p><span>Subtotal</span><span>$12.000</span></p>
+            <hr>
+            <p><span>Costo de envio</span><span>$899</span></p>
+            <hr>
+            <p><span>Total</span><span>$12.899</span></p>
+            <button class="button">Seguir comprando</button>
+            <button class="button">Checkout</button>
+          </div>
+          
+              
+            
+ </form>
+</body>
+</html>
