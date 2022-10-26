@@ -41,3 +41,54 @@ body {
 }
 
 /* FIN CARDS INDEX*/
+
+/*----product detail----*/
+.tituloPrecio{
+    display: flex;
+   flex-wrap: nowrap;
+   padding-inline-start: 10px;
+}
+.tituloDisco{
+    width: 50%;
+
+}
+.precioDisco{
+    width: 40%;
+    text-align: center;
+}
+.descripcion ul{
+list-style: none;
+padding-inline-start: 20px;
+}
+
+.contenedor-img-descripcion{
+    height: 400px;
+}
+.fa-shopping-cart{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-right: 15px;
+}
+
+.campo {
+    width: 60%;
+    height: 30px; 
+    padding: 5px; 
+    border-radius: 1%; 
+     
+}
+
+.button {
+    background-color: #666; 
+    width: 60%;
+    height: 30px;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
