@@ -14,4 +14,11 @@ https://www.zivals.com.ar/categoria/vinilos
 
 https://www.maniacrecords.com.ar/
 
+--------------------------------------------------------------------------
+SPRINT 2 
+
+ENLACE AL TABLERO DE TRABAJO:
+
+https://alexisherediav.monday.com/boards/3433617673
+
 
