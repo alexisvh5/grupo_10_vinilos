@@ -40,6 +40,8 @@ height: 20px;
 width: 20px;
 }
 
+
+
 /**FIN HEADER*/
 
 /* CARDS INDEX*/
@@ -221,6 +223,9 @@ padding-inline-start: 20px;
     color: antiquewhite;
     font-size: 10px;
     display: flex;
+}
+.detalles{
+
 }
 
 
