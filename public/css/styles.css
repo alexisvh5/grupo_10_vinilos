@@ -1,10 +1,11 @@
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body { 
     background-color: rgb(1, 1, 33);
+
 }
 
 
@@ -20,8 +21,8 @@ body {
 
 .index-card {
 
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 325px;
     background-color: rgb(1, 1, 70);
     border: 1px solid rgb(123, 232, 172);
     margin-bottom: 15px;
@@ -40,7 +41,31 @@ body {
 
 }
 
+.index-h3 {
+    color: antiquewhite;
+}
+
+.index-oportunidad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+   width: 100%;
+}
+
 /* FIN CARDS INDEX*/
+
+/*FOOTER */
+
+.fa-whatsapp{
+    position: fixed;
+    color: white;
+    left: 1200px;
+    bottom: 50px;
+    font-size: 100px;
+}
+
+/*FIN FOOTER */
 
 /*----product detail----*/
 .tituloPrecio{
@@ -62,7 +87,7 @@ padding-inline-start: 20px;
 }
 
 .contenedor-img-descripcion{
-    height: 400px;
+    height: 450px;
 }
 .fa-shopping-cart{
    display: flex;
@@ -92,3 +117,7 @@ padding-inline-start: 20px;
     background-color: whitesmoke;
     color: black;
 }
+
+
+
+
