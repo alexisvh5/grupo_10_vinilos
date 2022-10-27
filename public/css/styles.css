@@ -7,14 +7,40 @@ body {
     background-color: rgb(1, 1, 33);
 
 }
-.fa-whatsapp{
-    position: fixed;
-    color: white;
-    left: 1200px;
-    bottom: 50px;
-    font-size: 100px;
+
+/*HEADER*/ 
+
+
+
+.nav-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
+.ul-registro-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-header li p {
+  color: white;
+}
+
+.nav-header li p:hover {
+    transition: .3;
+    color: burlywood;
+}
+
+.cart-nav-header { 
+    color: aliceblue;
+height: 20px;
+width: 20px;
+}
+
+/**FIN HEADER*/
 
 /* CARDS INDEX*/
 
@@ -34,6 +60,13 @@ body {
     border: 1px solid rgb(123, 232, 172);
     margin-bottom: 15px;
 
+}
+
+.index-card:hover {
+
+    transition: .6s;
+    width: 300px;
+    height: 360px;
 }
 
 .index-card img {
@@ -74,6 +107,22 @@ footer{
     justify-content: space-between;
     height: 250px;
 }
+
+.footer-fixed{
+    position: fixed;
+    color: white;
+    right: 120px;
+    bottom: 50px;
+    font-size: 45px;
+    color: greenyellow;
+    
+}
+
+.footer-fixed:hover {
+    transition: .6s;
+    color: lightblue;
+}
+
 
 .footer-nav ul li{
     list-style-type: none;
