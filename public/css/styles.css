@@ -5,6 +5,7 @@
 
 body { 
     background-color: rgb(1, 1, 33);
+
 }
 
 
@@ -56,9 +57,12 @@ body {
 
 /*FOOTER */
 
-footer i {
-
-    width: 500px;
+.fa-whatsapp{
+    position: fixed;
+    color: white;
+    left: 1200px;
+    bottom: 50px;
+    font-size: 100px;
 }
 
 /*FIN FOOTER */
@@ -113,3 +117,7 @@ padding-inline-start: 20px;
     background-color: whitesmoke;
     color: black;
 }
+
+
+
+
