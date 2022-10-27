@@ -96,27 +96,50 @@ padding-inline-start: 20px;
    margin-right: 15px;
 }
 
+.cajacampos {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 .campo {
-    width: 60%;
+    width: 50%;
     height: 30px; 
-    padding: 5px; 
+    padding: 10px; 
     border-radius: 1%; 
+    margin: 5px;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
      
 }
 
 .button {
     background-color: #666; 
-    width: 60%;
+    width: 50%;
     height: 30px;
     color: white;
     padding: 10px;
     margin: 5px;
+    flex-direction: column;
+    
 }
 
 .button:hover {
     background-color: whitesmoke;
     color: black;
 }
+
+.register-h3 {
+    color: antiquewhite;
+}
+
+.register-pie{
+    color: antiquewhite;
+    font-size: 10px;
+    display: flex;
+}
+
+
 
 
 

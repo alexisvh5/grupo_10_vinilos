@@ -16,7 +16,8 @@
 <body>
     <main>
         <form action="/" method="GET">
-            <h4>Crear Cuenta</h4>
+        <h3 class="register-h3">Crear Cuenta</h3>
+        <div class="cajacampos">
              <div>
              <input
               type="text"
@@ -30,7 +31,7 @@
              <input
               type="e-mail"
               name="e-mail"
-              placeholder="*e-mail"
+              placeholder="*E-mail"
               class="campo"
               required/>   
              </div>
@@ -43,6 +44,7 @@
               class="campo"
               required/>
              </div>
+
              <div>
              <input
               type="password"
@@ -51,13 +53,17 @@
               class="campo"
               required/>    
              </div>
+            
              
              <div>
              <button type="submit" class="button">Crear Cuenta</button> 
+             </div>
+             <div>
              <button type="reset" class="button">Borrar</button>
              </div>
-             <div>Los campos con (*) son requeridos.</div>
-             <div>Los datos proporcionados son confidenciales y para nuestro uso exclusivo.</div>
+             <div class="register-pie">Los campos con (*) son requeridos.</div>
+             <div class="register-pie">Los datos proporcionados son confidenciales y para nuestro uso exclusivo.</div>
+             </div>
         </form>
     </main>
 </body>
