@@ -7,6 +7,13 @@ body {
     background-color: rgb(1, 1, 33);
 
 }
+.fa-whatsapp{
+    position: fixed;
+    color: white;
+    left: 1200px;
+    bottom: 50px;
+    font-size: 100px;
+}
 
 
 /* CARDS INDEX*/
@@ -56,14 +63,42 @@ body {
 /* FIN CARDS INDEX*/
 
 /*FOOTER */
-
-.fa-whatsapp{
-    position: fixed;
+footer{
+    margin-top: 40px;
+    margin-bottom: 70px;
+    margin-left: 120px;
+    display: flex;
     color: white;
-    left: 1200px;
-    bottom: 50px;
-    font-size: 100px;
+    font-size: 25px;
+    width: 100%;
+    justify-content: space-between;
+    height: 250px;
 }
+
+.footer-nav ul li{
+    list-style-type: none;
+    margin-top: 35px;
+}
+.footer-redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-redes-iconos ul li{
+    display: inline;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.footer-location-mapa{
+    background-color: blue;
+    color: white;
+    height: 70%;
+    width: 70%;
+}
+
 
 /*FIN FOOTER */
 
@@ -138,7 +173,6 @@ padding-inline-start: 20px;
     font-size: 10px;
     display: flex;
 }
-
 
 
 
