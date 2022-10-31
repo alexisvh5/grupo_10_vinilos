@@ -18,9 +18,9 @@ app.get('/login', (req, res)=> {
     res.sendFile(path.join(__dirname, '/views/login.html'))
 });
 
-app.get('/form', (req, res) => {
+/*app.get('/form', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/form.html'))
-});
+});*/
 
 
 
