@@ -1,116 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <title> Detalle de producto</title>
-</head>
-<body>
-  <header>
-    <div>
- <img  class="imagen-header" src="static/imagen/imagen-header-Logo.jpeg" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>Detalle de producto</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          class="imagen-header"
+          src="static/imagen/imagen-header-Logo.jpeg"
+          alt=""
+        />
 
-<nav class="nav-header">
-  <div>
-  <ul class="ul-registro-head">
-    <li><a href="/register"><p>Registrate</p></a></li>
-    <li><a href="/form"><p>Login</p></a></li>
-    <li><a href=""><p>Dejanos tu comentario</p></a></li>
-  </ul>
-</div>
-<div>
-    <ul>
-    <li><a href="/productCart"><p>Comprar</p></a></li>
-  </ul>
-</div>
-</nav>
- 
-</div>
-
-  </header>
-    <form class="cart-container"action="/shopping-cart"method="GET">
-        <h3>Mi carrito</h3>
-        <div class="container">
-<!--para agregar productos al carrito,imagen,descripcion,precio unitario con contador ,precio final y un remove por si quiere borrarlo-->
-            <div class="cart-items">
-              <div class="product-image">
-                <img src="static/imagen/darksideportada.jpg" width="100px" heigth="100px"/>
-              </div>
-            
-              <div class="description">
-                <p class="title">AAAAA</p>
-                <p class="autor">BBBBB</p>
-                <p class="año">XXXX</p>
-              </div>
-             <div class="counter">
-               <div class="variacion">-</div>
-               <div class="cantidad"> CANT </div>
-               <div class="variacion">+</div>
-             </div> 
-            
-             <div class="precio">PRECIO</div>
-
-             <div class="borrar-seleccion">
-               <i class ="fas fa-trash icon"></i>
-               <span class="btn">Remove</span>
-             </div>
-         
-            </div>
-         <hr/>
-        </div>  
-        <div class="right-bar">
-            <p><span>Subtotal</span><span>$12.000</span></p>
-            <hr>
-            <p><span>Costo de envio</span><span>$899</span></p>
-            <hr>
-            <p><span>Total</span><span>$12.899</span></p>
-            <button class="button">Seguir comprando</button>
-            <button class="button">Checkout</button>
+        <nav class="nav-header">
+          <div>
+            <ul class="ul-registro-head">
+              <li>
+                <a href="/register"><p>Registrate</p></a>
+              </li>
+              <li>
+                <a href="/form"><p>Login</p></a>
+              </li>
+              <li>
+                <a href=""><p>Dejanos tu comentario</p></a>
+              </li>
+            </ul>
           </div>
-          
-              
-            
- </form>
+          <div>
+            <ul>
+              <li>
+                <a href="/productCart"><p>Comprar</p></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <form action="/shopping-cart" method="GET">
+      <div class="shopper">
+        <h1>Mi carrito</h1>
+        <div class="cart">
+<!--para agregar productos al carrito,imagen,descripcion,precio unitario con contador ,precio final y un remove por si quiere borrarlo-->
+          <div class="shop">
+            <div class="box">
+              <img src="static/imagen/races-queen.jpg"/>
 
- <footer>
-  <section class="footer-nav">
-    <ul>
-      <li><a href="">nosotros</a> </li>
-      <li><a href="">productos</a> </li>
-      <li><a href="">contacto</a> </li>
-      <li><a href="">compras</a> </li>
-    </ul>
-  </section>
+              <div class="content">
+                <h3>Titulo</h3>
+                <h4>price</h4>
+                <p class="unit">cantidad<input value="2" /></p>
+                <p class="btn-area">
+                  <i class="fas fa-trash"></i>
+                  <span class="btn2">Remove</span>
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <img src="static/imagen/eric-clapton-for-sale.jpg"/>
 
-  <section class="footer-redes">
-    <div class="footer-redes-iconos">
-      <ul>
-        <li> <i class="fab fa-facebook-f"></i></li>
-        <li><i class="fab fa-instagram"></i></li>
-        <li><i class="fab fa-twitter"></i></li>
-      </ul>
-    </div>
-    <div class="footer-redes-email">dejanos tu e-mail <i class="far fa-envelope"></i>
-    </div>
-  </section>
+              <div class="content">
+                <h3>Titulo</h3>
+                <h4>price</h4>
+                <p class="unit">cantidad<input value="2" /></p>
+                <p class="btn-area">
+                  <i class="fas fa-trash"></i>
+                  <span class="btn2">Remove</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <section class="footer-location">
-    <h4>ubicanos</h4>
-    <div class="footer-location-mapa">
-      <p>acá va un enlace con la ubicacion, con imagen</p>
-    </div>
-  </section>
-  <div class="footer-fixed">
-    <i class="fab fa-whatsapp"></i>
-  </div>
+          <div class="right-bar">
+            <p><span>Subtotal</span><span>$12.000</span></p>
+            <hr />
+            <p><span>Costo de envio</span><span>$899</span></p>
+            <hr />
+            <p><span>Total</span><span>$12.899</span></p>
 
-</footer>
+            <a href="#">Seguir comprando</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i>Checkout</a>
+          </div>
+        </div>
+      </div>
+    </form>
 
-</body>
+    <footer>
+      <section class="footer-nav">
+        <ul>
+          <li><a href="">nosotros</a></li>
+          <li><a href="">productos</a></li>
+          <li><a href="">contacto</a></li>
+          <li><a href="">compras</a></li>
+        </ul>
+      </section>
 
+      <section class="footer-redes">
+        <div class="footer-redes-iconos">
+          <ul>
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+          </ul>
+        </div>
+        <div class="footer-redes-email">
+          dejanos tu e-mail <i class="far fa-envelope"></i>
+        </div>
+      </section>
 
+      <section class="footer-location">
+        <h4>ubicanos</h4>
+        <div class="footer-location-mapa">
+          <p>acá va un enlace con la ubicacion, con imagen</p>
+        </div>
+      </section>
+      <div class="footer-fixed">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </footer>
+  </body>
 </html>
