@@ -4,25 +4,21 @@ const path = require('path');
 
 const app = express(); 
 
-app.listen(3001, ()=>{
-    console.log("ya funciona")
-}); 
+const indexRouter= require("./routes/index");
 
 app.use( '/static', express.static(__dirname + '/public')); 
 
-app.get('/', (req, res)=>{
-res.sendFile(path.join(__dirname, "/views/index.html"))
-})
-
-app.get('/login', (req, res)=> {
-    res.sendFile(path.join(__dirname, '/views/login.html'))
-});
-
-/*app.get('/form', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/form.html'))
-});*/
+app.set("view engine", "ejs");
 
 
+
+app.use('/',indexRouter);
+
+app.use('/register', indexRouter);
+
+app.use('/login', indexRouter );
+
+app.use('/contact', indexRouter );
 
 
 app.get('/productDetail1', (req, res) => {
@@ -54,10 +50,10 @@ app.get('/productDetail8', (req, res) => {
 app.get('/productCart', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/productCart.html'))
 });
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/register.html'))
-});
 
 
 
 
+/*app.get('/form', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/form.html'))
+});*/
