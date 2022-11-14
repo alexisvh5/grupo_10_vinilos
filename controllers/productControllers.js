@@ -80,6 +80,37 @@ img:"engl-the-rolling-stones.jpg"
                             titulo:"",
                             img: "for-sale-david-bowie.jpg"
                             },
+                            {
+                                id:9,
+                            nombre:"Roxy music",
+                            genero:"rock",
+                            sello:"",
+                            año:1994,
+                            precio:9000,
+                            titulo:"",
+                            img: "for-sale-roxy.jpeg"
+                            },
+                            {
+                                id:10,
+                                nombre:"Fleetwood Mac",
+                                genero:"rock",
+                                sello:"",
+                                año:1994,
+                                precio:1000,
+                                titulo:"",
+                                img: "for-sale-fleetwood-mac.jpg"
+                                },
+                                {
+                                    id:11,
+                                    nombre:"The Beatles",
+                                    genero:"rock",
+                                    sello:"",
+                                    año:1994,
+                                    precio:13000,
+                                    titulo:"",
+                                    img: "for-sale-beatles.jpg"
+                                    },
+                                
                         ]
                           
 
