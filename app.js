@@ -26,6 +26,10 @@ app.get('/productCart', indexRouter);
 app.get('/productDetail', indexRouter
 )
 
+app.listen ('3003', () => {
+    console.log ('Servidor funcionando')
+})
+
 
 
 

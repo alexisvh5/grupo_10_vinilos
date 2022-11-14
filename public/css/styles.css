@@ -204,6 +204,20 @@ padding-inline-start: 20px;
      
 }
 
+.campoComentario {
+    width: 50%;
+    height: 100px; 
+    padding: 10px; 
+    border-radius: 1%; 
+    margin: 5px;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    text-align: left;
+    vertical-align: top;
+    flex-direction: column;
+
+}
+
 .button {
     background-color: #666; 
     width: 50%;
