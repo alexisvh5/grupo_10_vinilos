@@ -1,83 +1,84 @@
 vinilos= [
 {
 id:1,
-nombre:"",
-genero:"",
+nombre:"Rolling Stones",
+genero:"Rock and Roll",
 sello:"",
 año:1994,
 precio:1212,
-titulo:"",
-
+titulo:"England's newest hit makers",
+img:"engl-the-rolling-stones.jpg"
 },
 {
     id:2,
-    nombre:"",
-    genero:"",
+    nombre:"Eric Clapton",
+    genero:"blues",
     sello:"",
     año:1994,
-    precio:1212,
+    precio:2330,
     titulo:"",
-    img: ""
+    img: "eric-clapton-for-sale.jpg"
     },
  {
         id:3,
-        nombre:"",
-        genero:"",
+        nombre:"Pink floyd",
+        genero:"Rock",
         sello:"",
         año:1994,
-        precio:1212,
-        titulo:"",
-        img: ""
+        precio:4000,
+        titulo:"The Wall",
+        img: "the-wall-pink-floyd.jpg"
         },
  {
             id:4,
-            nombre:"",
-            genero:"",
+            nombre:"Queen",
+            genero:"Rock",
             sello:"",
             año:1994,
-            precio:1212,
-            titulo:"",
+            precio:4500,
+            titulo:"The races",
+            img:"races-queen.jpg"
             }
             ,
             {
                 id:5,
-                nombre:"",
+                nombre:"springsteen",
                 genero:"",
                 sello:"",
                 año:1994,
                 precio:1212,
                 titulo:"",
-                img: ""
+                img:"born-bruce-springsteen.jpg"
                 },
                 {
                     id:6,
-                    nombre:"",
-                    genero:"",
+                    nombre:"The Doors",
+                    genero:"blues",
                     sello:"",
                     año:1994,
-                    precio:1212,
+                    precio:5000,
                     titulo:"",
-                    img: ""
+                    img: "fra-doors.jpeg"
                     },
                     {
                         id:7,
-                        nombre:"",
-                        genero:"",
+                        nombre:"ACDC",
+                        genero:"rock",
                         sello:"",
                         año:1994,
-                        precio:1212,
-                        titulo:"",
-                        img: ""
+                        precio:2100,
+                        titulo:"The razors",
+                        img: "the-razors-ac-dc.jpg"
                         },
                         {
                             id:8,
-                            nombre:"",
-                            genero:"",
+                            nombre:"David Bowie",
+                            genero:"rock",
                             sello:"",
                             año:1994,
-                            precio:1212,
+                            precio:7834,
                             titulo:"",
-                            img: ""
+                            img: "for-sale-david-bowie.jpg"
                             },
                         ]
                           
@@ -89,7 +90,7 @@ const productController={
 
     detail: (req,res)=>{
         
-        let vinilo = vinilos.find(vinilo=>vinilo.id === req.params.productID)
+        let vinilo = vinilos.find(vinilo=>vinilo.id === req.params.productId)
         
         render("productDetail"),{vinilo}},
 };
