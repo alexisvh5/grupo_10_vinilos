@@ -85,9 +85,13 @@ titulo:"",
 
 
 const productController={
-    cart:(req,res)=>{render("productCart")},
+    cart:(req,res)=>{render("productCart", {vinilos})},
 
-    detail: (req,res)=>{render("productDetail"),{vinilos}},
+    detail: (req,res)=>{
+        
+        let vinilo = vinilos.find(vinilo=>vinilo.id === req.params.productID)
+        
+        render("productDetail"),{vinilo}},
 };
 
 module.exports = productController;
