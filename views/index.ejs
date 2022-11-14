@@ -58,8 +58,15 @@
 
     <div class="index-card">
       <div class="index-card-image">
-        <a href="/productDetail/:productId">
-          <img src="static/imagen/eric-clapton-for-sale.jpg" alt="Eric Clapton"/></a>
+
+
+        <% vinilos.forEach( vinilo =>{ %>
+
+         <a href="/views/productDetail.ejs/<%=vinilo.id%>"><%= vinilo.img %></a>
+<%})%>
+
+
+    
       </div>
       <div class="index-card-text">
         <p>aca va una descricion</p>
@@ -178,7 +185,7 @@
           <div class="footer-redes-email">dejanos tu e-mail <i class="far fa-envelope"></i>
           </div>
         </section>
-      
+  
         <section class="footer-location">
           <h4>ubicanos</h4>
           <div class="footer-location-mapa">
