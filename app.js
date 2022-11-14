@@ -8,6 +8,8 @@ const indexRouter= require("./routes/index");
 
 app.use( '/static', express.static(__dirname + '/public')); 
 
+app.listen("3000", () => console.log("servidor Corriendo"));
+
 app.set("view engine", "ejs");
 
 
