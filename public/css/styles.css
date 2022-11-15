@@ -143,6 +143,30 @@ width: 20px;
     margin-bottom: 15px;
     border:solid 1px #aaa;
 }
+
+.cajacomentario {
+    width:60%;
+    height: 130px;
+    padding:1px;
+    margin:auto;
+    margin-bottom: 1px;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.campocomentario {
+    font-size: 15px;
+    width: 100%;
+    height: 130px;
+    flex-wrap: wrap;
+    padding:10px 15px;
+    border:none;
+    color:black;
+    margin-bottom: 15px;
+    border:solid 1px #aaa;
+
+}
 .cajacampos button{
     border:none;
     width:100%;
@@ -281,25 +305,7 @@ padding-inline-start: 20px;
      
 }*/
 
-<<<<<<< HEAD
 /*.button {
-=======
-.campoComentario {
-    width: 50%;
-    height: 100px; 
-    padding: 10px; 
-    border-radius: 1%; 
-    margin: 5px;
-    flex-wrap: wrap;
-    background-color: antiquewhite;
-    text-align: left;
-    vertical-align: top;
-    flex-direction: column;
-
-}
-
-.button {
->>>>>>> 49ca649bdd4d9d04f3b0f8ddefa6c9c2c2c434ea
     background-color: #666; 
     width: 50%;
     height: 30px;
