@@ -32,14 +32,14 @@
       </header>
 <body>
     <main>
-        <form action="/" method="GET">
+        <form class="formulario"action="/" method="POST">
         <h3 class="register-h3">Crear Cuenta</h3>
         <div class="cajacampos">
              <div>
              <input
               type="text"
               name="name"
-              placeholder="*Nombre y Apellido"
+              placeholder="Nombre y Apellido"
               class="campo"
               required/>
              </div>
@@ -48,7 +48,7 @@
              <input
               type="e-mail"
               name="e-mail"
-              placeholder="*E-mail"
+              placeholder="E-mail"
               class="campo"
               required/>   
              </div>
@@ -57,7 +57,7 @@
              <input 
               type="password"
               name="password"
-              placeholder="*Elegí tu contraseña"
+              placeholder="Elegí tu contraseña"
               class="campo"
               required/>
              </div>
@@ -66,7 +66,7 @@
              <input
               type="password"
               name="password"
-              placeholder="*Confirmar Contraseña"
+              placeholder="Confirmar Contraseña"
               class="campo"
               required/>    
              </div>
@@ -78,8 +78,9 @@
              <div>
              <button type="reset" class="button">Borrar</button>
              </div>
-             <div class="register-pie">Los campos con (*) son requeridos.</div>
-             <div class="register-pie">Los datos proporcionados son confidenciales y para nuestro uso exclusivo.</div>
+             <hr/>
+             <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
+             <p>¿Ya tienes cuenta?<a class="link" href="/login"> Iniciar sesión</a></p>
              </div>
         </form>
     </main>

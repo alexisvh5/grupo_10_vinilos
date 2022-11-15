@@ -32,14 +32,14 @@
       </header>
 <body>
     <main>
-        <form action="/" method="GET">
-        <h3 class="login-h3">Iniciar Sesion</h3>
+        <form class="formulario"action="/" method="POST">
+        <h3 class="login-h3">Iniciar Sesión</h3>
         <div class="cajacampos">
              <div>
              <input
               type="text"
               name="name"
-              placeholder="*Nombre y Apellido"
+              placeholder="Nombre y Apellido"
               class="campo"
               required/>
              </div>
@@ -48,7 +48,7 @@
              <input
               type="e-mail"
               name="e-mail"
-              placeholder="*E-mail"
+              placeholder="E-mail"
               class="campo"
               required/>   
              </div>
@@ -57,20 +57,23 @@
              <input 
               type="password"
               name="password"
-              placeholder="*Escribe tu contraseña"
+              placeholder="Escribe tu contraseña"
               class="campo"
               required/>
              </div>
 
              <div>
-             <button type="submit" class="button">Iniciar Sesion</button> 
+             <button type="submit" class="button">Iniciar Sesión</button> 
              </div>
              <div>
              <button type="reset" class="button">Borrar</button>
              </div>
-             <div class="login-pie">Los campos con (*) son requeridos.</div>
-             <div class="login-pie">Los datos proporcionados son confidenciales y para nuestro uso exclusivo.</div>
+             <hr/>
+             <p><a class="link"href="#">¿Olvidaste tu contraseña?</a></p>
+             <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
+             <p>¿No tienes cuenta?<a class="link" href="/register"> Registrate!</a></p>
              </div>
+             
         </form>
     </main>
     <footer>
