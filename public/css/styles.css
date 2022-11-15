@@ -281,7 +281,25 @@ padding-inline-start: 20px;
      
 }*/
 
+<<<<<<< HEAD
 /*.button {
+=======
+.campoComentario {
+    width: 50%;
+    height: 100px; 
+    padding: 10px; 
+    border-radius: 1%; 
+    margin: 5px;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    text-align: left;
+    vertical-align: top;
+    flex-direction: column;
+
+}
+
+.button {
+>>>>>>> 49ca649bdd4d9d04f3b0f8ddefa6c9c2c2c434ea
     background-color: #666; 
     width: 50%;
     height: 30px;

@@ -19,7 +19,7 @@
          <ul class="ul-registro-head">
            <li><a href="/register"><p>Registrate</p></a></li>
            <li><a href="/login"><p>Login</p></a></li>
-           <li><a href=""><p>Dejanos tu comentario</p></a></li>
+           <li><a href="/contact"><p>Dejanos tu comentario</p></a></li>
          </ul>
        </div>
        <div>
@@ -30,20 +30,29 @@
        </nav>
         
        </div>
-      
       </header>
 
 
     
     <div class="index-card contenedor-img-descripcion">
         <div class="index-card-image">
-        <img src="static/imagen/eric-clapton-for-sale.jpg" alt="" >
+        <img src="static/imagen/engl-the-rolling-stones.jpg" alt="" >
         </div>
+
+
         <div class="index-card-text">
         <article class="tituloPrecio">
-            <h4 class="tituloDisco">Titulo album</h4>
+
+
+          <% vinilos.forEach ( vinilo =>{ %>
+
+            <h4 class="tituloDisco"><%= vinilo.titulo%></h4>
+<%})%>
+            
             <h3 class="precioDisco">$15000</h3>  <i class="fas fa-shopping-cart"></i>
         </article>
+
+
         <article class="descripcion">
             <ul>
                <li>Nombre:</li> 
