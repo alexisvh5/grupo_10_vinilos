@@ -28,16 +28,16 @@
             <h4 class="tituloDisco"><%= vinilo.nombre%></h4>
             <h4 class="tituloDisco"><%= vinilo.titulo%></h4>
             
-            <h3 class="precioDisco"><%= vinilo.precio%></h3>  <i class="fas fa-shopping-cart"></i>
+            <h3 class="precioDisco"> $ <%= vinilo.precio%></h3>  <i class="fas fa-shopping-cart"></i>
         </article>
 
 
         <article class="descripcion">
             <ul>
-               <li>Nombre:</li> 
-               <li>Género:</li>
-               <li>Sello:</li>
-               <li>Año:</li>
+               <li>Nombre: <%= vinilo.nombre %></li> 
+               <li>Género: <%= vinilo.genero %></li>
+               <li>Sello: <%= vinilo.sello %></li>
+               <li>Año: <%= vinilo.año %></li>
             </ul>
         </article>
         </div>
