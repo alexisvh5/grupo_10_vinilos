@@ -111,17 +111,13 @@ vinilos = [
   },
 ];
                           
-
-
-
 const productController={
-    cart:(req,res)=>{res.render("productCart", {vinilos})},
+    cart:(req,res)=>{res.render("productCart", {vinilos})}, 
 
     detail: (req,res)=>{
-        
-        let vinilo = vinilos.find(vinilo=>vinilo.id === req.params.productId)
-        
-        res.render("productDetail"),{vinilo}},
-};
+      let vinilo = vinilos.find(vinilo=>vinilo.id == req.params.productId)
+      res.render("productDetail",{vinilo})
+    }
+}
 
 module.exports = productController;

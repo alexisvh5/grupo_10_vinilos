@@ -15,8 +15,8 @@
 
     
     <div class="index-card contenedor-img-descripcion">
-        <div class="index-card-image">
-        <img src="static/imagen/engl-the-rolling-stones.jpg" alt="" >
+        <div class="index-card-image">    
+        <img src="/static/imagen/<%= vinilo.img %>" alt="" >
         </div>
 
 
@@ -24,12 +24,11 @@
         <article class="tituloPrecio">
 
 
-          <% vinilos.forEach ( vinilo =>{ %>
 
+            <h4 class="tituloDisco"><%= vinilo.nombre%></h4>
             <h4 class="tituloDisco"><%= vinilo.titulo%></h4>
-<%})%>
             
-            <h3 class="precioDisco">$15000</h3>  <i class="fas fa-shopping-cart"></i>
+            <h3 class="precioDisco"><%= vinilo.precio%></h3>  <i class="fas fa-shopping-cart"></i>
         </article>
 
 
