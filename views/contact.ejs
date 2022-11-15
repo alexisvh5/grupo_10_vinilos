@@ -11,10 +11,9 @@
   <%-include("./partials/header.ejs") %>
 <body>
     <main>
-        <form action="/" method="GET">
-        <h3 class="login-h3">Iniciar Sesion</h3>
-        <div class="cajacampos">
-             <div>
+        <form action="/contact" method="POST">
+        <h3 class="login-h3">Dejanos tu comentario</h3>
+        <div class="cajacomentario">
              <input
               type="text"
               name="name"
@@ -22,13 +21,14 @@
               class="campoComentario"
               required/>
              </div>
+            </div>   
+        </form> 
+    </main>
+  </body>
+        
+   <%-include("./partials/footer.ejs") %>
+            
           
-
-             <%-include("./partials/footer.ejs") %>
-            
-            </body>
-            
-            
-            </html>
+</html>
         
         

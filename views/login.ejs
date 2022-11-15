@@ -1,124 +1,3 @@
-<<<<<<< HEAD:views/login.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <title>Rocksphera</title>
-</head>
-<body>
-    <header>
-        <div>
-     <img  class="imagen-header" src="static/imagen/imagen-header-Logo.jpeg" alt="">
-    
-    <nav class="nav-header">
-      <div>
-      <ul class="ul-registro-head">
-        <li><a href="/register"><p>Registrate</p></a></li>
-        <li><a href="/login"><p>Login</p></a></li>
-        <li><a href=""><p>Dejanos tu comentario</p></a></li>
-      </ul>
-    </div>
-    <div>
-        <ul>
-        <li><a href="/productCart"><p>Comprar</p></a></li>
-      </ul>
-    </div>
-    </nav>
-     
-    </div>
-    
-      </header>
-<body>
-    <main>
-        <form class="formulario"action="/" method="POST">
-        <h3 class="login-h3">Iniciar Sesión</h3>
-        <div class="cajacampos">
-             <div>
-             <input
-              type="text"
-              name="name"
-              placeholder="Nombre y Apellido"
-              class="campo"
-              required/>
-             </div>
-
-             <div>
-             <input
-              type="e-mail"
-              name="e-mail"
-              placeholder="E-mail"
-              class="campo"
-              required/>   
-             </div>
-             
-             <div>
-             <input 
-              type="password"
-              name="password"
-              placeholder="Escribe tu contraseña"
-              class="campo"
-              required/>
-             </div>
-
-             <div>
-             <button type="submit" class="button">Iniciar Sesión</button> 
-             </div>
-             <div>
-             <button type="reset" class="button">Borrar</button>
-             </div>
-             <hr/>
-             <p><a class="link"href="#">¿Olvidaste tu contraseña?</a></p>
-             <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
-             <p>¿No tienes cuenta?<a class="link" href="/register"> Registrate!</a></p>
-             </div>
-             
-        </form>
-    </main>
-    <footer>
-      <section class="footer-nav">
-        <ul>
-          <li><a href="">nosotros</a> </li>
-          <li><a href="">productos</a> </li>
-          <li><a href="">contacto</a> </li>
-          <li><a href="">compras</a> </li>
-        </ul>
-      </section>
-    
-      <section class="footer-redes">
-        <div class="footer-redes-iconos">
-          <ul>
-            <li> <i class="fab fa-facebook-f"></i></li>
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-twitter"></i></li>
-          </ul>
-        </div>
-        <div class="footer-redes-email">dejanos tu e-mail <i class="far fa-envelope"></i>
-        </div>
-      </section>
-    
-      <section class="footer-location">
-        <h4>ubicanos</h4>
-        <div class="footer-location-mapa">
-          <p>acá va un enlace con la ubicacion, con imagen</p>
-        </div>
-      </section>
-      <div class="footer-fixed">
-        <i class="fab fa-whatsapp"></i>
-      </div>
-  
-  </footer>
-  
-  </body>
-  
-  
-  </html>
-  
-</body>
-</html>
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,7 +15,7 @@
 
 <body>
     <main>
-        <form action="/" method="GET">
+        <form action="/login" method="POST">
         <h3 class="login-h3">Iniciar Sesion</h3>
         <div class="cajacampos">
              <div>
@@ -187,4 +66,3 @@
   
 </body>
 </html>
->>>>>>> 49ca649bdd4d9d04f3b0f8ddefa6c9c2c2c434ea:views/login.ejs
