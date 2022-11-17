@@ -134,7 +134,7 @@ const productController={
 
     detailReco: function (req, res){
       let vinireco = vinilosRecomendado.find(vini=> vini.id ===req.params.productId)
-      res.render('productDetail', (vinireco))
+      res.render('productDetailrecome', (vinireco))
     },
 
     
