@@ -1,4 +1,4 @@
-vinilos = [
+ vinilos = [
   {
     id: 1,
     nombre: "Rolling Stones",
@@ -79,6 +79,10 @@ vinilos = [
     titulo: "",
     img: "for-sale-david-bowie.jpg",
   },
+ 
+];
+             
+ vinilosRecomendado = [
   {
     id: 9,
     nombre: "Roxy music",
@@ -89,6 +93,7 @@ vinilos = [
     titulo: "",
     img: "for-sale-roxy.jpeg",
   },
+
   {
     id: 10,
     nombre: "Fleetwood Mac",
@@ -99,6 +104,7 @@ vinilos = [
     titulo: "",
     img: "for-sale-fleetwood-mac.jpg",
   },
+
   {
     id: 11,
     nombre: "The Beatles",
@@ -108,16 +114,30 @@ vinilos = [
     precio: 13000,
     titulo: "",
     img: "for-sale-beatles.jpg",
-  },
+  }
+
 ];
-                          
+
 const productController={
     cart:(req,res)=>{res.render("productCart", {vinilos})}, 
 
     detail: (req,res)=>{
       let vinilo = vinilos.find(vinilo=>vinilo.id == req.params.productId)
       res.render("productDetail",{vinilo})
-    }
+    },
+
+    cartRecome: function (req, res) {
+      res.render
+    },
+
+    cartReco: function(req, res){ res.render('productCart', {vinilosRecomendado})},
+
+    detailReco: function (req, res){
+      let vinireco = vinilosRecomendado.find(vini=> vini.id ===req.params.productId)
+      res.render('productDetail', (vinireco))
+    },
+
+    
 }
 
 module.exports = productController;
