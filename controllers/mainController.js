@@ -1,6 +1,17 @@
+let fs = require('fs');
+let path = require('path');
+
+let pathJson = path.join(__dirname, "../data/productsData.json");
+
+let vinilos = JSON.parse(fs.readFileSync(pathJson, 'UTF-8')); 
+
+
 const mainController={
+    
     index:(req, res)=>{
-        res.render("index")
+      let vinilosRecomendado = vinilos.filter (product => product.recome == true)
+
+        res.render("index", {vinilosRecomendado, vinilos})
         },
     login:(req, res)=> {
         res.render("login")
@@ -11,6 +22,7 @@ const mainController={
     register:(req, res) => {
         res.render("register")
     },
+
 };
 
 

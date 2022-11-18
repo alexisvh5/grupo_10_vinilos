@@ -12,6 +12,8 @@ router.get("/contact",mainController.contact);
 
 router.get("/productCart",productController.cart);
 router.get("/productDetail/:productId",productController.detail)
+router.get("/productDetailrecome/:productId", productController.detail);
+
 
 
 
