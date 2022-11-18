@@ -1,0 +1,128 @@
+ [
+    {
+      "id": 1,
+      "nombre": "Rolling Stones",
+      "genero": "Rock and Roll",
+      "sello": "Parlaphone",
+      "año": 1994,
+      "precio": 1212,
+      "titulo": "England's newest hit makers",
+      "img": "engl-the-rolling-stones.jpg",
+      "recome": false
+    },
+    {
+      "id": 2,
+      "nombre": "Eric Clapton",
+      "genero": "blues",
+      "sello": "",
+      "año": 1994,
+      "precio": 2330,
+      "titulo": "Clapton",
+      "img": "eric-clapton-for-sale.jpg",
+      "recome": false
+    },
+    {
+      "id": 3,
+      "nombre": "Pink floyd",
+      "genero": "Rock",
+      "sello": "",
+      "año": 1994,
+      "precio": 4000,
+      "titulo": "The Wall",
+      "img": "the-wall-pink-floyd.jpg",
+      "recome": false
+    },
+    {
+      "id": 4,
+      "nombre": "Queen",
+      "genero": "Rock",
+      "sello": "EMI",
+      "año": 1994,
+      "precio": 4500,
+      "titulo": "A Nigth At The Races",
+      "img": "races-queen.jpg",
+      "recome": false
+    },
+    {
+      "id": 5,
+      "nombre": "Bruce Springsteen",
+      "genero": "Indie",
+      "sello": "",
+      "año": 1994,
+      "precio": 1212,
+      "titulo": "Born in USA",
+      "img": "born-bruce-springsteen.jpg",
+      "recome": false
+    },
+    {
+      "id": 6,
+      "nombre": "The Doors",
+      "genero": "blues",
+      "sello": "",
+      "año": 1994,
+      "precio": 5000,
+      "titulo": "The Doors",
+      "img": "fra-doors.jpeg",
+      "recome": false
+    },
+    {
+      "id": 7,
+      "nombre": "AC/DC",
+      "genero": "rock",
+      "sello": "",
+      "año": 1994,
+      "precio": 2100,
+      "titulo": "The Razors Edge",
+      "img": "the-razors-ac-dc.jpg",
+      "recome": false
+    },
+    {
+      "id": 8,
+      "nombre": "David Bowie",
+      "genero": "rock",
+      "sello": "",
+      "año": 1994,
+      "precio": 7834,
+      "titulo": "",
+      "img": "for-sale-david-bowie.jpg",
+      "recome": false
+    },
+    { 
+      "id": 9,
+      "nombre": "Roxy music",
+      "genero": "rock",
+      "sello": "",
+      "año": 1994,
+      "precio": 9000,
+      "titulo": "",
+      "img": "for-sale-roxy.jpeg",
+      "recome": true
+    },
+  
+    {
+      "id": 10,
+      "nombre": "Fleetwood Mac",
+      "genero": "rock",
+      "sello": "",
+      "año": 1994,
+      "precio": 1000,
+      "titulo": "Fleetwood Mac",
+      "img": "for-sale-fleetwood-mac.jpg",
+      "recome": true
+    },
+  
+    {
+      "id": 11,
+      "nombre": "The Beatles",
+      "genero": "rock",
+      "sello": "EMI",
+      "año": 1994,
+      "precio": 13000,
+      "titulo": "For Sale",
+      "img": "for-sale-beatles.jpg",
+      "recome": true
+    }
+  
+  ]
+
+  
