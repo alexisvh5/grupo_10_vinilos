@@ -1,3 +1,7 @@
+const  methodOverride = require ("method-override");
+app.use (methodOverride("_method"));
+
+
 const express = require('express');
 
 const path = require('path'); 
