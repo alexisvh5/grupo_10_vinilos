@@ -18,14 +18,7 @@
 
 <body>
 
-  <%- include("./partials/header.ejs") %> 
-
-
-
-
-  carrusel aca
-
-  <h3 class="index-h3">Nuestros Recomendados</h3>
+  <h3 class="index-h3">Productos</h3>
 
   <section class="index-section">
 
@@ -44,25 +37,6 @@
 
     </section>
 
-    <h3 class="index-h3">Una Oportunidad Increible</h3>
 
-
-    <% vinilosRecomendado.forEach( vinireco=>{ %>
-      <div class="index-card">
-        <div class="index-card-image">
-          <a href="/productDetailrecome/<%=vinireco.id%>"> <img src="static/imagen/<%= vinireco.img %>" alt=""></a>
-        </div>
-      </div>
-      <div class="index-card-text">
-        <p>aca va una descricion</p>
-      </div>
-      
-    
-      <%})%>
-
-
-      <%-include("./partials/footer.ejs") %>
-</body>
-
-
-</html>
+    </body>
+    </html>
