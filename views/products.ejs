@@ -1,0 +1,19 @@
+
+  <h3 class="index-h3">Productos</h3>
+
+  <section class="index-section">
+
+        <% vinilos.forEach( vinilo=>{ %>
+          <div class="index-card">
+            <div class="index-card-image">
+              <a href="/productDetail/<%=vinilo.id%>"> <img src="static/imagen/<%= vinilo.img %>" alt=""></a>
+            </div>
+          </div>
+          <div class="index-card-text">
+            <p>aca va una descricion</p>
+          </div>
+          
+        
+          <%})%>
+
+    </section>
