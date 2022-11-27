@@ -14,3 +14,5 @@ router.post("/products",productController.productCreate)
 router.delete("/products/:id", productController.productDelete)
 router.get("/products/:id",productController.detail)
 router.put("/products/:id/edit",productController.productEdit)
+
+module.exports = router; 

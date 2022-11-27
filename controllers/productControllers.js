@@ -12,10 +12,18 @@ const productController={
       let vinilo = vinilos.find(vinilo=>vinilo.id == req.params.productId)
       res.render("productDetail",{vinilo})
     },
-    productList:(req,res)=>{},
-    productEdit:(req,res)=>{},
-    productDelete:(req,res)=>{},
-    productCreate:(req,res)=>{},
+    productList:(req,res)=>{
+      res.send("si esta funcionando")
+    },
+    productEdit:(req,res)=>{
+
+    },
+    productDelete:(req,res)=>{
+
+    },
+    productCreate:(req,res)=>{
+
+    },
 }
 
 module.exports = productController;
