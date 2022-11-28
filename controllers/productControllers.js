@@ -13,7 +13,7 @@ const productController={
       res.render("productDetail",{vinilo})
     },
     productList:(req,res)=>{
-      res.send("si esta funcionando")
+      res.render('products', {vinilos})
     },
     productEdit:(req,res)=>{
 
@@ -22,6 +22,8 @@ const productController={
 
     },
     productCreate:(req,res)=>{
+      
+      
 
     },
 }
