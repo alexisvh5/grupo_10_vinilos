@@ -9,7 +9,7 @@ const productController={
     cart:(req,res)=>{res.render("productCart", {vinilos})}, 
 
     detail:(req,res)=>{
-      let vinilo = vinilos.find(vinilo=>vinilo.id == req.params.productId)
+      let vinilo = vinilos.find(vinilo=>vinilo.id == req.params.id)
       res.render("productDetail",{vinilo})
     },
     productList:(req,res)=>{

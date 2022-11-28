@@ -26,7 +26,6 @@ app.use('/contact', indexRouter );
 // RUTAS PRODUCTOS
 
 app.get('/products', productsRoutes); 
-app.get('/products/create', productsRoutes);
 
 app.get('/productCart', productsRoutes);
 app.get('/productDetail', productsRoutes);
