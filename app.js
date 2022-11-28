@@ -28,7 +28,8 @@ app.use('/contact', indexRouter );
 app.get('/products', productsRoutes); 
 
 app.get('/productCart', productsRoutes);
-app.get('/productDetail', productsRoutes);
+app.get('/productDetail/:productId', productsRoutes);
+app.get('/productDetailRecome/:productId', productsRoutes);
 
 
 
