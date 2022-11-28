@@ -29,7 +29,8 @@ app.get('/products', productsRoutes);
 app.get('/products/create', productsRoutes);
 
 app.get('/productCart', productsRoutes);
-app.get('/productDetail', productsRoutes);
+app.get('/productDetail/:productId', productsRoutes);
+app.get('/productDetailRecome/:productId', productsRoutes);
 
 
 
