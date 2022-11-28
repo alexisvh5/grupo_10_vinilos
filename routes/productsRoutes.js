@@ -9,10 +9,10 @@ router.get("/productDetail/:productId",productController.detail)
 router.get("/productDetailrecome/:productId", productController.detail);
 
 
-router.get("/products",productController.productList)
-router.post("/products",productController.productCreate)
-router.delete("/products/:id", productController.productDelete)
-router.get("/products/:id",productController.detail)
-router.put("/products/:id/edit",productController.productEdit)
+router.get("/products",productController.productList);
+router.post("/products",productController.productCreate);
+router.delete("/products/:id", productController.productDelete);
+router.get("/products/:id",productController.detail);
+router.put("/products/:id/edit",productController.productEdit);
 
 module.exports = router; 

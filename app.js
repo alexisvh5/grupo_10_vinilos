@@ -19,13 +19,14 @@ app.use('/',indexRouter);
 app.use('/register', indexRouter);
 app.use('/login', indexRouter );
 app.use('/contact', indexRouter );
-app.get('/productCart', indexRouter);
-app.get('/productDetail', indexRouter);
+
 
 // RUTAS PRODUCTOS
 
-app.use('/products', productsRoutes); 
+app.get('/products', productsRoutes); 
 
+app.get('/productCart', productsRoutes);
+app.get('/productDetail', productsRoutes);
 
 
 
