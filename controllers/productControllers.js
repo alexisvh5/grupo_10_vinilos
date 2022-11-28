@@ -22,10 +22,28 @@ const productController={
 
     },
     productCreate:(req,res)=>{
+      res.render ("product-create-form")
       
       
 
     },
-}
+    productStore: (req, res) => {
+      let image;
+		if(req.file != undefined) {
+			image = req.file.filename;
+		}else{
+			image = "13-the-doors.jpg"
+		}
+		let newVinilo = {
+			id: vinilos[vinilos.length - 1].id + 1,
+			...req.body,
+			image, 
+		};
+		vinilos.push(newVinilo)
+		fs.writeFileSync(pathJson, JSON.stringify(vinilos, null, ' '));
+		res.redirect('/');
+	},
+    }
+
 
 module.exports = productController;

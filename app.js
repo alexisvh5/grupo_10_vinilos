@@ -9,6 +9,8 @@ app.use( '/static', express.static(__dirname + '/public'));
 const  methodOverride = require ("method-override");
 app.use (methodOverride("_method"));
 
+
+
 // TEMPLATE VIEWS
 
 app.set("view engine", "ejs");
@@ -24,6 +26,7 @@ app.use('/contact', indexRouter );
 // RUTAS PRODUCTOS
 
 app.get('/products', productsRoutes); 
+app.get('/products/create', productsRoutes);
 
 app.get('/productCart', productsRoutes);
 app.get('/productDetail', productsRoutes);
@@ -31,7 +34,7 @@ app.get('/productDetail', productsRoutes);
 
 
 app.listen ('3003', () => {
-    console.log ('Servidor funcionando')
+    console.log ('Servidor funcionando en puerto 3003')
 })
 
 
