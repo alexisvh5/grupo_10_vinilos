@@ -15,8 +15,10 @@ const productController={
   productList:(req,res)=>{
     res.render('products', {vinilos})
   },
-  productEdit:(req,res)=>{
-    res.send ('Hola!!!')
+  productEdit:(req, res) => {
+      let id = req.params.id
+      let productToEdit = products.find(product => product.id == id)
+      res.render('product-edit-form', {productToEdit})
 
   },
   productDelete:(req,res)=>{
@@ -25,8 +27,6 @@ const productController={
   },
   productCreate:(req,res)=>{
     res.render ("product-create-form")
-    
-    
 
   },
   productStore: (req, res) => {
@@ -45,9 +45,27 @@ const productController={
   fs.writeFileSync(pathJson, JSON.stringify(vinilos, null, ' '));
   res.redirect('/');
 },
-productUpdate : (req,res) => {
-  res.send ("Hola actualizar!!")
-}
+
+
+productUpdate: (req, res) => {
+  let id = req.params.id;
+  let productToEdit = vinilos.find(product => product.id == id)
+
+  productToEdit = {
+    id: productToEdit.id,
+    ...req.body,
+    image: productToEdit.image,
+  };
+  
+  let newProducts = vinilos.map(product => {
+    if (product.id == productToEdit.id) {
+      return product = {...productToEdit};
+    }
+    return product;
+  })
+fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+  res.redirect('/');
+},
   }
 
 

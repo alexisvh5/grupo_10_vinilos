@@ -18,18 +18,12 @@ app.set("view engine", "ejs");
 // RUTAS MAIN
 
 app.use('/',indexRouter);
-app.use('/register', indexRouter);
-app.use('/login', indexRouter );
-app.use('/contact', indexRouter );
 
 
 // RUTAS PRODUCTOS
 
-app.get('/products', productsRoutes); 
+app.use('/products', productsRoutes); 
 
-app.get('/productCart', productsRoutes);
-app.get('/productDetail/:productId', productsRoutes);
-app.get('/productDetailRecome/:productId', productsRoutes);
 
 
 
