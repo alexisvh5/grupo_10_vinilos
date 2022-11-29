@@ -38,4 +38,25 @@ Archivo retro.md
 5 - Dejar de hacer: 
     -----
 
+----------RETRO SPRINT 4-----------
+
+1 - Comenzar a hacer:
+    No desanimarnos tanto ante las dificultades del proyecto y curso. Ya queda menos.
+    
+2 - Hacer mas:
+    Reunirnos mas seguido para seguir codeando juntos. Trabajamos muy bien en equipo.
+
+3 - Continuar haciendo:
+    Seguir apoyándonos entre todos. 
+    Seguir siendo autodidactas.
+    Aceptar que hay cosas que vamos a entender mas adelante.
+        
+
+4 - Hacer menos:
+    Iniciar las reuniones quejandonos del curso. Consume mucho tiempo valioso.
+        
+5 - Dejar de hacer: 
+    -----
+
+
 
