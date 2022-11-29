@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title> Detalle de producto a eliminar</title>
+</head>
+<body>
+  
+ 
+
+    
+    <div class="index-card contenedor-img-descripcion">
+        <div class="index-card-image">    
+        <img src="static/imagen/<%= vinilo.img %>" alt="">
+        </div>
+
+
+        <div class="index-card-text">
+        <article class="tituloPrecio">
+
+
+
+            <h4 class="tituloDisco"><%= vinilo.nombre%></h4>
+            <h4 class="tituloDisco"><%= vinilo.titulo%></h4>
+            
+            <h3 class="precioDisco"> $ <%= vinilo.precio%></h3>  <i class="fas fa-shopping-cart"></i>
+        </article>
+
+
+        <article class="descripcion">
+            <ul>
+               <li>Nombre: <%= vinilo.nombre %></li> 
+               <li>Género: <%= vinilo.genero %></li>
+               <li>Sello: <%= vinilo.sello %></li>
+               <li>Año: <%= vinilo.año %></li>
+            </ul>
+        </article>
+        </div>
+        <div>
+            <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <button type="submit">Eliminar</button>
+        </form>
+        </div>   
+        
+
+
+       
+    
+    
+</body>
+</html>

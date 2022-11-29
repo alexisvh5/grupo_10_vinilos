@@ -17,12 +17,12 @@ const productController={
   },
   productEdit:(req, res) => {
       let id = req.params.id
-      let productToEdit = products.find(product => product.id == id)
+      let productToEdit = vinilos.find(product => product.id == id)
       res.render('product-edit-form', {productToEdit})
 
   },
   productDelete:(req,res)=>{
-    res.send ('Prueba de ruta de borrado');
+    res.render ('product-delete-form');
 
   },
   productCreate:(req,res)=>{
@@ -63,7 +63,7 @@ productUpdate: (req, res) => {
     }
     return product;
   })
-fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+fs.writeFileSync(pathJson, JSON.stringify(newProducts, null, ' '));
   res.redirect('/');
 },
   }

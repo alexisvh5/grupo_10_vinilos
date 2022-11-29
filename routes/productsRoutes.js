@@ -37,6 +37,7 @@ router.put('/', upload.any(),productController.productUpdate);
 router.get('/delete/:id', productController.productDelete);
 router.delete('/', productController.productDelete);
 
+
 router.get("/productCart",productController.cart);
 router.get("/productDetail/:id",productController.detail)
 router.get("/productDetailrecome/:id", productController.detail);
