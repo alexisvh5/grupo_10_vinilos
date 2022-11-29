@@ -46,8 +46,7 @@ const productController={
   res.redirect('/');
 },
 
-
-productUpdate: (req, res) => {
+  productUpdate: (req, res) => {
   let id = req.params.id;
   let productToEdit = vinilos.find(product => product.id == id)
 
@@ -63,7 +62,7 @@ productUpdate: (req, res) => {
     }
     return product;
   })
-fs.writeFileSync(pathJson, JSON.stringify(newProducts, null, ' '));
+  fs.writeFileSync(pathJson, JSON.stringify(newProducts, null, ' '));
   res.redirect('/');
 },
   }
