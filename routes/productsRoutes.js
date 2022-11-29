@@ -31,7 +31,8 @@ router.post ('/',upload.any(),productController.productStore);
 
 //EDITAR UN PRODUCTO
 router.get('/:id/edit', productController.productEdit);
-router.put('/', upload.any(),productController.productUpdate);
+router.put("/:id/edit", upload.any(), productController.productUpdate)
+//router.put('/', upload.any(),productController.productUpdate);
 
 //ELIMINAR UN PRODUCTO
 router.get('/delete/:id', productController.productDelete);

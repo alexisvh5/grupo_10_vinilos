@@ -38,8 +38,15 @@ const productController={
   }
   let newVinilo = {
     id: vinilos[vinilos.length - 1].id + 1,
-    ...req.body,
-    image, 
+    nombre,
+    genero,
+    sello,
+    año,
+    precio,
+    titulo,
+  ...req.body, 
+  imagen
+
   };
   vinilos.push(newVinilo)
   fs.writeFileSync(pathJson, JSON.stringify(vinilos, null, ' '));
