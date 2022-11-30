@@ -3,6 +3,7 @@ const router=express.Router();
 const mainController = require("../controllers/mainController");
 const productController= require("../controllers/productControllers");
 const multer= require ('multer');
+let path = require('path');
 
 
 
@@ -31,12 +32,11 @@ router.post ('/',upload.any(),productController.productStore);
 
 //EDITAR UN PRODUCTO
 router.get('/:id/edit', productController.productEdit);
-router.put("/:id/edit", upload.any(), productController.productUpdate)
+router.put('/:id/edit', upload.any(), productController.productUpdate)
 //router.put('/', upload.any(),productController.productUpdate);
 
 //ELIMINAR UN PRODUCTO
-router.get('/delete/:id', productController.productDelete);
-router.delete('/', productController.productDelete);
+router.delete('/delete/:id', productController.productDelete);
 
 
 router.get("/productCart",productController.cart);

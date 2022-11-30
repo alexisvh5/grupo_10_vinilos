@@ -1,6 +1,6 @@
 [
  {
-  "id": 3,
+  "id": 1,
   "nombre": "Pink floyd",
   "genero": "Rock",
   "sello": "",
@@ -11,15 +11,13 @@
   "recome": false
  },
  {
-  "id": 3,
-  "nombre": "Pink floyd",
-  "genero": "Rock",
-  "sello": "",
-  "año": 1994,
-  "precio": 4000,
-  "titulo": "The Wall",
-  "img": "the-wall-pink-floyd.jpg",
-  "recome": false
+  "id": 2,
+  "name": "alexis",
+  "genero": "qwrqwe",
+  "sello": "das",
+  "year": "4",
+  "precio": "3",
+  "titulo": "d"
  },
  {
   "id": 3,
