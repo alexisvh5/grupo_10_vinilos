@@ -28,11 +28,12 @@ const productController={
 		res.redirect('/');
 	},
   productCreate:(req,res)=>{
-    res.render ("product-create-form",{vinilo})
+    res.render ("product-create-form")
 
   },
   productStore: (req, res) => {
     let imagen;
+    console.log(req.file)
   if(req.file != undefined) {
     imagen = req.file.filename;
   }else{

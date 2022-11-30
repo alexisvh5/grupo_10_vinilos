@@ -16,7 +16,7 @@ const storage = multer.diskStorage ({
     },
     filename: function (req, file, cb) {
         cb(null, 
-           file.filename + '-' + Date.now() + path.extname(file.originalname));
+           file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 })
           
@@ -28,7 +28,7 @@ router.get ('/', productController.productList); //si funciona, es la ruta /prod
 
 //CREACION DE UN PRODUCTO
 router.get('/create', productController.productCreate);
-router.post ('/',upload.any(),productController.productStore);
+router.post ('/',upload.single("imagen"),productController.productStore);
 
 //EDITAR UN PRODUCTO
 router.get('/:id/edit', productController.productEdit);
