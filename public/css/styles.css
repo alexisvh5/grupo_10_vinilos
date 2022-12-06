@@ -206,6 +206,22 @@ hr{
 .link:hover{
     color: rgb(224, 83, 170) ;
 }
+
+.register-h4 {
+    margin:0;
+    text-align: left;
+    margin-bottom: 30px;
+    color: antiquewhite;
+    font-size: 18px;;
+}
+
+.listaDespl {
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    margin: 0;
+    background-color: white;
+}
 /*hasta acá estilos para formularios de registro y login*/
 
 /*FOOTER */

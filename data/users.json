@@ -1,0 +1,48 @@
+[
+    {
+     "id": 1,
+     "nombre y apellido": "Mariano Funes",
+     "email": "mariano.funes@gmail.com",
+     "contraseña": "mariano",
+     "confirmacion contraseña": "mariano",
+     "categoria": "rock",
+     "imagen": "null.jpg"
+     },
+     {
+     "id": 2,
+     "nombre y apellido": "Alexis Heredia",
+     "email": "alexis.heredia@gmail.com",
+     "contraseña": "alexis",
+     "confirmacion contraseña": "alexis",
+     "categoria": "rock",
+     "imagen":"null.jpg"
+     },
+     {
+     "id": 3,
+     "nombre y apellido": "Patricia Irazabal",
+     "email": "patricia.irazabal@gmail.com",
+     "contraseña": "pato",
+     "confirmacion contraseña": "pato",
+     "categoria": "rock",
+     "imagen": "null.jpg"
+    },
+    {
+     "id": 4,
+     "nombre y apellido": "Tomas Marzocchi",
+     "email": "tomas.marziocchi@gmail.com",
+     "contraseña": "tomas",
+     "confirmacion contraseña": "tomas",
+     "categoria": "rock",
+     "imagen": "null.jpg"
+     },
+     {
+     "id": 5,
+     "nombre y apellido": "Adriana Mendez",
+     "email": "adriana.mendez@gmail.com",
+     "contraseña": "adriana",
+     "confirmacion contraseña": "adriana",
+     "categoria": "rock",
+     "imagen": "null.jpg"
+     }
+    
+]
