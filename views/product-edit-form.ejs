@@ -12,36 +12,80 @@
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="/static/css/styles.css" />
+  <link rel="stylesheet" href="/static/css/stylesForm.css" />
   <title>Rocksphera</title>
 </head>
 <body>
+	
+    <form class = "formulario" action="/products" method="POST" enctype="multipart/form-data">
+        <h3 class="create-h3">Editar Producto</h3>
+        <div class="cajacampos">
+        <div>
+        <input 
+         type="text"
+         name="name"
+         placeholder="Nombre"
+         class="campo"
+         required/>
+        </div>
 
-    <form action="/products/<%= productToEdit.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
-        <label for="name">nombre</label>
-        <input type="text" name="name">
-        <br>
-        <label for="genero">genero</label>
-        <input type="text" name="genero">
-        <br>
-        <label for="sello">sello</label>
-        <input type="text" name="sello">
-        <br>
-        <label for="year">año</label>
-        <input type="number" name="year">
-        <br>
-        <label for="precio">precio</label>
-        <input type="number" name="precio">
-        <br>
-        <label for="titulo">titulo</label>
-        <input type="text" name="titulo">
-        <br>
-        <label for="imagen">imagen</label>
-        <input type="file" name="imagen">
-        <br>
-        <button>editar</button>
+        <div>
+            <input 
+             type="text"
+             name="name"
+             placeholder="Género"
+             class="campo"
+             required/>
+        </div>
 
+        <div>
+            <input 
+             type="text"
+             name="name"
+             placeholder="Sello"
+             class="campo"
+             required/>
+        </div>
+        <div>
+            <input 
+             type="text"
+             name="number"
+             placeholder="Año"
+             class="campo"
+             required/>
+        </div>
+        <div>
+            <input 
+             type="number"
+             name="name"
+             placeholder="Precio"
+             class="campo"
+             required/>
+        </div>
+        <div>
+            <input 
+             type="text"
+             name="name"
+             placeholder="Título"
+             class="campo"
+             required/>
+        </div>
+        
+        <div>
+            <label for="imagen">Imagen</label>
+            <input 
+             type="file"
+             name="name"
+             placeholder="Imagen"
+             class="campo"
+             required/>
+        </div>
+       
+       
+        <button class="button">Guardar</button>
+        </div>
     </form>
+	
 
 	
 </body>	
