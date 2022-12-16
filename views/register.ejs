@@ -15,13 +15,13 @@
 
 <body>
     <main>
-        <form class="formulario"action="/register" method="POST">
+        <form class="formulario"action="/users/register" method="POST" enctype="multipart/form-data">
         <h3 class="register-h3">Crear Cuenta</h3>
         <div class="cajacampos">
              <div>
              <input
               type="text"
-              name="name"
+              name="NombreyApellido"
               placeholder="Nombre y Apellido"
               class="campo"
               required/>
@@ -30,7 +30,7 @@
              <div>
              <input
               type="e-mail"
-              name="e-mail"
+              name="email"
               placeholder="E-mail"
               class="campo"
               required/>   
@@ -39,7 +39,7 @@
              <div>
              <input 
               type="password"
-              name="password"
+              name="contrasena"
               placeholder="Elegí tu contraseña"
               class="campo"
               required/>
@@ -48,7 +48,7 @@
              <div>
              <input
               type="password"
-              name="password"
+              name="confirmacionContrasena"
               placeholder="Confirmar Contraseña"
               class="campo"
               required/>    
@@ -56,7 +56,7 @@
              
              <div>
                 <h4 class="register-h4">Elegí tu categoria</h4>
-                <select class= "campo" name="Categorias" id="lang">
+                <select class= "campo" name="categoria" id="lang">
                 <option value="Rock">Rock</option>
                 <option value="Clásicos">Clásicos</option>
                 <option value="Metal">Metal</option>
@@ -69,7 +69,7 @@
                  <h4 class="register-h4">Elegí tu foto de usuario</h4>               
                  <input 
                  type="file"
-                 name="name"
+                 name="img"
                  placeholder="Subi tu foto"
                  class="campo"
                  required/>
