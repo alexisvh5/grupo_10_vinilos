@@ -3,8 +3,7 @@ const router=express.Router();
 const mainController = require("../controllers/mainController");
 const productController= require("../controllers/productControllers");
 const multer= require ('multer');
-
-
+let path = require('path');
 
 
 // ***Multer***
@@ -15,7 +14,7 @@ const storage = multer.diskStorage ({
     },
     filename: function (req, file, cb) {
         cb(null, 
-           file.filename + '-' + Date.now() + path.extname(file.originalname));
+           file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 })
           
@@ -27,16 +26,15 @@ router.get ('/', productController.productList); //si funciona, es la ruta /prod
 
 //CREACION DE UN PRODUCTO
 router.get('/create', productController.productCreate);
-router.post ('/',upload.any(),productController.productStore);
+router.post ('/',upload.single("imagen"),productController.productStore);
 
 //EDITAR UN PRODUCTO
 router.get('/:id/edit', productController.productEdit);
-router.put("/:id/edit", upload.any(), productController.productUpdate)
+router.put('/:id/edit', upload.single("imagen"), productController.productUpdate)
 //router.put('/', upload.any(),productController.productUpdate);
 
 //ELIMINAR UN PRODUCTO
-router.get('/delete/:id', productController.productDelete);
-router.delete('/', productController.productDelete);
+router.delete('/delete/:id', productController.productDelete);
 
 
 router.get("/productCart",productController.cart);

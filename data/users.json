@@ -1,0 +1,112 @@
+[
+ {
+  "id": 1,
+  "nombreyApellido": "Mariano Funes",
+  "email": "mariano.funes@gmail.com",
+  "contrasena": "mariano",
+  "confirmacionContrasena": "mariano",
+  "categoria": "rock",
+  "img": "null.jpg"
+ },
+ {
+  "id": 2,
+  "nombreyApellido": "Alexis Heredia",
+  "email": "alexis.heredia@gmail.com",
+  "contrasena": "alexis",
+  "confirmacionContrasena": "alexis",
+  "categoria": "rock",
+  "img": "null.jpg"
+ },
+ {
+  "id": 3,
+  "nombreyApellido": "Patricia Irazabal",
+  "email": "patricia.irazabal@gmail.com",
+  "contrasena": "pato",
+  "confirmacionContrasena": "pato",
+  "categoria": "rock",
+  "img": "null.jpg"
+ },
+ {
+  "id": 4,
+  "nombreyApellido": "Tomas Marzocchi",
+  "email": "tomas.marziocchi@gmail.com",
+  "contrasena": "tomas",
+  "confirmacionContrasena": "tomas",
+  "categoria": "rock",
+  "img": "null.jpg"
+ },
+ {
+  "id": 5,
+  "nombreyApellido": "Adriana Mendez",
+  "email": "adriana.mendez@gmail.com",
+  "contrasena": "adriana",
+  "confirmacionContrasena": "adriana",
+  "categoria": "rock",
+  "img": "null.jpg"
+ },
+ {
+  "id": 6,
+  "Nombre_y_apellido": "pepe loco",
+  "e-mail": "lcastelat@gmail.com",
+  "password": [
+   "123456",
+   "123456"
+  ],
+  "Categorias": "Rock",
+  "img": "imagen-1671146789792.jpeg"
+ },
+ {
+  "id": 7,
+  "NombreyApellido": "Maria Estevez",
+  "email": "lcastelat@gmail.com",
+  "contrasena": "123456",
+  "confirmacionContrasena": "123456",
+  "categoria": "Rock",
+  "img": "img-1671199012415.jpeg"
+ },
+ {
+  "id": 8,
+  "NombreyApellido": "Bianca Isabella",
+  "email": "bianca@gmail.com",
+  "contrasena": "mama123",
+  "confirmacionContrasena": "mama123",
+  "categoria": "Rock",
+  "img": "img-1671199126523.jpg"
+ },
+ {
+  "id": 9,
+  "NombreyApellido": "Lionel Messi",
+  "email": "Lionel@gmail.com",
+  "contrasena": "mundial",
+  "confirmacionContrasena": "mundial",
+  "categoria": "Rock",
+  "img": "img-1671210670873.jpg"
+ },
+ {
+  "id": 10,
+  "NombreyApellido": "Sofia Magallanes",
+  "email": "sofia@gmail.com",
+  "contrasena": "gol123",
+  "confirmacionContrasena": "gol123",
+  "categoria": "Metal",
+  "img": "img-1671210893695.jpg"
+ },
+ {
+  "id": 11,
+  "NombreyApellido": "Micaela Bueno",
+  "email": "mica@gmail.com",
+  "contrasena": "123456",
+  "confirmacionContrasena": "123456",
+  "categoria": "Blues",
+  "img": "img-1671211023677.jpg"
+ },
+ {
+  "id": 12,
+  "NombreyApellido": "Juan Carlos",
+  "email": "juan@hotmail.com",
+  "contrasena": "asdfg",
+  "confirmacionContrasena": "asdfg",
+  "categoria": "Metal",
+  "img": "img-1671211121105.jpeg"
+ }
+]

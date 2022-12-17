@@ -21,32 +21,29 @@ const productController={
       res.render('product-edit-form', {productToEdit})
 
   },
-  productDelete:(req,res)=>{
-    res.render ('product-delete-form');
-
-  },
+  productDelete:(req,res)=>{ 
+		let id = req.params.id;
+		let finalProducts = vinilos.filter(product => product.id != id);
+		fs.writeFileSync(pathJson, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
+	},
   productCreate:(req,res)=>{
     res.render ("product-create-form")
 
   },
   productStore: (req, res) => {
-    let image;
+    let imagen;
+    console.log(req.file)
   if(req.file != undefined) {
-    image = req.file.filename;
+    imagen = req.file.filename;
   }else{
-    image = "13-the-doors.jpg"
+    imagen = "13-the-doors.jpg"
   }
+  console.log(req.body)
   let newVinilo = {
     id: vinilos[vinilos.length - 1].id + 1,
-    nombre,
-    genero,
-    sello,
-    año,
-    precio,
-    titulo,
-  ...req.body, 
-  imagen
-
+    ...req.body,
+    img:imagen, 
   };
   vinilos.push(newVinilo)
   fs.writeFileSync(pathJson, JSON.stringify(vinilos, null, ' '));
@@ -57,15 +54,22 @@ const productController={
   let id = req.params.id;
   let productToEdit = vinilos.find(product => product.id == id)
 
-  productToEdit = {
+  let imagen;
+  if(req.file != undefined) {
+    imagen = req.file.filename;
+  }else{
+    imagen = productToEdit.img
+  }
+
+  const productNew = {
     id: productToEdit.id,
     ...req.body,
-    image: productToEdit.image,
+    img: imagen,
   };
-  
+ console.log(productNew)
   let newProducts = vinilos.map(product => {
-    if (product.id == productToEdit.id) {
-      return product = {...productToEdit};
+    if (product.id == productNew.id) {
+      return product = {...productNew};
     }
     return product;
   })
