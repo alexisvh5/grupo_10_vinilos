@@ -5,7 +5,7 @@
 }
 
 .formulario{
-    background-color: black;
+    background-color:white;
     padding:20px 10px;
     width:100%;
 }
@@ -104,4 +104,8 @@ hr{
     margin-bottom: 30px;
     color: antiquewhite;
     font-size: 30px;;
+}
+
+.text-danger {
+    color:red;
 }

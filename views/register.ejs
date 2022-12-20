@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/stylesForm.css">
     <title>Rocksphera</title>
 </head>
 <body>
@@ -21,10 +21,15 @@
              <div>
              <input
               type="text"
-              name="NombreyApellido"
+              name="NombreyApellido" 
               placeholder="Nombre y Apellido"
               class="campo"
-              required/>
+              />
+              <% if (locals.errors && errors.NombreyApellido) { %>
+                <div class="text-danger">
+                <%= errors.NombreyApellido.msg %>
+              </div>
+              <% } %>
              </div>
 
              <div>
@@ -33,7 +38,12 @@
               name="email"
               placeholder="E-mail"
               class="campo"
-              required/>   
+              />   
+              <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                <%= errors.email.msg %>
+              </div>
+              <% } %>
              </div>
              
              <div>
@@ -42,7 +52,12 @@
               name="contrasena"
               placeholder="Elegí tu contraseña"
               class="campo"
-              required/>
+              />
+              <% if (locals.errors && errors.contrasena) { %>
+                <div class="text-danger">
+                <%= errors.contrasena.msg %>
+              </div>
+              <% } %>
              </div>
 
              <div>
@@ -51,7 +66,12 @@
               name="confirmacionContrasena"
               placeholder="Confirmar Contraseña"
               class="campo"
-              required/>    
+              />   
+              <% if (locals.errors && errors.confirmarContrasena) { %>
+                <div class="text-danger">
+                <%= errors.confirmacionContrasena.msg %>
+              </div>
+              <% } %> 
              </div>
              
              <div>
@@ -72,7 +92,12 @@
                  name="img"
                  placeholder="Subi tu foto"
                  class="campo"
-                 required/>
+                 />
+                 <% if (locals.errors && errors.img.msg) { %>
+                  <div class="text-danger">
+                  <%= errors.img.msg %>
+                </div>
+                <% } %>
                 </div>
 
 

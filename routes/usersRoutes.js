@@ -7,18 +7,7 @@ const fs = require ('fs');
 let path = require('path');
 
 // Express Validator
-const {body} = require ('express-validator'); 
-
-
-//Validaciones
-const validateCreateForm = [
-    body ('NombreyApellido').notEmpty().withMessage('Debes completar el campo de Nombre y Apellido'),    
-    body ('email').isEmail().withMessage('Agregar un email válido'),
-    body ('contrasena').notEmpty().withMessage('Debes completar el campo contraseña'),,
-    body ('confirmacionContrasena').notEmpty().withMessage('Debes repetir la contraseña elegida'),
-    body ('categoria').notEmpty().withMessage('Debes elegir una categoria'),
-    body ('img').notEmpty().withMessage('Debes elegir tu foto de perfil'),
-];
+const { body } = require ('express-validator'); 
 
  
 // ***Multer***
@@ -36,10 +25,19 @@ const storage = multer.diskStorage ({
 
 var upload = multer({storage: storage});
 
+//Validaciones
+const validateCreateForm = [
+    body ('NombreyApellido').notEmpty().withMessage('Debes completar el campo de Nombre y Apellido'),    
+    body ('email').isEmail().withMessage('Agregar un email válido'),
+    body ('contrasena').notEmpty().withMessage('Debes completar el campo contraseña'),
+    body ('confirmacionContrasena').notEmpty().withMessage('Debes repetir la contraseña elegida'),
+    body ('img').notEmpty().withMessage('Debes elegir tu foto de perfil'),
+];
+
 
 //CREACION DE UN USUARIO - 
 router.get('/register', userController.register);
-router.post ('/register',upload.single('img'), userController.processRegister);
+router.post ('/register', upload.single('img'), validateCreateForm, userController.processRegister);
 
 
 // LOGEO DE UN USUARIO 
