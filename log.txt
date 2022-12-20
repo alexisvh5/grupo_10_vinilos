@@ -217,6 +217,7 @@ Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /static/imagen/
+<<<<<<< HEAD
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
@@ -439,5 +440,15 @@ Se ingresó en la página /products/static/imagen/eric-clapton-for-sale.jpg
 Se ingresó en la página /products/static/imagen/races-queen.jpg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+=======
+Se ingresó en la página /favicon.ico
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /products/productDetail/static/imagen/the-wall-pink-floyd.jpg
+Se ingresó en la página /products/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /products/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /products/static/imagen/races-queen.jpg
+Se ingresó en la página /products/static/imagen/eric-clapton-for-sale.jpg
+>>>>>>> 45af4e4c2119852f4f894355956f34c858ede62a
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
