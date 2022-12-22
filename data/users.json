@@ -262,5 +262,14 @@
   "confirmacionContrasena": "",
   "categoria": "Rock",
   "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 30,
+  "NombreyApellido": " ",
+  "email": " ",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
  }
 ]

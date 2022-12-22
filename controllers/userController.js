@@ -18,14 +18,14 @@ const userController = {
              },
           
     processRegister: (req, res) => {
-      const resultValidation = validationResult(req);
+      /*const resultValidation = validationResult(req);
     
       if (resultValidation.errors.length > 0) {
         return res.render ('register'), {
         errors: resultValidation.mapped(),
         odlData: req.body,
-      }
-      /*
+      };*/
+      
        let imagen;
      // console.log(req.file)
     if(req.file != undefined) { 
@@ -44,11 +44,9 @@ const userController = {
     users.push(newUser)
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
     res.redirect('/')
-  }
-*/
+  },
 
-  }
-},
+  
 
     login: (req, res) => {
       return res.render ('login')
@@ -56,18 +54,6 @@ const userController = {
 
 }
 
-
-
-/*   profile: (req, res) => {
-      return res.render ('userProfile')
-  }*/
-
-
-
-   
-  
-
-  
 
   
 
