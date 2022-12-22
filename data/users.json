@@ -226,5 +226,41 @@
   "confirmacionContrasena": "$2a$10$NBKfzmU3icZquXj3R9vhYurFPNDivAo9mFldYQktggv4sjywsWvGW",
   "categoria": "Rock",
   "img": "img-1671721369582.jpg"
+ },
+ {
+  "id": 26,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 27,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 28,
+  "NombreyApellido": "Estefania Zambudio",
+  "email": "estefy@gmail.com",
+  "contrasena": "esteft123",
+  "confirmacionContrasena": "estefy123",
+  "categoria": "Rock",
+  "img": "img-1671733933123.jpeg"
+ },
+ {
+  "id": 29,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
  }
 ]

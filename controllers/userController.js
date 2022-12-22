@@ -15,22 +15,20 @@ const userController = {
     register:  (req, res) => {
         return res.render ('register');
 
-    },
-  
-    
+             },
+          
     processRegister: (req, res) => {
-     /* const resultValidation = validationResult(req);
+      const resultValidation = validationResult(req);
     
       if (resultValidation.errors.length > 0) {
         return res.render ('register'), {
         errors: resultValidation.mapped(),
-      } 
+        odlData: req.body,
       }
-      },*/
-
-     let imagen;
+      /*
+       let imagen;
      // console.log(req.file)
-    if(req.file != undefined) {
+    if(req.file != undefined) { 
       imagen = req.file.filename;
     }else{
       imagen = "best-of-cream.jpg"
@@ -46,19 +44,30 @@ const userController = {
     users.push(newUser)
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
     res.redirect('/')
-  },  
+  }
+*/
 
+  }
+},
 
     login: (req, res) => {
       return res.render ('login')
   }
+
+}
+
+
+
 /*   profile: (req, res) => {
       return res.render ('userProfile')
   }*/
 
 
-}
 
+   
+  
+
+  
 
   
 
