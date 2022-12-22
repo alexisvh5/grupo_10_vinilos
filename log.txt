@@ -455,6 +455,7 @@ Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+<<<<<<< HEAD
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /static/imagen/
@@ -571,3 +572,12 @@ Se ingresó en la página /products/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /products/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /products/static/imagen/races-queen.jpg
 Se ingresó en la página /products/static/imagen/eric-clapton-for-sale.jpg
+=======
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /static/imagen/
+>>>>>>> 1d77cedf2ffdebc572f95a727eed5ba0d3dd1dd5
