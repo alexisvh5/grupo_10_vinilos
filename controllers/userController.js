@@ -1,6 +1,6 @@
 let fs = require('fs');
 let path = require('path');
-const bcryptjs = require('bcryptjs');
+//const bcryptjs = require('bcryptjs');
 
 let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en formato Json
 
@@ -39,14 +39,15 @@ const userController = {
     let newUser = {
       id: users[users.length - 1].id + 1,
       ...req.body,
-      contrasena:bcryptjs.hashSync(req.body.contrasena,10),
-      confirmacionContrasena:bcryptjs.hashSync(req.body.confirmacionContrasena,10),
+      //contrasena:bcryptjs.hashSync(req.body.contrasena,10),
+      //confirmacionContrasena:bcryptjs.hashSync(req.body.confirmacionContrasena,10),
       img:imagen, 
     };
     users.push(newUser)
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
-    res.redirect('/');
-  
+    res.redirect('/')
+  },  
+
 
     login: (req, res) => {
       return res.render ('login')
@@ -57,7 +58,7 @@ const userController = {
 
 
 }
-}
+
 
   
 
