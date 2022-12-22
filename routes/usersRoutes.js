@@ -40,7 +40,7 @@ var upload = multer({storage: storage});
 
 //CREACION DE UN USUARIO - 
 router.get('/register', userController.register);
-router.post ('/register', upload.single('img'), validateCreateForm, validateCreateForm, userController.processRegister);
+router.post ('/register', upload.single('img'), validateCreateForm, userController.processRegister);
 
 
 // LOGEO DE UN USUARIO 

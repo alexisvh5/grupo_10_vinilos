@@ -5,7 +5,7 @@
 }
 
 .formulario{
-    background-color:white;
+    background-color: black;
     padding:20px 10px;
     width:100%;
 }
@@ -16,6 +16,15 @@
     color: white;
     font-size: 30px;
 }
+
+.register-h3{
+    margin:0;
+    text-align: center;
+    margin-bottom: 30px;
+    color:white;
+    font-size: 30px;
+}
+
 .cajacampos{
     width:60%;
     padding:15px;
@@ -109,3 +118,4 @@ hr{
 .text-danger {
     color:red;
 }
+

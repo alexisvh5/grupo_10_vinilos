@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/stylesForm.css">
+    <link rel="stylesheet" href="/static/css/stylesForm.css" >
+    <link rel="stylesheet" href="/static/css/styles.css" >
     <title>Rocksphera</title>
 </head>
 <body>
@@ -16,15 +17,14 @@
 <body>
     <main>
         <form class="formulario"action="/users/register" method="POST" enctype="multipart/form-data">
-        <h3 class="register-h3">Crear Cuenta</h3>
+        <h3 class="register-h3">Crea tu Cuenta</h3>
         <div class="cajacampos">
              <div>
              <input
               type="text"
               name="NombreyApellido" 
               placeholder="Nombre y Apellido"
-              class="campo"
-              />
+              class="campo" >
               <% if (locals.errors && errors.NombreyApellido) { %>
                 <div class="text-danger">
                 <%= errors.NombreyApellido.msg %>
@@ -112,7 +112,7 @@
              </div>
              <hr/>
              <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
-             <p>¿Ya tienes cuenta?<a class="link" href="/login"> Iniciar sesión</a></p>
+             <p>¿Ya tienes cuenta?<a class="link" href="/users/login"> Iniciar sesión</a></p>
              </div>
         </form>
     </main>
