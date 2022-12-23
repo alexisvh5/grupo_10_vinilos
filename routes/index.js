@@ -4,8 +4,8 @@ const mainController = require("../controllers/mainController");
 //const productController= require("../controllers/productControllers");
 
 
-const {body} = require ('express-validator');
-router.post ('/register', )
+//const {body} = require ('express-validator');
+//router.post ('/register', )
 
 
 router.get("/",mainController.index);

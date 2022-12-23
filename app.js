@@ -18,7 +18,7 @@ app.use (methodOverride("_method"));
 
 app.set("view engine", "ejs");
 app.use (express.urlencoded({extended: false})); //esto lo agregué teoria clase 23
-
+                                                 //captura la info enviada en un formulario via post   
 
 // RUTAS MAIN
 

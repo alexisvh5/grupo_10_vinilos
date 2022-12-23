@@ -108,5 +108,213 @@
   "confirmacionContrasena": "asdfg",
   "categoria": "Metal",
   "img": "img-1671211121105.jpeg"
+ },
+ {
+  "id": 13,
+  "NombreyApellido": "Maria Estevez",
+  "email": "121213",
+  "contrasena": "adriana",
+  "confirmacionContrasena": "adriana",
+  "categoria": "Rock",
+  "img": "img-1671226013119.jpeg"
+ },
+ {
+  "id": 14,
+  "NombreyApellido": "Soledad Martinez",
+  "email": "sole@gmail.com",
+  "contrasena": "sole123",
+  "confirmacionContrasena": "sole123",
+  "categoria": "Metal",
+  "img": "img-1671545817917.jpeg"
+ },
+ {
+  "id": 15,
+  "NombreyApellido": "Soledad Martinez",
+  "email": "sole@gmail.com",
+  "contrasena": "sole123",
+  "confirmacionContrasena": "sole123",
+  "categoria": "Clásicos",
+  "img": "img-1671545847662.jpeg"
+ },
+ {
+  "id": 16,
+  "NombreyApellido": "Desiree Moravenick",
+  "email": "desi@gmail.com",
+  "contrasena": "popo09",
+  "confirmacionContrasena": "popo09",
+  "categoria": "Rock",
+  "img": "img-1671549218065.jpeg"
+ },
+ {
+  "id": 17,
+  "NombreyApellido": "Anabel Molina",
+  "email": "ana@gmail.com",
+  "contrasena": "reina2022",
+  "confirmacionContrasena": "reina2022",
+  "categoria": "Rock",
+  "img": "img-1671549260043.jpeg"
+ },
+ {
+  "id": 18,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 19,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 20,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 21,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 22,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 23,
+  "NombreyApellido": "mariano",
+  "email": "alexis.herediav@hotmail.com",
+  "contrasena": "campeones",
+  "confirmacionContrasena": "campeones",
+  "categoria": "Rock",
+  "img": "img-1671720123200.jpg"
+ },
+ {
+  "id": 24,
+  "NombreyApellido": "nora",
+  "email": "alexis.herediav@hotmail.com",
+  "contrasena": "$2a$10$dy/CentPmNTMr0VKHL/PbOiXRzRrRJqcoteBp3Fd9e/ngdx02vk8q",
+  "confirmacionContrasena": "dea",
+  "categoria": "Rock",
+  "confirmarcionContrasena": "$2a$10$9Zce61tZptD9mxCvaQW6muKmkx82KHIGKiapyw3pGV2DjYw/UKfBC",
+  "img": "img-1671721227269.jpg"
+ },
+ {
+  "id": 25,
+  "NombreyApellido": "diego",
+  "email": "alexis.herediav@hotmail.com",
+  "contrasena": "$2a$10$4Sig4NNPeOAEgay9fk5bFe5gl9C0hLbtmaMytrBYWIddu10NrZcsC",
+  "confirmacionContrasena": "$2a$10$NBKfzmU3icZquXj3R9vhYurFPNDivAo9mFldYQktggv4sjywsWvGW",
+  "categoria": "Rock",
+  "img": "img-1671721369582.jpg"
+ },
+ {
+  "id": 26,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 27,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 28,
+  "NombreyApellido": "Estefania Zambudio",
+  "email": "estefy@gmail.com",
+  "contrasena": "esteft123",
+  "confirmacionContrasena": "estefy123",
+  "categoria": "Rock",
+  "img": "img-1671733933123.jpeg"
+ },
+ {
+  "id": 29,
+  "NombreyApellido": "",
+  "email": "",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 30,
+  "NombreyApellido": " ",
+  "email": " ",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 31,
+  "NombreyApellido": " ",
+  "email": " ",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 32,
+  "NombreyApellido": " ",
+  "email": " ",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 33,
+  "NombreyApellido": " xx",
+  "email": " xx",
+  "contrasena": "xx",
+  "confirmacionContrasena": "xx",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 34,
+  "NombreyApellido": " ",
+  "email": " ",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "img-1671754748943.jpg"
+ },
+ {
+  "id": 35,
+  "NombreyApellido": " ",
+  "email": " ",
+  "contrasena": "",
+  "confirmacionContrasena": "",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
  }
 ]

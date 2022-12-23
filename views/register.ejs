@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/stylesForm.css">
+    <link rel="stylesheet" href="/static/css/styles.css" >
     <title>Rocksphera</title>
 </head>
 <body>
@@ -18,13 +19,13 @@
         <form class="formulario"action="/users/register" method="POST" enctype="multipart/form-data">
         <h3 class="register-h3">Crear Cuenta</h3>
         <div class="cajacampos">
-             <div>
+             <div class="claseNombre">
              <input
               type="text"
               name="NombreyApellido"
               placeholder="Nombre y Apellido"
               class="campo"
-              required/>
+              />
              </div>
 
              <div>
@@ -33,7 +34,7 @@
               name="email"
               placeholder="E-mail"
               class="campo"
-              required/>   
+              />   
              </div>
              
              <div>
@@ -42,7 +43,7 @@
               name="contrasena"
               placeholder="Elegí tu contraseña"
               class="campo"
-              required/>
+            />
              </div>
 
              <div>
@@ -51,7 +52,7 @@
               name="confirmacionContrasena"
               placeholder="Confirmar Contraseña"
               class="campo"
-              required/>    
+              />    
              </div>
              
              <div>
@@ -72,7 +73,7 @@
                  name="img"
                  placeholder="Subi tu foto"
                  class="campo"
-                 required/>
+                />
                 </div>
 
 
