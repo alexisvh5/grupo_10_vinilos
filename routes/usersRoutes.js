@@ -48,7 +48,7 @@ router.post ('/register', upload.single('img'), validateCreateForm, userControll
 
 // LOGEO DE UN USUARIO 
 router.get('/login', userController.login);
-//router.post ('/',userController.proccesLogin); //no esta creado este metodo
+router.post ('/login',userController.loginProcess);
 
 
 

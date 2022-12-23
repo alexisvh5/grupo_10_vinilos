@@ -16,7 +16,7 @@ const productController={
     res.render('products', {vinilos})
   },
   productEdit:(req, res) => {
-      let id = req.params.id
+      let id = req.params.i;
       let productToEdit = vinilos.find(product => product.id == id)
       res.render('product-edit-form', {productToEdit})
 
