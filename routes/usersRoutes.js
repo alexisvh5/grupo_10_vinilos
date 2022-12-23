@@ -19,24 +19,7 @@ const validateCreateForm = [
         body ('contrasena').notEmpty().withMessage('Debes completar el campo contraseña'),
         body ('confirmacionContrasena').notEmpty().withMessage('Debes repetir la contraseña elegida'),
         body ('categoria').notEmpty().withMessage('Debes elegir una categoria'),
-        body ('img').custom((value, { req }) => {
-            let file = req.file; 
-            let acceptedExtensions = ['.jpg', '.png', '.gif'];
-            
-            if (!file) {
-                throw new Error('Tienes que subir una imagen');
-            } else {
-                let fileExtension = path.extname (file.originalname)
-                if (acceptedExtensions.includes(fileExtension)) {
-                    throw new Error('Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}');
-    
-               }
-            
-            }
-            
-            return true;
 
-        }),
     ];
      
     

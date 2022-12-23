@@ -25,7 +25,7 @@
               name="NombreyApellido" 
               placeholder="Nombre y Apellido"
               class="campo <%= locals.errors && errors.NombreyApellido ? 'is-invalid' : null %>"
-              value= "<% locals.oldData ? oldData.NombreyApellido : null %> "
+              value= "<%locals.oldData ? oldData.NombreyApellido : null %>"
               />
               <% if (locals.errors && errors.NombreyApellido) { %>
                 <div class="text-danger">
@@ -41,7 +41,7 @@
               name="email"
               placeholder="E-mail"
               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-              value= "<% locals.oldData ? oldData.email : null %> "
+              value="<% locals.oldData ? oldData.email : "" %>"
               />   
               <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
@@ -107,11 +107,7 @@
                  placeholder="Subi tu foto"
                  class="campo <%= locals.errors && errors.img ? 'is-invalid' : null %>"
                   >
-                 <% if (locals.errors && errors.img.msg) { %>
-                  <div class="text-danger">
-                  <%= errors.img.msg %> 
-                </div>
-                <% } %>
+                
                 </div>
 
 

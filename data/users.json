@@ -271,5 +271,23 @@
   "confirmacionContrasena": "",
   "categoria": "Rock",
   "img": "best-of-cream.jpg"
+ },
+ {
+  "id": 31,
+  "NombreyApellido": " mariano",
+  "email": "alexis.herediav@hotmail.com",
+  "contrasena": "$2a$10$oTYOzDGahqScMtbb8uNepe9/qbXZWUqf1g0/7SlSgbU7.wlVQNl2m",
+  "confirmacionContrasena": "$2a$10$lSgN6BOOXLK9OgpByyGBPOfwUXHxh8MRYF0hvMRf1wq0SxaSaLYxS",
+  "categoria": "Rock",
+  "img": "img-1671758939562.jpg"
+ },
+ {
+  "id": 32,
+  "NombreyApellido": " aelxis",
+  "email": "boom_elgroxo_94@hotmail.com",
+  "contrasena": "$2a$10$6kaqQfhMPW4YxJbzDB4PI.T3xxDuW22zt2rebUAPhhaSMrdeCf9ce",
+  "confirmacionContrasena": "$2a$10$/ADR.7/mGtaBQ2wkoTAjmO49FskH0ZAMyPTmikLI/L3BESB9Lr05a",
+  "categoria": "Rock",
+  "img": "img-1671759394877.jpg"
  }
 ]
