@@ -694,6 +694,7 @@ Se ingresó en la página /static/imagen/
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /static/imagen/
+<<<<<<< HEAD
 >>>>>>> 2727741b9aa205069b9197d8693d8692db88e732
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /favicon.ico
@@ -725,6 +726,8 @@ Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+=======
+>>>>>>> 56a6cf30ca88233ed77732b7d87a8605a799e5db
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
@@ -742,3 +745,28 @@ Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+<<<<<<< HEAD
+=======
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /static/imagen/
+>>>>>>> 56a6cf30ca88233ed77732b7d87a8605a799e5db

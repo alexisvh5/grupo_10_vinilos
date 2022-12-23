@@ -7,7 +7,7 @@ let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en forma
 let users = JSON.parse(fs.readFileSync(pathUsersJson, 'UTF-8'));
 
 
-const { validationResult} = require ('express-validator');
+const { validationResult } = require ('express-validator');
 const User = require ('../models/Users');
 
 const userController = {
@@ -19,6 +19,7 @@ const userController = {
           
     processRegister: (req, res) => {
       const resultValidation = validationResult(req);
+<<<<<<< HEAD
     
       console.log(resultValidation)
 
@@ -27,6 +28,14 @@ const userController = {
           errors: resultValidation.mapped(),
           oldData: req.body,
         }) } 
+=======
+    console.log(resultValidation)
+      if (resultValidation.errors.length > 0) {
+        return res.render ('register',{
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })}
+>>>>>>> 56a6cf30ca88233ed77732b7d87a8605a799e5db
       
        let imagen;
      // console.log(req.file)
@@ -43,6 +52,7 @@ const userController = {
       confirmacionContrasena:bcryptjs.hashSync(req.body.confirmacionContrasena,10),
       img:imagen, 
     };
+    console.log(newUser)
     users.push(newUser)
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
     res.redirect('/')
