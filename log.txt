@@ -452,6 +452,8 @@ Se ingresó en la página /products/static/imagen/eric-clapton-for-sale.jpg
 >>>>>>> 45af4e4c2119852f4f894355956f34c858ede62a
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+<<<<<<< HEAD
+=======
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
@@ -511,6 +513,7 @@ Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+>>>>>>> 2727741b9aa205069b9197d8693d8692db88e732
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
@@ -528,6 +531,8 @@ Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+<<<<<<< HEAD
+=======
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
@@ -689,6 +694,40 @@ Se ingresó en la página /static/imagen/
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /static/imagen/
+<<<<<<< HEAD
+>>>>>>> 2727741b9aa205069b9197d8693d8692db88e732
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /favicon.ico
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /products/productDetail/static/imagen/the-wall-pink-floyd.jpg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /products/productDetail/static/imagen/the-wall-pink-floyd.jpg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /products/productDetail/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /products/productDetail/static/imagen/the-wall-pink-floyd.jpg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
+=======
+>>>>>>> 56a6cf30ca88233ed77732b7d87a8605a799e5db
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
@@ -706,6 +745,8 @@ Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
+<<<<<<< HEAD
+=======
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.png
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg
 Se ingresó en la página /users/static/imagen/imagen-header-Logo.jpeg

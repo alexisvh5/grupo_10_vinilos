@@ -29,6 +29,16 @@ findByField:function(field,text){
           ,
     processRegister: (req, res) => {
       const resultValidation = validationResult(req);
+<<<<<<< HEAD
+    
+      console.log(resultValidation)
+
+      if (resultValidation.errors.length > 0) {
+        return res.render ('register', {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        }) } 
+=======
     console.log(resultValidation)
       if (resultValidation.errors.length > 0) {
         return res.render ('register',{
@@ -76,7 +86,7 @@ return res.render("register",{
 
     login: (req, res) => {
       return res.render ('login')
-  },
+  }
   loginProcess:(req,res)=>{
 let userTologin= userController.findByField("name",  req.body.q)
 

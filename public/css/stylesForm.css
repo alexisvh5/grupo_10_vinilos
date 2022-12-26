@@ -30,6 +30,7 @@
     padding:15px;
     margin:auto;
     margin-bottom: 15px;
+    
   
 
     display:flex;
@@ -107,7 +108,7 @@ hr{
     color: rgb(224, 83, 170) ;
 }
 
-.register-h4 {
+.register-h3 {
     margin:0;
     text-align: center;
     margin-bottom: 30px;
@@ -117,5 +118,10 @@ hr{
 
 .text-danger {
     color:red;
+    
+}
+
+.claseNombre {
+    border: solid 4px red;
 }
 
