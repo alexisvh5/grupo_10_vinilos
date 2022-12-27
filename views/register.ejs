@@ -25,7 +25,7 @@
               name="NombreyApellido"
               placeholder="Nombre y Apellido"
               class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
-              value= "<%locals.oldData ? oldData.NombreyApellido : null %>"
+              value="<%locals.oldData ? oldData.NombreyApellido : null %>"
               />
              </div>
 
@@ -34,8 +34,8 @@
               type="e-mail"
               name="email"
               placeholder="E-mail"
-              class="campo <%=locals.errors && errors.email ? 'is-invalid' : null%>"
-              value="<%locals.oldData ? oldData.email : "" %>"
+              class="campo <%=locals.errors && errors.email ? 'is-invalid' : "" %>"
+              value="<%locals.oldData ? oldData.email : null %>"
               />   
              </div>
              
