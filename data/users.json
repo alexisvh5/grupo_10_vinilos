@@ -307,14 +307,5 @@
   "confirmacionContrasena": "$2a$10$BDozDXPLbRhDLdgRiecF4.ydLtfDG8O3rhb7RoVb/FX1gnhjqL1iC",
   "categoria": "Rock",
   "img": "img-1671804404771.jpg"
- },
- {
-  "id": 35,
-  "NombreyApellido": "marianoaaaaaaaa",
-  "email": "alex@hotmail.com",
-  "contrasena": "$2a$10$lTYv8Xj6f8Yn1NKrkU3U3.M9EU1LySbzCjxU32687436OP4bbs/PK",
-  "confirmacionContrasena": "$2a$10$4klb4epDkRbhiBYy5c4oB.eDFVO7KjRth0QNge9QJiieb2eZTowcy",
-  "categoria": "Rock",
-  "img": "img-1671806150152.jpg"
  }
 ]
