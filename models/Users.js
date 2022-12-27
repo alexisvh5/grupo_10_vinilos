@@ -37,11 +37,9 @@ const User = {
     findByField: function (field, text) {
         let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
-      
-            res.render("index", {
-                errors: resultValidation.mapped(),
-                oldData: req.body,
-              }) },
+        return userFound
+    }
+         ,
   
     create: function (userData) {
         let allUsers = this.findAll();
@@ -69,6 +67,6 @@ const User = {
 
 module.exports = User;
 
-//console.log (User.create({nombreyApellido: 'Bianca', email: 'bianca@gmail.com'}));
+
 //console.log (User.generateId());
 //console.log (User.delete(6));

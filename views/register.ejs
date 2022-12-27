@@ -13,7 +13,6 @@
   
   <%-include("./partials/header.ejs") %>
 
-
 <body>
     <main>
         <form class="formulario"action="/users/register" method="POST" enctype="multipart/form-data">
@@ -25,7 +24,7 @@
               name="NombreyApellido"
               placeholder="Nombre y Apellido"
               class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
-              value="<%locals.oldData ? oldData.NombreyApellido : null %>"
+              value="<%= locals.oldData ? oldData.NombreyApellido : null %>"
               />
              </div>
 
@@ -34,8 +33,8 @@
               type="e-mail"
               name="email"
               placeholder="E-mail"
-              class="campo <%=locals.errors && errors.email ? 'is-invalid' : "" %>"
-              value="<%locals.oldData ? oldData.email : null %>"
+              class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
+              value="<%= locals.oldData ? oldData.email : null%>"
               />   
              </div>
              
@@ -45,6 +44,7 @@
               name="contrasena"
               placeholder="Elegí tu contraseña"
               class="campo"
+             
             />
              </div>
 
@@ -54,6 +54,7 @@
               name="confirmacionContrasena"
               placeholder="Confirmar Contraseña"
               class="campo"
+        
               />    
              </div>
              
@@ -74,7 +75,7 @@
                  type="file"
                  name="img"
                  placeholder="Subi tu foto"
-                 class="campo <%=locals.errors && errors.img ? 'is-invalid' : null %>"
+                 class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>"
                   >
                 
                 </div>

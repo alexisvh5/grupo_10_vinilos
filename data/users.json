@@ -307,5 +307,50 @@
   "confirmacionContrasena": "$2a$10$BDozDXPLbRhDLdgRiecF4.ydLtfDG8O3rhb7RoVb/FX1gnhjqL1iC",
   "categoria": "Rock",
   "img": "img-1671804404771.jpg"
+ },
+ {
+  "id": 35,
+  "NombreyApellido": "mariano iudica",
+  "email": "mariano@hotmail.com",
+  "contrasena": "$2a$10$6Cb08EOvRgsFR1MjfQMmeutmdEKk8JrTrAI1y4haaLDKcOJCAJUCW",
+  "confirmacionContrasena": "$2a$10$NR/KB5keJuck.Dc.So3yf.H3lnYMfcx0xgIh5BBhwwtFuc.hT5T5a",
+  "categoria": "Rock",
+  "img": "img-1672143900023.jpg"
+ },
+ {
+  "id": 36,
+  "NombreyApellido": "mariano iorio",
+  "email": "mariano@hotmail.com",
+  "contrasena": "$2a$10$IHanlBVMbhP5vO1I/5swy.ukaGeCSbwjCAfonHAZ5NaLFZb6yMhVe",
+  "confirmacionContrasena": "$2a$10$pMINPEfBoOpZpcXOGfSGvOWl6wE4XRT7yflTHmv7H/.mcxVfV/O/K",
+  "categoria": "Rock",
+  "img": "img-1672143922202.jpg"
+ },
+ {
+  "id": 37,
+  "NombreyApellido": "mariano messi",
+  "email": "mariano@hotmail.com",
+  "contrasena": "$2a$10$HuqKFbQ9FRsYEFlQpWp3gu.7jXIQcvvbXf8caNm4agIF8PKR9TLBC",
+  "confirmacionContrasena": "$2a$10$MAubphO2b5n6Ble.bmiPJuEyicCcPaheOcDVv/SeME0tX.Gv4P1xK",
+  "categoria": "Rock",
+  "img": "img-1672144081075.jpg"
+ },
+ {
+  "id": 38,
+  "NombreyApellido": "mariano mesii",
+  "email": "123@hotmail.com",
+  "contrasena": "$2a$10$L0gByRMp31.Wwnx03syGSuDnToRF7u6DW9KOPQXAzN7SRic1EqY/.",
+  "confirmacionContrasena": "$2a$10$.leD6o9OAkv7T3c/qeBQGeqt09pZYOBtubSsgG9j93nrAYAvNnoKK",
+  "categoria": "Rock",
+  "img": "img-1672144114803.jpg"
+ },
+ {
+  "id": 39,
+  "NombreyApellido": "mariano eee",
+  "email": "boom_elgroxo_94@hotmail.com",
+  "contrasena": "$2a$10$O3JtPEqfe2GQ105OpUyfle4w58R/6tDPSbRJ/HpJiZn9Y.MP4FMdy",
+  "confirmacionContrasena": "$2a$10$eLWns5iV9IccTvfIgzUOZeKnxka08b6hqOu5nBMK69D2YmLmMwis6",
+  "categoria": "Rock",
+  "img": "img-1672144939119.jpg"
  }
 ]
