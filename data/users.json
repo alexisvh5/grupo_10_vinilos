@@ -274,50 +274,6 @@
  },
  {
   "id": 31,
-<<<<<<< HEAD
-  "NombreyApellido": " ",
-  "email": " ",
-  "contrasena": "",
-  "confirmacionContrasena": "",
-  "categoria": "Rock",
-  "img": "best-of-cream.jpg"
- },
- {
-  "id": 32,
-  "NombreyApellido": " ",
-  "email": " ",
-  "contrasena": "",
-  "confirmacionContrasena": "",
-  "categoria": "Rock",
-  "img": "best-of-cream.jpg"
- },
- {
-  "id": 33,
-  "NombreyApellido": " xx",
-  "email": " xx",
-  "contrasena": "xx",
-  "confirmacionContrasena": "xx",
-  "categoria": "Rock",
-  "img": "best-of-cream.jpg"
- },
- {
-  "id": 34,
-  "NombreyApellido": " ",
-  "email": " ",
-  "contrasena": "",
-  "confirmacionContrasena": "",
-  "categoria": "Rock",
-  "img": "img-1671754748943.jpg"
- },
- {
-  "id": 35,
-  "NombreyApellido": " ",
-  "email": " ",
-  "contrasena": "",
-  "confirmacionContrasena": "",
-  "categoria": "Rock",
-  "img": "best-of-cream.jpg"
-=======
   "NombreyApellido": " mariano",
   "email": "alexis.herediav@hotmail.com",
   "contrasena": "$2a$10$oTYOzDGahqScMtbb8uNepe9/qbXZWUqf1g0/7SlSgbU7.wlVQNl2m",
@@ -333,5 +289,32 @@
   "confirmacionContrasena": "$2a$10$/ADR.7/mGtaBQ2wkoTAjmO49FskH0ZAMyPTmikLI/L3BESB9Lr05a",
   "categoria": "Rock",
   "img": "img-1671759394877.jpg"
+ },
+ {
+  "id": 33,
+  "NombreyApellido": "mariano",
+  "email": "alexis.herediav@hotmail.com",
+  "contrasena": "$2a$10$FXPUK0PfJTONEMwGQ4/6F.fSkws64RSaZoxkAvc1nhqjDabEQK.6S",
+  "confirmacionContrasena": "$2a$10$rrMk.jHGKoybtqtt8v4K2.GBpsm5mqWfe86f1SY4XuArXSFpQiVku",
+  "categoria": "Rock",
+  "img": "img-1671804282551.jpg"
+ },
+ {
+  "id": 34,
+  "NombreyApellido": "mariano",
+  "email": "alexis.herediav@hotmail.com",
+  "contrasena": "$2a$10$eBuBBMMXVniTq4T4qQugOeAl812PHS4uZBVpskmzTOBxj4cS.ZfZm",
+  "confirmacionContrasena": "$2a$10$BDozDXPLbRhDLdgRiecF4.ydLtfDG8O3rhb7RoVb/FX1gnhjqL1iC",
+  "categoria": "Rock",
+  "img": "img-1671804404771.jpg"
+ },
+ {
+  "id": 35,
+  "NombreyApellido": "marianoaaaaaaaa",
+  "email": "alex@hotmail.com",
+  "contrasena": "$2a$10$lTYv8Xj6f8Yn1NKrkU3U3.M9EU1LySbzCjxU32687436OP4bbs/PK",
+  "confirmacionContrasena": "$2a$10$4klb4epDkRbhiBYy5c4oB.eDFVO7KjRth0QNge9QJiieb2eZTowcy",
+  "categoria": "Rock",
+  "img": "img-1671806150152.jpg"
  }
 ]

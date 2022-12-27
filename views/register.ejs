@@ -24,12 +24,8 @@
               type="text"
               name="NombreyApellido"
               placeholder="Nombre y Apellido"
-<<<<<<< HEAD
-              class="campo"
-=======
-              class="campo <%= locals.errors && errors.NombreyApellido ? 'is-invalid' : null %>"
+              class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
               value= "<%locals.oldData ? oldData.NombreyApellido : null %>"
->>>>>>> 56a6cf30ca88233ed77732b7d87a8605a799e5db
               />
              </div>
 
@@ -38,12 +34,8 @@
               type="e-mail"
               name="email"
               placeholder="E-mail"
-<<<<<<< HEAD
-              class="campo"
-=======
-              class="campo <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-              value="<% locals.oldData ? oldData.email : "" %>"
->>>>>>> 56a6cf30ca88233ed77732b7d87a8605a799e5db
+              class="campo <%=locals.errors && errors.email ? 'is-invalid' : null%>"
+              value="<%locals.oldData ? oldData.email : "" %>"
               />   
              </div>
              
@@ -82,14 +74,9 @@
                  type="file"
                  name="img"
                  placeholder="Subi tu foto"
-<<<<<<< HEAD
-                 class="campo"
-                />
-=======
-                 class="campo <%= locals.errors && errors.img ? 'is-invalid' : null %>"
+                 class="campo <%=locals.errors && errors.img ? 'is-invalid' : null %>"
                   >
                 
->>>>>>> 56a6cf30ca88233ed77732b7d87a8605a799e5db
                 </div>
 
 

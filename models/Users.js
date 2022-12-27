@@ -13,7 +13,10 @@ const User = {
         return JSON.parse (fs.readFileSync(this.fileName, 'utf-8')); 
 
     },
+ findAll: function () {
+        return this.getData();
 
+    },
     generateId: function () {
         let allUsers = this.findAll();
         let lastUser = allUsers.pop();
@@ -23,10 +26,7 @@ const User = {
     return 1;
     },
 
-    findAll: function () {
-        return this.getData();
-
-    },
+   
 
     findByPk: function (id) {
         let allUsers = this.findAll();
@@ -37,9 +37,12 @@ const User = {
     findByField: function (field, text) {
         let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
-        return userFound;
-    },
-    
+      
+            res.render("index", {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+              }) },
+  
     create: function (userData) {
         let allUsers = this.findAll();
         let newUser = {
