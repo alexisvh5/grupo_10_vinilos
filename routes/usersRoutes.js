@@ -24,7 +24,7 @@ const validateCreateForm = [
      
     
  
-// ***Multer***
+// **Multer**
 
 const storage = multer.diskStorage ({
     destination: function (req, file, cb) {
@@ -48,8 +48,8 @@ router.post ('/register', upload.single('img'), validateCreateForm, userControll
 
 // LOGEO DE UN USUARIO 
 router.get('/login', userController.login);
-router.post ('/login',userController.loginProcess);
+router.post ('/',userController.processLogin); //no esta creado este metodo
 
 
 
-module.exports = router; 
+module.exports = router;

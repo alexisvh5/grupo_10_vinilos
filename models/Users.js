@@ -42,16 +42,27 @@ const User = {
     
     create: function (userData) {
         let allUsers = this.findAll();
+
+        let imagen;
+        // console.log(req.file)
+       if(req.file != undefined) { 
+         imagen = req.file.filename;
+       }else{
+         imagen = "best-of-cream.jpg"
+       }
+   
         let newUser = {
             id: this.generateId(),
-            ...req.body //este es el express operator que agrega al OL todo lo que escribió el usuario
-        }
-        allUsers.push(newUser);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-       //console.log (newUser)
-        return newUser;
-
-    },
+            ...req.body,
+            contrasena:bcryptjs.hashSync(req.body.contrasena,10),
+            confirmacionContrasena:bcryptjs.hashSync(req.body.confirmacionContrasena,10),
+            img:imagen, 
+          };
+        
+          console.log(newUser)
+          allUsers.push(newUser)
+          fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
+          res.redirect('/')},
 
 
     delete: function (id) {
@@ -64,8 +75,7 @@ const User = {
 
 };
 
+ //console.log(User.findByField("email","alexis.herediav@hotmail.com"))
+
 module.exports = User;
 
-//console.log (User.create({nombreyApellido: 'Bianca', email: 'bianca@gmail.com'}));
-//console.log (User.generateId());
-//console.log (User.delete(6));

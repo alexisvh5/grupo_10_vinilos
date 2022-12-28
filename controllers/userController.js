@@ -8,57 +8,30 @@ let users = JSON.parse(fs.readFileSync(pathUsersJson, 'UTF-8'));
 
 
 const { validationResult } = require ('express-validator');
-const User = require ('../models/Users');
+const user = require ('../models/Users');
 
 const userController = {
-  findAll: function(){
-    return users
-  },
 
     register:  (req, res) => {
         return res.render ('register');
 
              },
-             
-findByField:function(field,text){
-  let todos=this.findAll
-  let userFound = todos.find(oneUser => oneUser[field] === text);
-  return userFound;
-  
-}
-          ,
+          
     processRegister: (req, res) => {
       const resultValidation = validationResult(req);
-<<<<<<< HEAD
-    
-      console.log(resultValidation)
 
-      if (resultValidation.errors.length > 0) {
-        return res.render ('register', {
-          errors: resultValidation.mapped(),
-          oldData: req.body,
-        }) } 
-=======
-    console.log(resultValidation)
       if (resultValidation.errors.length > 0) {
         return res.render ('register',{
         errors: resultValidation.mapped(),
         oldData: req.body,
       })}
-            
-      let userInDB= users.findByField("e-mail", req.body.email);
-if(userInDB){
-return res.render("register",{
-  errors:{
-    email:{
-      msg:"este email ya esta registrado"
-    }
-  },
-  oldData:req.body
-})
+      let userInDB = user.findByField("email", req.body.email);
 
-}
-
+      if (userInDB) {
+        return res.render ('register',{
+        errors:{email:{msg:"este email ya esta registrado"}}},{oldData: req.body}
+     )}
+      
        let imagen;
      // console.log(req.file)
     if(req.file != undefined) { 
@@ -66,7 +39,6 @@ return res.render("register",{
     }else{
       imagen = "best-of-cream.jpg"
     }
-
     //console.log(req.body)
     let newUser = {
       id: users[users.length - 1].id + 1,
@@ -75,27 +47,25 @@ return res.render("register",{
       confirmacionContrasena:bcryptjs.hashSync(req.body.confirmacionContrasena,10),
       img:imagen, 
     };
-  
-    console.log(newUser)
+  //  console.log(newUser)
     users.push(newUser)
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
     res.redirect('/')
-
-
   },
+
+  
 
     login: (req, res) => {
       return res.render ('login')
-  }
-  loginProcess:(req,res)=>{
-let userTologin= userController.findByField("name",  req.body.q)
-
-res.send(userTologin)
   },
+  processLogin:(req,res)=>{
+    return res.render("login")
+  }
 
 }
 
-console.log(userController.findByField("NombreyApellido","Alexis Heredia"))
+
+  
+
 
 module.exports = userController;
-

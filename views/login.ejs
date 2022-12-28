@@ -19,31 +19,50 @@
         <form class="formulario"  action="/users/login" method="POST"enctype="multipart/form-data">
         <h3 class="login-h3">Iniciar Sesion</h3>
         <div class="cajacampos">
-             <div>
-             <input
-              type="text"
-              name="NombbreyApellido"
-              placeholder="*Nombre y Apellido"
-              class="campo"
-             >
+          <div>
+            <input 
+             type="text"
+             name="NombreyApellido" 
+             placeholder="Nombre y Apellido"
+             class="campo <%= locals.errors && errors.NombreyApellido ? 'is-invalid' : null %>"
+             value= "<%locals.oldData ? oldData.NombreyApellido : null %>"
+             />
+             <% if (locals.errors && errors.NombreyApellido) { %>
+               <div class="text-danger">
+               <%= errors.NombreyApellido.msg %>
              </div>
+             <% } %>
+            </div>
+            
 
-             <div>
-             <input
-              type="e-mail"
-              name="email"
-              placeholder="*E-mail"
-              class="campo"
-              >   
-             </div>
-             
-             <div>
+            <div>
+              <input
+               type="e-mail"
+               name="email"
+               placeholder="E-mail"
+               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+               value="<% locals.oldData ? oldData.email : "" %>"
+               />   
+               <% if (locals.errors && errors.email) { %>
+                 <div class="text-danger">
+                 <%= errors.email.msg %>
+               </div>
+               <% } %>
+              </div>
+
+      <div>
              <input 
               type="password"
               name="contrasena"
-              placeholder="*Escribe tu contraseña"
-              class="campo"
-           >
+              placeholder="Elegí tu contraseña"
+              class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+             
+              />
+              <% if (locals.errors && errors.contrasena) { %>
+                <div class="text-danger">
+                <%= errors.contrasena.msg %>
+              </div>
+              <% } %>
              </div>
 
              <div>
