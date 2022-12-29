@@ -1,6 +1,12 @@
+
 let fs = require('fs');
 let path = require('path');
 const bcryptjs = require('bcryptjs');
+
+
+
+const user = require ('../models/Users');
+const {validationResult} = require ('express-validator');
 
 let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en formato Json
 
@@ -63,6 +69,10 @@ const userController = {
   }
 
 }
+
+//loginProcess:(req,res)=>{
+//let userTologin= users.findByField("email",  req.body.email);
+//},
 
 
   

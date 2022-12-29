@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/stylesForm.css" >
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/stylesForm.css">
+    <link rel="stylesheet" href="/static/css/styles.css" >
     <title>Rocksphera</title>
 </head>
 <body>
 
   
- <%-include("./partials/header.ejs") %>
+  <%-include("./partials/header.ejs") %>
 
 
 <body>
     <main>
-        <form class="formulario"  action="/users/login" method="POST"enctype="multipart/form-data">
-        <h3 class="login-h3">Iniciar Sesion</h3>
+        <form class="formulario"action="/users/login" method="POST" enctype="multipart/form-data">
+        <h3 class="register-h3">Crear Cuenta</h3>
         <div class="cajacampos">
           <div>
             <input 
@@ -66,24 +66,57 @@
              </div>
 
              <div>
-             <button type="submit" class="button">Iniciar Sesion</button> 
+             <input
+              type="password"
+              name="confirmacionContrasena"
+              placeholder="Confirmar Contraseña"
+              class="campo"
+              />    
+             </div>
+             
+             <div>
+                <h4 class="register-h4">Elegí tu categoria</h4>
+                <select class= "campo" name="categoria" id="lang">
+                <option value="Rock">Rock</option>
+                <option value="Clásicos">Clásicos</option>
+                <option value="Metal">Metal</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Blues">Blues</option>
+                </select>
+                </div>
+                
+            <div>
+                 <h4 class="register-h4">Elegí tu foto de usuario</h4>               
+                 <input 
+                 type="file"
+                 name="img"
+                 placeholder="Subi tu foto"
+                 class="campo <%= locals.errors && errors.img ? 'is-invalid' : null %>"
+                  >
+                
+                </div>
+
+
+
+            
+             
+             <div>
+             <button type="submit" class="button">Crear Cuenta</button> 
              </div>
              <div>
              <button type="reset" class="button">Borrar</button>
              </div>
              <hr/>
              <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
-             
+             <p>¿Ya tienes cuenta?<a class="link" href="/login"> Iniciar sesión</a></p>
              </div>
         </form>
     </main>
-  
+
     <%-include("./partials/footer.ejs") %>
-  
-  </body>
-  
-  
-  </html>
-  
-</body>
-</html>
+    
+    </body>
+    
+    
+    </html>
+
