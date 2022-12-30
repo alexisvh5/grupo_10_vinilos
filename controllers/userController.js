@@ -30,10 +30,16 @@ const userController = {
 
       let userInDB = user.findByField("email", req.body.email);
 
-      if (userInDB) {
+      if (userInDB)  {
         return res.render ('register',{
-        errors:{email:{msg:"Este email ya se encuentra registrado"}},oldData: req.body}
-     )}
+        errors:{
+          email:{
+            msg:"Este email ya se encuentra registrado"
+          }
+        },
+          oldData: req.body
+      });
+    }
       
        let imagen;
      // console.log(req.file)
@@ -60,14 +66,15 @@ const userController = {
       return res.render ("login")
   },
   processLogin:(req, res)=>{
+   /*
     const resultValidation = validationResult(req);
 
-    if (resultValidation.errors.length > 0) {
-    return res.render ("login",{
-      errors: resultValidation.mapped(),
-    oldData: req.body,
-   })}
-   
+      if (resultValidation.errors.length > 0) {
+        return res.render ('login',{
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })}
+   */
 let userToLogin = user.findByField("email",req.body.email);
 
 if(userToLogin) {

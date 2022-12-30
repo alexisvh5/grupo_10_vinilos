@@ -23,13 +23,8 @@
               type="text"
               name="NombreyApellido" 
               placeholder="Nombre y Apellido"
-<<<<<<< HEAD
-              class="campo <%= locals.errors && errors.NombreyApellido ? 'is-invalid' : null %>"
-              value= "<%locals.oldData ? oldData.NombreyApellido : null %>"
-=======
               class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
               value="<%= locals.oldData ? oldData.NombreyApellido : null %>"
->>>>>>> 6c4b201ad8fa55d3afa9ac7fe37922ca88c3ebce
               />
               <% if (locals.errors && errors.NombreyApellido) { %>
                 <div class="text-danger">
@@ -44,14 +39,9 @@
               type="e-mail"
               name="email"
               placeholder="E-mail"
-<<<<<<< HEAD
-              class="campo <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-              value="<% locals.oldData ? oldData.email : "" %>"
-=======
               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
-              value="<%= locals.oldData ? oldData.email : null%>"
->>>>>>> 6c4b201ad8fa55d3afa9ac7fe37922ca88c3ebce
-              />   
+              value="<%= locals.oldData ? oldData.email : "" %>"/>
+                 
               <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                 <%= errors.email.msg %>
@@ -64,20 +54,14 @@
               type="password"
               name="contrasena"
               placeholder="Elegí tu contraseña"
-<<<<<<< HEAD
-              class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+              class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"/>
              
-              />
+              
               <% if (locals.errors && errors.contrasena) { %>
                 <div class="text-danger">
                 <%= errors.contrasena.msg %>
               </div>
               <% } %>
-=======
-              class="campo"
-             
-            />
->>>>>>> 6c4b201ad8fa55d3afa9ac7fe37922ca88c3ebce
              </div>
 
              <div>
@@ -85,7 +69,6 @@
               type="password"
               name="confirmacionContrasena"
               placeholder="Confirmar Contraseña"
-<<<<<<< HEAD
               class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>"
               />   
               <% if (locals.errors && errors.confirmarContrasena) { %>
@@ -93,11 +76,6 @@
                 <%= errors.confirmacionContrasena.msg %>
               </div>
               <% } %> 
-=======
-              class="campo"
-        
-              />    
->>>>>>> 6c4b201ad8fa55d3afa9ac7fe37922ca88c3ebce
              </div>
              
              <div>
@@ -126,11 +104,7 @@
                  type="file"
                  name="img"
                  placeholder="Subi tu foto"
-<<<<<<< HEAD
-                 class="campo <%= locals.errors && errors.img ? 'is-invalid' : null %>"
-=======
                  class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>"
->>>>>>> 6c4b201ad8fa55d3afa9ac7fe37922ca88c3ebce
                   >
                 
                 </div>
