@@ -5,23 +5,19 @@ const bcryptjs = require('bcryptjs');
 
 
 
-const user = require ('../models/Users');
-const {validationResult} = require ('express-validator');
+
 
 let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en formato Json
 
 let users = JSON.parse(fs.readFileSync(pathUsersJson, 'UTF-8'));
 
-
-//const { validationResult } = require ('express-validator');
-//const user = require ('../models/Users');
+const user = require ('../models/Users');
+const {validationResult} = require ('express-validator');
 
 const userController = {
 
     register:  (req, res) => {
-        return res.render ('register');
-
-             },
+        return res.render ('register')},
           
     processRegister: (req, res) => {
       const resultValidation = validationResult(req);
@@ -31,21 +27,16 @@ const userController = {
         errors: resultValidation.mapped(),
         oldData: req.body,
       })}
+
       let userInDB = user.findByField("email", req.body.email);
 
       if (userInDB) {
-        return res.render ('register', {
-        errors:{
-          email:{
-            msg: "este email ya esta registrado"
-          }
-        },
-        oldData: req.body
-      });
-    }
+        return res.render ('register',{
+        errors:{email:{msg:"Este email ya se encuentra registrado"}},oldData: req.body}
+     )}
       
        let imagen;
-     // console.log(req.file) 
+     // console.log(req.file)
     if(req.file != undefined) { 
       imagen = req.file.filename;
     }else{
@@ -63,26 +54,40 @@ const userController = {
     users.push(newUser)
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
     res.redirect('/')
-    //return res.send ('Ok, se creó el usuario');
   },
-
   
-
     login: (req, res) => {
-      return res.render ('login')
+      return res.render ("login")
   },
-  processLogin:(req,res)=>{
-    return res.render("login")
+  processLogin:(req, res)=>{
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+    return res.render ("login",{
+      errors: resultValidation.mapped(),
+    oldData: req.body,
+   })}
+   
+let userToLogin = user.findByField("email",req.body.email);
+
+if(userToLogin) {
+return res.send(userToLogin)
+} 
+
+return res.render ("login",{
+  errors:{email:{msg:"no se encuentra el usuario registrado"}},oldData:req.body
+ })
   }
 
 }
+
 
 //loginProcess:(req,res)=>{
 //let userTologin= users.findByField("email",  req.body.email);
 //},
 
 
-  
+ 
 
 
 module.exports = userController;
