@@ -69,11 +69,14 @@ const userController = {
    })}
    
 let userToLogin = user.findByField("email",req.body.email);
+
 if(userToLogin) {
- return res.render ("login",{
+return res.send(userToLogin)
+} 
+
+return res.render ("login",{
   errors:{email:{msg:"no se encuentra el usuario registrado"}},oldData:req.body
  })
-}
   }
 
 }
