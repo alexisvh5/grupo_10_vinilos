@@ -43,4 +43,14 @@
   "confirmacionContrasena": "adriana",
   "categoria": "rock",
   "img": "null.jpg"
- }]
+ },
+ {
+  "id": 6,
+  "NombreyApellido": "facundo mosco",
+  "email": "facu@hotmail.com",
+  "contrasena": "$2a$10$.BustGcCWWI8x2Qs1Ye9ZuJKg90bVzpBiDNttdymvb.k9JjrG8jDW",
+  "confirmacionContrasena": "$2a$10$r4/d7iMdSzFfPsexR4/39uh.XOW3/WBr0vjwz6FJH9wuJLpa3beqe",
+  "categoria": "Rock",
+  "img": "best-of-cream.jpg"
+ }
+]

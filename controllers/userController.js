@@ -17,9 +17,7 @@ const {validationResult} = require ('express-validator');
 const userController = {
 
     register:  (req, res) => {
-        return res.render ('register');
-
-             },
+        return res.render ('register')},
           
     processRegister: (req, res) => {
       const resultValidation = validationResult(req);
@@ -57,17 +55,29 @@ const userController = {
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
     res.redirect('/')
   },
-
   
-
     login: (req, res) => {
-      return res.render ('login')
+      return res.render ("login")
   },
-  processLogin:(req,res)=>{
-    return res.render("login")
+  processLogin:(req, res)=>{
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+    return res.render ("login",{
+      errors: resultValidation.mapped(),
+    oldData: req.body,
+   })}
+   
+let userToLogin = user.findByField("email",req.body.email);
+if(userToLogin) {
+ return res.render ("login",{
+  errors:{email:{msg:"no se encuentra el usuario registrado"}},oldData:req.body
+ })
+}
   }
 
 }
+
 
 //loginProcess:(req,res)=>{
 //let userTologin= users.findByField("email",  req.body.email);
