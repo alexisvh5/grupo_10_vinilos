@@ -15,13 +15,19 @@ const validateCreateForm = [
     body ('NombreyApellido').notEmpty().withMessage('Debes completar el campo de Nombre y Apellido'),    
     body ('email')
         .notEmpty().withMessage ('Tienes que escribir un correo electrónico').bail()
-        .isEmail().withMessage ('Debes escribir un formato de correo válido'),
-        body ('contrasena').notEmpty().withMessage('Debes completar el campo contraseña'),
-        body ('confirmacionContrasena').notEmpty().withMessage('Debes repetir la contraseña elegida'),
-        body ('categoria').notEmpty().withMessage('Debes elegir una categoria'),
+        .isEmail().withMessage ('Debes escribir un formato de correo válido').bail(),
+        body ('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail(),
+        body ('confirmacionContrasena').notEmpty().withMessage('Debes repetir la contraseña elegida').bail(),
+        body ('categoria').notEmpty().withMessage('Debes elegir una categoria').bail()
 
     ];
      
+    const validateCreateFormlogin = [
+        body ('email')
+            .notEmpty().withMessage ('Tienes que escribir un correo electrónico').bail()
+            .isEmail().withMessage ('Debes escribir un formato de correo válido').bail(),
+            body ('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail()
+        ];
     
  
 // **Multer**
@@ -48,7 +54,7 @@ router.post ('/register', upload.single('img'), validateCreateForm, userControll
 
 // LOGEO DE UN USUARIO 
 router.get('/login', userController.login);
-router.post ('/',userController.processLogin); //no esta creado este metodo
+router.post('/login',validateCreateFormlogin,userController.processLogin); 
 
 
 
