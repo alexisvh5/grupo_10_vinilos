@@ -5,16 +5,14 @@ const bcryptjs = require('bcryptjs');
 
 
 
-const user = require ('../models/Users');
-const {validationResult} = require ('express-validator');
+
 
 let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en formato Json
 
 let users = JSON.parse(fs.readFileSync(pathUsersJson, 'UTF-8'));
 
-
-const { validationResult } = require ('express-validator');
 const user = require ('../models/Users');
+const {validationResult} = require ('express-validator');
 
 const userController = {
 
@@ -31,11 +29,12 @@ const userController = {
         errors: resultValidation.mapped(),
         oldData: req.body,
       })}
+
       let userInDB = user.findByField("email", req.body.email);
 
       if (userInDB) {
         return res.render ('register',{
-        errors:{email:{msg:"este email ya esta registrado"}}},{oldData: req.body}
+        errors:{email:{msg:"Este email ya se encuentra registrado"}},oldData: req.body}
      )}
       
        let imagen;
@@ -75,7 +74,7 @@ const userController = {
 //},
 
 
-  
+ 
 
 
 module.exports = userController;
