@@ -13,8 +13,8 @@ let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en forma
 let users = JSON.parse(fs.readFileSync(pathUsersJson, 'UTF-8'));
 
 
-const { validationResult } = require ('express-validator');
-const user = require ('../models/Users');
+//const { validationResult } = require ('express-validator');
+//const user = require ('../models/Users');
 
 const userController = {
 
@@ -34,12 +34,18 @@ const userController = {
       let userInDB = user.findByField("email", req.body.email);
 
       if (userInDB) {
-        return res.render ('register',{
-        errors:{email:{msg:"este email ya esta registrado"}}},{oldData: req.body}
-     )}
+        return res.render ('register', {
+        errors:{
+          email:{
+            msg: "este email ya esta registrado"
+          }
+        },
+        oldData: req.body
+      });
+    }
       
        let imagen;
-     // console.log(req.file)
+     // console.log(req.file) 
     if(req.file != undefined) { 
       imagen = req.file.filename;
     }else{
@@ -57,6 +63,7 @@ const userController = {
     users.push(newUser)
     fs.writeFileSync(pathUsersJson, JSON.stringify(users, null, ' '));
     res.redirect('/')
+    //return res.send ('Ok, se creó el usuario');
   },
 
   
