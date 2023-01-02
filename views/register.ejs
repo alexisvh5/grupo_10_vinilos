@@ -40,8 +40,8 @@
               name="email"
               placeholder="E-mail"
               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
-              value="<%= locals.oldData ? oldData.email : null%>"
-              />   
+              value="<%= locals.oldData ? oldData.email : "" %>"/>
+                 
               <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                 <%= errors.email.msg %>
@@ -54,9 +54,14 @@
               type="password"
               name="contrasena"
               placeholder="Elegí tu contraseña"
-              class="campo"
+              class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"/>
              
-            />
+              
+              <% if (locals.errors && errors.contrasena) { %>
+                <div class="text-danger">
+                <%= errors.contrasena.msg %>
+              </div>
+              <% } %>
              </div>
 
              <div>
@@ -99,6 +104,7 @@
                  type="file"
                  name="img"
                  placeholder="Subi tu foto"
+                 class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>"
                   >
 
 
