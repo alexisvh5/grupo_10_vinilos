@@ -4,14 +4,13 @@ let path = require('path');
 const bcryptjs = require('bcryptjs');
 
 
-
-
-
 let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en formato Json
 
 let users = JSON.parse(fs.readFileSync(pathUsersJson, 'UTF-8'));
 
 const user = require ('../models/Users');
+
+
 const {validationResult} = require ('express-validator');
 
 const userController = {
@@ -70,14 +69,30 @@ const userController = {
    
 let userToLogin = user.findByField("email",req.body.email);
 
+
 if(userToLogin) {
-return res.send(userToLogin)
+
+  let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
+
+if(isOkThePassword){
+
+delete  userToLogin.contrasena
+
+ req.session.userLogged= userToLogin;
+
+ console.log(req.session)
+  return res.render("/users/profile",{
+   user:req.session.userLogged
+  })
+
+}
 } 
 
 return res.render ("login",{
-  errors:{email:{msg:"no se encuentra el usuario registrado"}},oldData:req.body
+  errors:{email:{msg:"Las credenciales son invalidas"}},oldData:req.body
  })
-  }
+  },
+  profile:(req,res)=>{res.render ("profile")}
 
 }
 

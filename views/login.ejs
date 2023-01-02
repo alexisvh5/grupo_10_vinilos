@@ -16,7 +16,7 @@
 
 <body>
     <main>
-        <form class="formulario"action="/users/login" method="post" enctype="multipart/form-data">
+        <form class="formulario" method="POST"action="/users/login">
         <h3 class="register-h3">Ingresá a tu cuenta</h3>
         <div class="cajacampos">
             
@@ -25,8 +25,7 @@
                type="e-mail"
                name="email"
                placeholder="E-mail"
-               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
-               value="<% locals.oldData ? oldData.email : "" %>"/>   
+             +/>   
 
                <% if (locals.errors && errors.email) { %>
                  <div class="text-danger">
