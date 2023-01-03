@@ -61,23 +61,5 @@
   "confirmacionContrasena": "$2a$10$Uvd..otqHDdhqNzSGEEfwObwJV/zTegMmcyqOgS1ScoKAkOElgIVC",
   "categoria": "Rock",
   "img": "img-1672665624750.jpg"
- },
- {
-  "id": 8,
-  "NombreyApellido": "Noelia Roman",
-  "email": "noe@gmail.com",
-  "contrasena": "$2a$10$sw1ddWkCnPSTPvGPdubitO60St52C1ZdQ.JXoJ2EBROOgRQcO5zFK",
-  "confirmacionContrasena": "$2a$10$CkZ0HEC1gT9gUEUq75nBbuWHR.WKX/yFIGORmTkxUUXf/MH/kuraW",
-  "categoria": "Rock",
-  "img": "img-1672714361700.jpeg"
- },
- {
-  "id": 9,
-  "NombreyApellido": "Luis Castelat",
-  "email": "lcastelat@gmail.com",
-  "contrasena": "$2a$10$kHQB3aIyeAsr4GHmc13Ql.FcszymTXgYN6KIE1UJPdTqS0Ztx3w0G",
-  "confirmacionContrasena": "$2a$10$Fw2n/EqRvnqXQ01ajnz49OnVNUoEzv39HnsHdXBpyLE8St/tp1K0i",
-  "categoria": "Rock",
-  "img": "best-of-cream.jpg"
  }
 ]
