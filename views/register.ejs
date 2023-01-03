@@ -19,10 +19,10 @@
         <h3 class="register-h3">Crea tu Cuenta</h3>
         <div class="cajacampos">
              <div>
+              <label for="name" class="register-h4">Nombre y Apellido:</label>
              <input 
               type="text"
               name="NombreyApellido" 
-              placeholder="Nombre y Apellido"
               class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
               value="<%= locals.oldData ? oldData.NombreyApellido : null %>"
               />
@@ -35,10 +35,10 @@
              
 
              <div>
+              <label for="name" class="register-h4">E-mail:</label>
              <input
               type="e-mail"
               name="email"
-              placeholder="E-mail"
               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
               value="<%= locals.oldData ? oldData.email : "" %>"/>
                  
@@ -50,10 +50,10 @@
              </div>
              
              <div>
+              <label for="name" class="register-h4">Contraseña:</label>
              <input 
               type="password"
               name="contrasena"
-              placeholder="Elegí tu contraseña"
               class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"/>
              
               
@@ -65,10 +65,10 @@
              </div>
 
              <div>
+              <label for="name" class="register-h4">Confirmacion Contraseña:</label>
              <input
               type="password"
               name="confirmacionContrasena"
-              placeholder="Confirmar Contraseña"
               class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>"
               />   
               <% if (locals.errors && errors.confirmarContrasena) { %>

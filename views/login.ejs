@@ -16,17 +16,17 @@
 
 <body>
     <main>
-        <form class="formulario"action="/users/login" method="post" enctype="multipart/form-data">
+        <form class="formulario" method="POST"action="/users/login">
         <h3 class="register-h3">Ingresá a tu cuenta</h3>
         <div class="cajacampos">
             
             <div>
+              <label for="name" class="register-h4">E-mail:</label>
               <input
                type="e-mail"
                name="email"
-               placeholder="E-mail"
-               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
-               value="<% locals.oldData ? oldData.email : "" %>"/>   
+                            
+               class="campo <%= locals.errors && errors.email ? 'is-invalid' : null %>"/>   
 
                <% if (locals.errors && errors.email) { %>
                  <div class="text-danger">
@@ -35,11 +35,12 @@
                <% } %>
               </div>
 
-      <div>
+             <div>
+             <label for="name" class="register-h4">Contraseña:</label>
              <input 
               type="password"
               name="contrasena"
-              placeholder="Elegí tu contraseña"
+              
               class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"/>
 
               <% if (locals.errors && errors.contrasena) { %>

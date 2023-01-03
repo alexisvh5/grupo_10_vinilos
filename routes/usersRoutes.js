@@ -22,7 +22,7 @@ const validateCreateForm = [
 
     ];
      
-    const validateCreateFormlogin = [
+   const validateCreateFormlogin = [
         body ('email')
             .notEmpty().withMessage ('Tienes que escribir un correo electrónico').bail()
             .isEmail().withMessage ('Debes escribir un formato de correo válido').bail(),
@@ -54,7 +54,11 @@ router.post ('/register', upload.single('img'), validateCreateForm, userControll
 
 // LOGEO DE UN USUARIO 
 router.get('/login', userController.login);
-router.post('/login',validateCreateFormlogin,userController.processLogin); 
+router.post('/login',validateCreateFormlogin, userController.processLogin); 
+
+//PERFIL DE USUARIO
+
+router.get("/profile", userController.profile)
 
 
 
