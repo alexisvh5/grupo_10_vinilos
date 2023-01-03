@@ -9,6 +9,23 @@ let path = require('path');
 // Express Validator
 const {body} = require ('express-validator'); 
 
+//session
+router.get ('/pruebaSession', function(req, res) {
+    if (req.session.numeroVisitas == undefined) {
+        req.session.numeroVisitas = 0;
+    }
+    req.session.numeroVisitas++;
+
+    res.send('Session tiene el numero: ' + req.session.numeroVisitas)
+});
+ 
+router.get ('/check', function(req, res){
+    if (req.session.userToLogin == undefined) {
+        res.send ('No estas logueado');
+    } else {
+        res.send ('El usuario logueado es " + req.session.userToLogin')
+    }
+})
 
 //Validaciones
 const validateCreateForm = [
@@ -22,7 +39,7 @@ const validateCreateForm = [
 
     ];
      
-   const validateCreateFormlogin = [
+    const validateCreateFormlogin = [
         body ('email')
             .notEmpty().withMessage ('Tienes que escribir un correo electrónico').bail()
             .isEmail().withMessage ('Debes escribir un formato de correo válido').bail(),
@@ -54,11 +71,7 @@ router.post ('/register', upload.single('img'), validateCreateForm, userControll
 
 // LOGEO DE UN USUARIO 
 router.get('/login', userController.login);
-router.post('/login',validateCreateFormlogin, userController.processLogin); 
-
-//PERFIL DE USUARIO
-
-router.get("/profile", userController.profile)
+router.post('/login',validateCreateFormlogin,userController.processLogin); 
 
 
 
