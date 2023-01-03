@@ -5,6 +5,9 @@ const userController= require("../controllers/userController");
 const multer= require ('multer');
 const fs = require ('fs');
 let path = require('path');
+const guestMiddleware = require ('../middlewares/guestMiddleware');
+const authMiddleware = require ('../middlewares/authMiddleware');
+
 
 // Express Validator
 const {body} = require ('express-validator'); 
@@ -65,7 +68,7 @@ var upload = multer({storage: storage});
 
 
 //CREACION DE UN USUARIO - 
-router.get('/register', userController.register);
+router.get('/register', guestMiddleware, userController.register);
 router.post ('/register', upload.single('img'), validateCreateForm, userController.processRegister);
 
 
