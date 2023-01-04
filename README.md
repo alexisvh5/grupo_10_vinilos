@@ -30,3 +30,8 @@ https://trello.com/b/k7Mm39Os/proyecto-integrador
 SPRINT 4
 ENLACE AL TABLERO DE TABLERO:
 https://trello.com/b/k7Mm39Os/proyecto-integrador
+
+-------------------------------------------------------------------------
+SPRINT 5
+ENLACE AL TABLERO DE TRABAJO:
+https://trello.com/b/EBKEWelX/sprint-5

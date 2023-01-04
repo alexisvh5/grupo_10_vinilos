@@ -80,10 +80,10 @@ delete  userToLogin.contrasena
 
  req.session.userLogged= userToLogin;
 
- console.log(req.session)
-  return res.render("/users/profile",{
-   user:req.session.userLogged
-  })
+ if(req.body.remember_user){
+  res.cookie("userEmail", req.body.email,{maxAge: (1000*60)*60})
+ }
+ return res.redirect("/users/profile")
 
 }
 } 
@@ -92,8 +92,15 @@ return res.render ("login",{
   errors:{email:{msg:"Las credenciales son invalidas"}},oldData:req.body
  })
   },
-  profile:(req,res)=>{res.render ("profile")}
-
+  profile:(req,res)=>{
+    console.log(req.cookies.userEmail)
+    res.render ("profile",{
+    user:req.session.userLogged
+   })},
+   logout: (req,res)=>{
+    res.clearCookie("userEmail");
+    req.session.destroy()
+  return res.redirect("/")}
 }
 
 

@@ -32,7 +32,7 @@
         <% vinilos.forEach( vinilo=>{ %>
           <div class="index-card">
             <div class="index-card-image">
-              <a href="products/productDetail/<%=vinilo.id%>"> <img src="static/imagen/<%= vinilo.img %>" alt=""></a>
+              <a href="/products/productDetail/<%=vinilo.id%>"> <img src="/static/imagen/<%= vinilo.img %>" alt=""></a>
             </div>
           </div>
           <div class="index-card-text">
@@ -50,7 +50,7 @@
     <% vinilosRecomendado.forEach( vinireco=>{ %>
       <div class="index-card">
         <div class="index-card-image">
-          <a href="/productDetailrecome/<%=vinireco.id%>"> <img src="static/imagen/<%= vinireco.img %>" alt=""></a>
+          <a href="/products/productDetailrecome/<%=vinireco.id%>"> <img src="/static/imagen/<%= vinireco.img %>" alt=""></a>
         </div>
       </div>
       <div class="index-card-text">
