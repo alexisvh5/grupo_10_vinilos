@@ -1,10 +1,9 @@
-//chequea si el usuario está logueado
-function authMiddleware (req, res, next) {
-    if (req.session.usuarioLogueado != undefined) {
-       next();
-    } else {
-       res.send('Esta pagina es para usuarios')
-    }
+function authMiddleware (req,res,next){
+
+   if(!req.session.userLogged){
+       res.redirect("/users/login");
+       
+   }next()
    }
    
    module.exports = authMiddleware;

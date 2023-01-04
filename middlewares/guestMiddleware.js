@@ -1,10 +1,9 @@
-//chequea que el usuario no esté logueado (invitado)
-function guestMiddleware (req, res, next) {
- if (req.session.usuarioLogueado == undefined) {
-    next();
- } else {
-    res.send('Esta pagina es para invitados')
- }
-}
+function guestMiddleware (req,res,next){
 
-module.exports = guestMiddleware;
+   if(req.session.userLogged){
+       res.redirect("/users/profile");
+       
+   }next()
+   }
+   
+   module.exports = guestMiddleware;

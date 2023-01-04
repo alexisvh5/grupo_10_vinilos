@@ -6,6 +6,9 @@ const productsRoutes = require("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
 const session = require ("express-session");    
 
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const cookies = require("cookie-parser");
+
 const app = express(); 
 
 app.use(session({
@@ -13,6 +16,11 @@ secret:"shh",
 resave: false,
 saveUninitialized:false,
 }));
+
+
+app.use(cookies());
+app.use(userLoggedMiddleware);
+
 
 
 const logMiddleware = require ('./middlewares/logMiddleware');
@@ -49,8 +57,8 @@ app.use(logMiddleware);
 
 
 
-app.listen ('3003', () => {
-    console.log ('Servidor funcionando en puerto 3003')
+app.listen ('3000', () => {
+    console.log ('Servidor funcionando en puerto 3000')
 })
 
 
