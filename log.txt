@@ -281,3 +281,11 @@ Se ingresó en la página /static/imagen/img-1672665624750.jpg
 Se ingresó en la página /static/imagen/img-1672665624750.jpg
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /static/imagen/
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /favicon.ico
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /favicon.ico
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /favicon.ico
