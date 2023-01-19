@@ -14,6 +14,7 @@ header{
     background-color:grey;
     margin:auto;
     width:100%;
+    height:35vh;
   
  
     
@@ -24,6 +25,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border: solid red 1px;
   
 }
 
@@ -31,11 +33,13 @@ header{
     display: flex;
     flex-wrap: wrap;
     text-decoration:none;
-    gap: 20px;
+    gap: 30px;
+    border: solid blue 1px;
 }
 
 .nav-header li p {
-  color:black;
+  color:white;
+  text-decoration: none;
 
 }
 
@@ -45,15 +49,15 @@ header{
 }
 
 .cart-nav-header { 
-    color: aliceblue;
+color: aliceblue;
 height: 20px;
 width: 20px;
 }
 
 .imagen-header {
-    width:80%;
-    height: auto;
-    margin-left: 90px;
+    width:30%;
+    margin-top: 20px;
+    margin-left: 30px;
     
 }
 
@@ -124,6 +128,7 @@ width: 20px;
 .login-h3,.register-h3{
     margin:0;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 30px;
     color:white;
     font-size: 30px;
@@ -243,26 +248,224 @@ hr{
 
 /*FOOTER */
 footer{
-    margin-top: 40px;
-    margin-bottom: 70px;
-    margin-left: 120px;
-    display: flex;
-    color: white;
-    font-size: 25px;
     width: 100%;
-    justify-content: space-between;
-    height: 250px;
+    display: inline-block;
+    height:35vh;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    background: #666;
 }
+.footer-vinilos{
+	background: #666;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 40px 20px;
+}
+
+.footer-vinilos .footer-left,
+.footer-vinilos .footer-center,
+.footer-vinilos .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-vinilos .footer-left{
+	width: 40%;
+    /*border:solid 1px red;*/
+}
+.footer-vinilos .footer-left .imagen-header{
+	width: 40%;
+    margin:0;
+   /* border:solid 1px red;*/
+}
+
+/* The company logo */
+
+.footer-vinilos h3{
+	color:  #ffffff;
+	
+	margin: 0;
+}
+
+
+/* Footer links */
+
+.footer-vinilos .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-vinilos .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+    font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-vinilos .footer-rocksphere{
+	color: #ffff;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-vinilos .footer-center{
+	width: 35%;
+    /*border:solid 1px red;*/
+}
+
+.footer-vinilos .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-vinilos .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-vinilos .footer-center i.fa-phone{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-vinilos .footer-center i.fa-map-marker{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-vinilos .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+    font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-vinilos .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-vinilos .footer-center p a{
+	color: #700e3e;
+	text-decoration: none;;
+}
+
+.footer-vinilos .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-vinilos .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-vinilos .footer-right{
+	width: 20%;
+   /* border:solid 1px red;*/
+}
+
+.footer-vinilos .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.footer-vinilos .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.footer-vinilos.footer-icons{
+	margin-top: 25px;
+}
+
+.footer-vinilos .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+@media (max-width: 880px) {
+
+	.footer-vinilos{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-vinilos .footer-left,
+	.footer-vinilos .footer-center,
+	.footer-vinilos .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-vinilos .footer-center i{
+		margin-left: 0;
+        text-align: center;
+	}
+
+}
+
+
+
+
+
+
+
+
 
 .footer-fixed{
     position: fixed;
     color: white;
-    right: 120px;
-    bottom: 50px;
-    font-size: 45px;
+    right:40px;
+    bottom: 40px;
+    font-size:30px;
     color: greenyellow;
     
-}
+}/*
 
 .footer-fixed:hover {
     transition: .6s;
@@ -292,7 +495,7 @@ footer{
     color: white;
     height: 70%;
     width: 70%;
-}
+}*/
 
 
 /*FIN FOOTER */

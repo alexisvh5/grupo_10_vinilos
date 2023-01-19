@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/static/css/styles.css">
-    <title>Rocksphera</title>
+    <title>Rocksphere</title>
 </head>
 <body>
   <%-include("./partials/header.ejs") %>
 <body>
     <main>
         <form class="formulario"action="/contact" method="POST">
-        <h3 class="login-h3">Dejanos tu comentario</h3>
+        <h3 class="login-h3">Dejanos tu comentario!</h3>
         <div class="cajacampos">
           <div>
             <label for="name" class="register-h4">Nombre y Apellido:</label>
@@ -47,6 +51,9 @@
             <div>
             <button type="submit" class="button">Enviar</button> 
             </div>
+            <div>
+              <button type="reset" class="button">Borrar</button>
+              </div>
            
             <hr/>
             <p>Gracias por tu comentario!</p>
