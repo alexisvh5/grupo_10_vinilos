@@ -118,6 +118,7 @@ width: 20px;
 }
 
 /* FIN CARDS INDEX*/
+/*FORMULARIOS*/
 /*estilos para formularios de registro y login*/
 
 .formulario{
@@ -138,8 +139,6 @@ width: 20px;
     padding:15px;
     margin:auto;
     margin-bottom: 15px;
-  
-
     display:flex;
     flex-direction: column;
 }
@@ -159,15 +158,10 @@ width: 20px;
     padding:15px;
     margin:auto;
     margin-bottom: 15px;
-  
-
     display:flex;
     flex-direction: column;
 }
     
-
-
-
 .campocomentario {
     font-size: 15px;
     width: 100%;
@@ -186,7 +180,6 @@ width: 20px;
     min-width: 100%;
     font-size: 15px;
     max-width: 100%;
-    
     flex-wrap: wrap;
     padding:10px 15px;
     border:none;
@@ -212,7 +205,6 @@ width: 20px;
 }
 hr{
     width: 100%;
-
 }
 .cajacampos p{
     color:white;
@@ -244,7 +236,7 @@ hr{
     margin: 0;
     background-color: white;
 }
-/*hasta acá estilos para formularios de registro y login*/
+/*FIN FORMULARIOS*/
 
 /*FOOTER */
 footer{
@@ -448,7 +440,7 @@ footer{
 	}
 
 }
-
+/*FIN FOOTER*/
 
 
 
