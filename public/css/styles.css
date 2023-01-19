@@ -118,13 +118,17 @@ width: 20px;
 }
 
 /* FIN CARDS INDEX*/
+
+
 /*FORMULARIOS*/
-/*estilos para formularios de registro y login*/
+
 
 .formulario{
     background-color:black;
     padding:20px 10px;
     width:100%;
+    /*margin:auto;*/
+    
 }
 .login-h3,.register-h3{
     margin:0;
@@ -236,6 +240,14 @@ hr{
     margin: 0;
     background-color: white;
 }
+.blanco{
+    margin:0;
+    text-align: left;
+    margin-bottom: 30px;
+    color: antiquewhite;
+    font-size: 18px;
+}
+
 /*FIN FORMULARIOS*/
 
 /*FOOTER */

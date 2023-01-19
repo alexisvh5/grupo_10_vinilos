@@ -496,3 +496,6 @@ Se ingresó en la página /static/imagen/
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /static/imagen/
+Se ingresó en la página /products/productDetail
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /static/imagen/
