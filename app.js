@@ -52,7 +52,7 @@ app.use('/products', productsRoutes);
 app.use('/users', usersRoutes)
 
 //middlewares
-app.use(logMiddleware);
+//app.use(logMiddleware); Comentado para no interferir subir al git
 
 
 
@@ -60,7 +60,6 @@ app.use(logMiddleware);
 app.listen ('3000', () => {
     console.log ('Servidor funcionando en puerto 3000')
 })
-
 
 
 
