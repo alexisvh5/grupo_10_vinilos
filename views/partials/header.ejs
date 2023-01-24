@@ -2,36 +2,53 @@
   <header>
     <div>
 
-     
+      <img  class="imagen-header" src="/static/imagen/imagen-header-Logo.png" alt="">
 
       <a href="/"><img  class="imagen-header" src="/static/imagen/imagen-header-Logo.jpeg" alt=""></a>
 
 
 
-<nav class="nav-header">
-  <div class="nav-header-register">
-  <ul class="ul-registro-head">
-  <% if (locals.isLogged) { %>
-    <li><a href="/users/profile"><img src="/static/imagen/<%=locals.userLogged.img%> " alt="imagen usuario"><p>Hola!<%=locals.userLogged.NombreyApellido %> </p></a></li>
-    <li><a href="/users/logout"><p>Logout</p></a></li>
-    <li><a href="/contact"><p>Dejanos tu comentario</p></a></li>
+    <nav class="nav-header">
+      <div class="nav-header-register">
+        <ul class="ul-registro-head">
+          <% if (locals.isLogged) { %>
+          <li>
+            <a href="/users/profile"
+              ><img
+                src="/static/imagen/<%=locals.userLogged.img%> "
+                alt="imagen usuario"
+              />
+              <p>Hola!<%=locals.userLogged.NombreyApellido %></p></a
+            >
+          </li>
+          <li>
+            <a href="/users/logout"><p>Logout</p></a>
+          </li>
+          <li>
+            <a href="/contact"><p>Contacto</p></a>
+          </li>
 
-<% } else { %>
-    <li><a href="/users/register"><p>Registrate</p></a></li>
-    <li><a href="/users/login"><p>Login</p></a></li>
-    <li><a href="/contact"><p>Dejanos tu comentario</p></a></li>
-    <% } %> 
-  </ul>
-</div>
+          <% } else { %>
+          <li>
+            <a href="/users/register"><p>Registrate</p></a>
+          </li>
+          <li>
+            <a href="/users/login"><p>Login</p></a>
+          </li>
+          <li>
+            <a href="/contact"><p>Contacto</p></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
 
-<div>
-    <ul>
-    <li><a href="/products/productCart"><p>Comprar</p></a></li>
-  </ul>
-</div>
-
-</nav>
- 
-</div>
-
-  </header>
+      <div>
+        <ul>
+          <li>
+            <a href="/products/productCart"><p>Comprar</p></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

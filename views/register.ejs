@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/stylesForm.css" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/static/css/styles.css" >
-    <title>Rocksphera</title>
+   
+    <title>Rocksphere</title>
 </head>
 <body>
 
@@ -79,7 +84,7 @@
              </div>
              
              <div>
-                <h4 class="register-h4">Elegí tu categoria</h4>
+                <label for="name" class="register-h4">Elegí tu categoria:</label>
                 <select class= "campo <%= locals.errors && errors.categoria ? 'is-invalid' : null %>" 
                 name="categoria" id="lang">
                 <option value="Rock">Rock</option>
@@ -99,7 +104,8 @@
                 </div>
                 
             <div>
-                 <h4 class="register-h4">Elegí tu foto de usuario</h4>               
+              <label for="name" class="register-h4">Elegí tu foto de usuario:</label>
+                         
                  <input 
                  type="file"
                  name="img"
