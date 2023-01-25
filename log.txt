@@ -502,3 +502,5 @@ Se ingresó en la página /products/productDetail
 Se ingresó en la página /static/imagen/
 Se ingresó en la página /static/imagen/
 >>>>>>> 0d4c8fbeba9782fdbb5a9d0167a0ea02c6088250
+Se ingresó en la página /static/imagen/
+Se ingresó en la página /favicon.ico
