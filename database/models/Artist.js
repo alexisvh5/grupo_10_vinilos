@@ -4,14 +4,17 @@ module.exports= (sequelize, dataTypes)=> {
 id_artist:{
 type: dataTypes.INTEGER(11),
 primaryKey: true,
-autoIncrement: true
+autoIncrement: true,
+allowNull: false
 },
 name:{
-    type: dataTypes.VARCHAR(45)
+    type: dataTypes.STRING,
+    allowNull: false
 
 },
 id_genre:{
-    type: dataTypes.INTEGER(11)
+    type: dataTypes.INTEGER,
+    allowNull: false
 }
 
     };

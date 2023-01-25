@@ -4,10 +4,12 @@ module.exports= (sequelize, dataTypes)=> {
 id_genre:{
 type: dataTypes.INTEGER,
 primaryKey: true,
-autoIncrement: true
+autoIncrement: true,
+allowNull: false
 },
 name: {
-    type: dataTypes.VARCHAR(45)
+    type: dataTypes.STRING,
+    allowNull: false
 },
 
     };

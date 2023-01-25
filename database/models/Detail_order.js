@@ -7,16 +7,20 @@ primaryKey: true,
 autoIncrement: true
 },
 quantity:{
-    type: dataTypes.INTEGER(10)
+    type: dataTypes.INTEGER,
+    allowNull: false
 },
 total: {
-    type: dataTypes.INTEGER(11)
+    type: dataTypes.INTEGER,
+    allowNull: false
 },
 id_order: {
-    type: dataTypes.INTEGER(11)
+    type: dataTypes.INTEGER,
+    allowNull: false
 },
 id_album: {
-    type: dataTypes.INTEGER(11)
+    type: dataTypes.INTEGER,
+    allowNull: false
 }
 
     };

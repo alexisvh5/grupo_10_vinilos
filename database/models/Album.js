@@ -5,31 +5,38 @@ module.exports = (sequelize, dataTypes) => {
         id_album: {
             type: dataTypes.INTEGER(11),
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
 
         },
         title: {
-            type: dataTypes.VARCHAR(45)
+            type: dataTypes.STRING,
+            allowNull: false
 
         },
         company: {
-            type: dataTypes.VARCHAR(20)
+            type: dataTypes.STRING,
+            allowNull: false
 
         },
         year: {
-            type: dataTypes.SMALLINT(4)
+            type: dataTypes.STRING,
+            allowNull: false
 
         },
         price: {
-            type: dataTypes.INTEGER(10)
+            type: dataTypes.INTEGER,
+            allowNull: false
 
         },
         id_genre: {
-            type: dataTypes.INTEGER(11)
+            type: dataTypes.INTEGER,
+            allowNull: false
 
         },
         id_artist: {
-            type: dataTypes.INTEGER(11)
+            type: dataTypes.INTEGER,
+            allowNull: false
 
         }
     

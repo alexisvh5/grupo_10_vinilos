@@ -7,16 +7,20 @@ primaryKey: true,
 autoIncrement: true
 },
 date:{
-    type:dataTypes.date
+    type:dataTypes.DATE,
+    allowNull: false
 },
 payment: {
-type: dataTypes.VARCHAR(20)
+type: dataTypes.STRING,
+allowNull: false
 },
 total: {
-    type:dataTypes.INTEGER(10)
+    type:dataTypes.INTEGER,
+    allowNull: false
 },
 id_user:{
-    type: dataTypes.INTEGER(11)
+    type: dataTypes.INTEGER,
+    allowNull: false
 }
     };
 
