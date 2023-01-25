@@ -1,11 +1,18 @@
 module.exports= (sequelize, dataTypes)=> { 
     let alias = "Artists"; 
     let columnas = {
-id:{
-type: dataTypes.INTEGER,
+id_artist:{
+type: dataTypes.INTEGER(11),
 primaryKey: true,
 autoIncrement: true
 },
+name:{
+    type: dataTypes.VARCHAR(45)
+
+},
+id_genre:{
+    type: dataTypes.INTEGER(11)
+}
 
     };
 

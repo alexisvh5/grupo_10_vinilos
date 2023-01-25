@@ -1,10 +1,13 @@
 module.exports= (sequelize, dataTypes)=> { 
     let alias = "Genres"; 
     let columnas = {
-id:{
+id_genre:{
 type: dataTypes.INTEGER,
 primaryKey: true,
 autoIncrement: true
+},
+name: {
+    type: dataTypes.VARCHAR(45)
 },
 
     };
