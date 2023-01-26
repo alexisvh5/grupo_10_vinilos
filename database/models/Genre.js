@@ -18,7 +18,14 @@ name: {
 
         timestamps: false
     };
-const User = sequelize.define(alias, columnas, config);
+const Genre = sequelize.define(alias, columnas, config); // aca cambie el nombre de la variable User por Genre
 
+Genre.associate = function (models) {
+    Genre.hasMany(models.Album, {
+        as: "albums", //ver si esta bien ese nombre
+        foreingKey: 'id_genre'
+    })
+
+}
 return Genre
 }

@@ -41,10 +41,19 @@ module.exports = (sequelize, dataTypes) => {
         }
     
     }
-    let config = {
+    let config = { 
         timestamps: false
     }
 }
 const Album = sequelize.define(alias, cols, config)
 
-return Album;
+Album.associate = function (models) {
+    Album.belongsTo(models.Genre, {
+        as: "genres", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
+        foreingKey: 'id_genre'
+    })
+
+    return Album;
+}
+
+
