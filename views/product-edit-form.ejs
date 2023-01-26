@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
-
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-  <link rel="stylesheet" href="/static/css/stylesForm.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  
+    <link rel="stylesheet" href="/static/css/stylesForm.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" >
   <title>Rocksphera</title>
 </head>
 <body>
@@ -20,73 +21,75 @@
     <form class = "formulario" action="/products" method="POST" enctype="multipart/form-data">
         <h3 class="create-h3">Editar Producto</h3>
         <div class="cajacampos">
-        <div>
-        <input 
-         type="text"
-         name="name"
-         placeholder="Nombre"
-         class="campo"
-         required/>
-        </div>
-
-        <div>
-            <input 
-             type="text"
-             name="name"
-             placeholder="Género"
-             class="campo"
-             required/>
-        </div>
-
-        <div>
-            <input 
-             type="text"
-             name="name"
-             placeholder="Sello"
-             class="campo"
-             required/>
-        </div>
-        <div>
-            <input 
-             type="text"
-             name="number"
-             placeholder="Año"
-             class="campo"
-             required/>
-        </div>
-        <div>
-            <input 
-             type="number"
-             name="name"
-             placeholder="Precio"
-             class="campo"
-             required/>
-        </div>
-        <div>
-            <input 
-             type="text"
-             name="name"
-             placeholder="Título"
-             class="campo"
-             required/>
-        </div>
+            <div>
+                <label for="name" class="register-h4">Titulo</label>
+                <input 
+                type="text"
+                 name="title"
+                 class="campo"
+                 required/>
+            </div>
+    
+            <div>
+                <label for="name" class="register-h4">Compañia</label>
+                <input 
+                 type="text"
+                 name="company"
+                 class="campo"
+                 required/>
+            </div>
+    
+            <div>
+                <label for="name" class="register-h4">Año</label>
+                <input 
+                 type="number"
+                 name="year"
+                 class="campo"
+                 required/>
+            </div>
+            <div>
+                <label for="name" class="register-h4">Precio</label>
+                <input 
+                 type="number"
+                 name="price"
+                 class="campo"
+                 required/>
+            </div>
+            <div>
+                <label for="name" class="register-h4">Género</label>
+                <input 
+                 type="text"
+                 name="name"
+                 class="campo"
+                 required/>
+            </div>
+            <div>
+                <label for="name" class="register-h4">Artista</label>
+                <input 
+                 type="text"
+                 name="name"
+                 class="campo"
+                 required/>
+            </div>
+            
+            <div>
+                <label for="imagen" class="register-h4">Imagen</label>
+                <input 
+                 type="file"
+                 name="imagen"
+                 placeholder="Imagen"
+                 class="campo"
+                 required/>
+            </div>
+           
+           
+            <button class="button">Guardar</button>
+            </div>
+        </form>
+    
         
-        <div>
-            <label for="imagen">Imagen</label>
-            <input 
-             type="file"
-             name="imagen"
-             placeholder="Imagen"
-             class="campo"
-             required/>
-        </div>
-       
-       
-        <button class="button">Guardar</button>
-        </div>
-    </form>
-	
-
-	
-</body>	
-</html>
+        <!-- /todos los productos -->
+    
+        
+    </body>	
+    </html>

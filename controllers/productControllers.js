@@ -1,3 +1,35 @@
+/*
+let db = require('../database/models');
+
+let productController = {
+  
+  productCreate: function( req, res) {
+    db.Album.create({
+      title: req.body.title,
+      company: req.body.company,
+      year: req.body.year,
+      price: req.body.price,
+      id_genre: req.body.id_genre,
+      id_artis: req.body.id_artis
+
+
+    }); 
+    
+    res.direct('/products')
+
+
+  }
+
+
+
+}
+
+module.exports = productController;
+
+
+*/
+// COMENTADO PARA HACER CRUD CON BASE DE DATOS
+
 let fs = require('fs');
 let path = require('path');
 
