@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "VinilosGrupo10",
-    "database": "rocksphere_database",
+    "database": "rocksphere_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

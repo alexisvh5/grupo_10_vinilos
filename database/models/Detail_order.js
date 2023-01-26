@@ -18,7 +18,7 @@ id_order: {
     type: dataTypes.INTEGER,
     allowNull: false
 },
-id_album: {
+id: {
     type: dataTypes.INTEGER,
     allowNull: false
 }
