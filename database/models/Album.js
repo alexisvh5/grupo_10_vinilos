@@ -53,6 +53,11 @@ Album.associate = function (models) {
         foreingKey: 'id_genre'
     })
 
+    Album.belongsTo(models.Artists, {
+        as: "artist", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
+        foreingKey: 'id_artist'
+    })
+
     return Album;
 }
 

@@ -2,16 +2,37 @@
 let db = require('../database/models');
 
 let productController = {
-  
-  productCreate: function( req, res) {
+
+    productList: function (req, res) {
+    db.Album.findAll()
+    .then(albumes => {
+      res.render('products', {vinilo})
+    })
+  },
+
+ productCreate:(req,res)=>{
+    res.render ("product-create-form")
+
+  },
+
+  productStore: function( req, res) {
+  let imagen;
+    console.log(req.file)
+  if(req.file != undefined) {
+    imagen = req.file.filename;
+  }else{
+    imagen = "13-the-doors.jpg"
+  },
     db.Album.create({
       title: req.body.title,
       company: req.body.company,
       year: req.body.year,
       price: req.body.price,
       id_genre: req.body.id_genre,
-      id_artis: req.body.id_artis
+      id_artist: req.body.id_artist,
+      
 
+      PREGUNTAR A PROFES POR IMG!!!!!!!!!
 
     }); 
     
