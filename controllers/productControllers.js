@@ -30,9 +30,9 @@ let productController = {
       price: req.body.price,
       id_genre: req.body.id_genre,
       id_artist: req.body.id_artist,
-      
+      image: imagen
 
-      PREGUNTAR A PROFES POR IMG!!!!!!!!!
+
 
     }); 
     

@@ -25,5 +25,7 @@ id_genre:{
     };
 const User = sequelize.define(alias, columnas, config);
 
+
+
 return Artist 
 }
