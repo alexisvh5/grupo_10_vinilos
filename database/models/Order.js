@@ -28,7 +28,7 @@ id_user:{
 
         timestamps: false
     };
-const User = sequelize.define(alias, columnas, config);
+const Order = sequelize.define(alias, columnas, config);
 
 return Order
 }

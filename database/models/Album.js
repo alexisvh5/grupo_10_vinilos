@@ -53,7 +53,7 @@ const Album = sequelize.define(alias, cols, config)
 
 Album.associate = function (models) {
     Album.belongsTo(models.Genres, {
-        as: "genres", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
+        as: "genre", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
         foreingKey: 'id_genre'
     })
 
