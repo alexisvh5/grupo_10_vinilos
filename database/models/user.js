@@ -45,5 +45,19 @@ zip_code: {
     };
 const User = sequelize.define(alias, columnas, config);
 
+User.associate = function (models) {
+    User.hasMany(models.Order, {
+        as: "Orders", 
+        foreingKey: 'id_user'
+    })
+
+    User.hasMany(models.Detail_order, {
+        as: "DetailUser",
+        foreingKey: "id_user"
+    })
+    
+
+}
+
 return User 
 }

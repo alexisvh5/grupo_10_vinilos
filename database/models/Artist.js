@@ -25,7 +25,13 @@ id_genre:{
     };
 const User = sequelize.define(alias, columnas, config);
 
+Artist.associate = function (models) {
+    Artist.hasMany(models.Album, {
+        as: "albumArtist", //ver si esta bien ese nombre
+        foreingKey: 'id_artist'
+    })
 
+}
 
 
 return Artist 
