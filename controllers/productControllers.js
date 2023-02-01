@@ -1,4 +1,4 @@
-/*
+
 let db = require('../database/models');
 
 let productController = {
@@ -22,7 +22,7 @@ let productController = {
     imagen = req.file.filename;
   }else{
     imagen = "13-the-doors.jpg"
-  },
+  }
     db.Album.create({
       title: req.body.title,
       company: req.body.company,
@@ -39,7 +39,8 @@ let productController = {
     res.direct('/products')
 
 
-  }
+  },
+  
 
 
 
@@ -48,9 +49,9 @@ let productController = {
 module.exports = productController;
 
 
-*/
-// COMENTADO PARA HACER CRUD CON BASE DE DATOS
 
+// COMENTADO PARA HACER CRUD CON BASE DE DATOS
+/*
 let fs = require('fs');
 let path = require('path');
 
@@ -132,4 +133,4 @@ const productController={
   }
 
 
-module.exports = productController;
+module.exports = productController; */
