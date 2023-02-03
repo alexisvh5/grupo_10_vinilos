@@ -36,7 +36,7 @@ router.get('/:id/edit', productController.productList);
 //router.put('/', upload.any(),productController.productUpdate);
 
 //ELIMINAR UN PRODUCTO
-//router.delete('/delete/:id', productController.productDelete);
+router.delete('/delete/:id', productController.productDelete);
 /*
 
 router.get("/productCart",productController.cart);
