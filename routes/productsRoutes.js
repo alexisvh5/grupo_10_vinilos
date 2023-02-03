@@ -31,7 +31,7 @@ router.get('/create', productController.productCreate);
 router.post ('/',upload.single("imagen"),productController.productStore);
 
 //EDITAR UN PRODUCTO
-router.get('/:id/edit', productController.productEdit);
+router.get('/:id/edit', productController.productList);
 router.put('/:id/edit', upload.single("imagen"), productController.productUpdate)
 router.put('/', upload.any(),productController.productUpdate);
 
