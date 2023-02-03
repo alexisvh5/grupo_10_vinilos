@@ -32,18 +32,25 @@ let productController = {
       id_artist: req.body.id_artist,
       image: imagen
 
-
-
-    }); 
+    }) 
+    .then(() => {
+      return res.redirect('/')
+    })
+    .catch(error => {
+      return  res.send(error)
+    })
     
-    res.direct('/products')
-
-
+  },
+  productDelete: function (req, res) {
+    Album.destroy({
+      where: {
+        id : req.params.id
+      }
+    })
+    .then(() => res.redirect('/'))
+    .catch(error => res.send(error))
   },
   
-
-
-
 }
 
 module.exports = productController;
