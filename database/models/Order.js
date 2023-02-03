@@ -31,7 +31,7 @@ id_user:{
 const Order = sequelize.define(alias, columnas, config);
 
 Order.associate = function (models) {
-    Order.belongsto(models.User, {
+    Order.belongsTo(models.User, {
         as: "Users", 
         foreingKey: 'id_user'
     })

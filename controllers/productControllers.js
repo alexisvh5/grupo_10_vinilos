@@ -1,4 +1,4 @@
-
+const path = require('path');
 let db = require('../database/models');
 
 let productController = {

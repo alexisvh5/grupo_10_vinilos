@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-const Album = sequelize.define(alias, cols, config)
+const Album = sequelize.define(alias, cols, config);
 
 Album.associate = function (models) {
     Album.belongsTo(models.Genre, {
@@ -66,8 +66,8 @@ Album.associate = function (models) {
         as: "AlbumDetail",
         foreingKey: "id_album"
     })
-
-    return Album;
 }
+    return Album;
+
  }
 
