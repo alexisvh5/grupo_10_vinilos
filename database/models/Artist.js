@@ -1,7 +1,7 @@
 module.exports= (sequelize, dataTypes)=> { 
-    let alias = "Artists"; 
+    let alias = "Artist"; 
     let columnas = {
-id_artist:{
+id:{
 type: dataTypes.INTEGER(11),
 primaryKey: true,
 autoIncrement: true,
@@ -23,7 +23,7 @@ id_genre:{
 
         timestamps: false
     };
-const User = sequelize.define(alias, columnas, config);
+const Artist = sequelize.define(alias, columnas, config);
 
 Artist.associate = function (models) {
     Artist.hasMany(models.Album, {

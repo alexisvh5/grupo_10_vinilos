@@ -1,5 +1,5 @@
 module.exports= (sequelize, dataTypes)=> { 
-    let alias = "Users"; 
+    let alias = "User"; 
     let columnas = {
 id:{
 type: dataTypes.INTEGER,
@@ -51,11 +51,7 @@ User.associate = function (models) {
         foreingKey: 'id_user'
     })
 
-    User.hasMany(models.Detail_order, {
-        as: "DetailUser",
-        foreingKey: "id_user"
-    })
-    
+
 
 }
 

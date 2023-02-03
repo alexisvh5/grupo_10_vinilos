@@ -1,9 +1,9 @@
 const Order = require("./Order");
 
 module.exports= (sequelize, dataTypes)=> { 
-    let alias = "Detail_orders"; 
+    let alias = "Detailorder"; 
     let columnas = {
-id_detail_order:{
+id:{
 type: dataTypes.INTEGER(11),
 primaryKey: true,
 autoIncrement: true
@@ -20,10 +20,11 @@ id_order: {
     type: dataTypes.INTEGER,
     allowNull: false
 },
-id_user: {
+id_album: {
     type: dataTypes.INTEGER,
     allowNull: false
 }
+
 
     };
 
@@ -31,19 +32,21 @@ id_user: {
 
         timestamps: false
     };
-const User = sequelize.define(alias, columnas, config);
+const Detailorder = sequelize.define(alias, columnas, config);
 
-Detail_order.associate = (models)=>{ 
-    Detail_order.belongsTo(models.Order, {
+Detailorder.associate = (models)=>{ 
+    Detailorder.belongsTo(models.Order, {
     as: "OrderDetail",
     foreingKey: "id_order"
 })
-Detail_order.belongsTo(models.User, {
-    as: "UserDetail",
-    foreingKey: "id_user"
+
+Detailorder.belongsTo(models.Album, {
+    as: "DetailAlbum",
+    foreingKey: "id_album"
 })
+
 
 }
 
-return Detail_order 
+return Detailorder 
 }

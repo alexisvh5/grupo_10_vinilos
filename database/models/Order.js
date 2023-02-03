@@ -1,5 +1,5 @@
 module.exports= (sequelize, dataTypes)=> { 
-    let alias = "Orders"; 
+    let alias = "Order"; 
     let columnas = {
 id:{
 type: dataTypes.INTEGER(11),
@@ -36,7 +36,7 @@ Order.associate = function (models) {
         foreingKey: 'id_user'
     })
 
-    Order.hasMany(models.Detail_order, {
+    Order.hasMany(models.Detailorder, {
         as: "detailOrder",
         foreingKey: "id_order"
     })
