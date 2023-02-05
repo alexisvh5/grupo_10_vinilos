@@ -1,3 +1,4 @@
+const { generateKey } = require('crypto');
 const path = require('path');
 let db = require('../database/models');
 
@@ -6,13 +7,15 @@ let productController = {
     productList: function (req, res) {
     db.Album.findAll()
     .then(albumes => {
-      res.render('products', {vinilo})
+      res.render('products', {albumes})
     })
   },
 
  productCreate:(req,res)=>{
-    res.render ("product-create-form")
-
+    db.Genre.findAll()
+    .then(genres => {
+    res.render ("product-create-form", {genres})
+  }) 
   },
 
   productStore: function( req, res) {

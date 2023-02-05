@@ -54,10 +54,16 @@
         </div>
         <div>
             <label for="name" class="register-h4">Género</label>
-            <input 
-             type="text"
-             name="name"
-             class="campo"
+            <select name="genero">
+                
+                <option value="#">Seleccione el género...</option>
+                <% for (let i = 0; i < genres.length; i++) { %>
+                <option value="<%=genres[i].id%>">
+                    <%=genres[i].name%>
+                </option>
+                <% } %>
+
+            </select> 
              required/>
         </div>
         <div>
