@@ -12,9 +12,11 @@ let productController = {
   },
 
  productCreate:(req,res)=>{
-    db.Genre.findAll()
-    .then(genres => {
-     return res.render ("product-create-form", {genres})
+    const genres = db.Genre.findAll()
+    const artist = db.Artist.findAll()
+    Promise.all([genres, artist])
+    .then( ([genres, artist]) => {
+     res.render ("product-create-form", {genres, artist})
   }) 
   }, 
 

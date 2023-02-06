@@ -68,14 +68,18 @@
         </div>
         <div>
             <label for="name" class="register-h4">Artista</label>
-            <input 
-             type="text"
-             name="artist"
-             class="campo"
+        </div>
+            <select name="artist" style="width: 100%">
+                <option value="#" >Seleccione el artista...</option>
+                <% for (let i = 0; i < artist.length; i++) { %>
+                <option value="<%=artist[i].id%>">
+                    <%=artist[i].name%>
+                </option>
+                <% } %>
+            </select> 
              required/>
-                     
 
-
+        <div>
             <label for="imagen" class="register-h4">Imagen</label>
             <input 
              type="file"
