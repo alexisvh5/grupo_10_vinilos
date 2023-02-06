@@ -14,9 +14,9 @@ let productController = {
  productCreate:(req,res)=>{
     db.Genre.findAll()
     .then(genres => {
-    res.render ("product-create-form", {genres})
+     return res.render ("product-create-form", {genres})
   }) 
-  },
+  }, 
 
   productStore: function( req, res) {
   let imagen;
@@ -31,8 +31,8 @@ let productController = {
       company: req.body.company,
       year: req.body.year,
       price: req.body.price,
-      id_genre: req.body.id_genre,
-      id_artist: req.body.id_artist,
+      id_genre: req.body.genre,
+      id_artist: req.body.artist,
       image: imagen
 
     }) 

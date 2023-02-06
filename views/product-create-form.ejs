@@ -52,17 +52,17 @@
              class="campo"
              required/>
         </div>
-        <div>
+            <div>
             <label for="name" class="register-h4">Género</label>
-            <select name="genero">
-                
-                <option value="#">Seleccione el género...</option>
+        </div>
+        <div>
+            <select name="genre" style="width: 100%">
+                <option value="#" >Seleccione el género...</option>
                 <% for (let i = 0; i < genres.length; i++) { %>
                 <option value="<%=genres[i].id%>">
                     <%=genres[i].name%>
                 </option>
                 <% } %>
-
             </select> 
              required/>
         </div>
@@ -70,12 +70,12 @@
             <label for="name" class="register-h4">Artista</label>
             <input 
              type="text"
-             name="name"
+             name="artist"
              class="campo"
              required/>
-        </div>
-        
-        <div>
+                     
+
+
             <label for="imagen" class="register-h4">Imagen</label>
             <input 
              type="file"
