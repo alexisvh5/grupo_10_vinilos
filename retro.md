@@ -77,3 +77,21 @@ Archivo retro.md
 5 - Dejar de hacer: 
     -----
 
+----------RETRO SPRINT 6-----------
+
+1 - Comenzar a hacer:
+    Planificar con más tiempo y dividir las tareas para cumplir con el sprint.
+    
+2 - Hacer mas:
+    Reunirnos para mostrar los avances individuales.
+    
+3 - Continuar haciendo:
+    Completar las tareas opcionales de los sprints.
+    Plantear nuestras dudas a los docentes para resolver lo que no nos sale.
+    Seguir apoyándonos entre todos.
+    
+4 - Hacer menos:
+    Desanimarnos ante las cosas que nos cuestan entender
+    
+5 - Dejar de hacer: 
+    -----
