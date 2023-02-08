@@ -28,6 +28,7 @@ let productController = {
   }else{
     imagen = "13-the-doors.jpg"
   }
+  console.log(req.body)
     db.Album.create({
       title: req.body.title,
       company: req.body.company,
@@ -35,7 +36,7 @@ let productController = {
       price: req.body.price,
       id_genre: req.body.genre,
       id_artist: req.body.artist,
-      image: imagen
+      imagen: imagen
 
     }) 
     .then(() => {
