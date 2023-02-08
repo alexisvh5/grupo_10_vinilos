@@ -251,14 +251,12 @@ hr{
 /*FIN FORMULARIOS*/
 
 /*FOOTER */
+
 footer{
+
+    bottom: 0;
     width: 100%;
-    display: inline-block;
-    height:35vh;
-    color: white;
-    font-size: 22px;
-    font-weight: 700;
-    background: #666;
+    background-color: #053742;
 }
 .footer-vinilos{
 	background: #666;
