@@ -35,3 +35,11 @@ https://trello.com/b/k7Mm39Os/proyecto-integrador
 SPRINT 5
 ENLACE AL TABLERO DE TRABAJO:
 https://trello.com/b/EBKEWelX/sprint-5
+
+-------------------------------------------------------------------------
+SPRINT 6
+ENLACE AL TABLERO DE TRABAJO:
+https://trello.com/b/rsvcWN2g/sprint-6
+
+-------------------------------------------------------------------------
+
