@@ -429,6 +429,18 @@ footer{
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
+.footer-icons a.facebook:hover
+{
+  background-color:#095771
+}
+.footer-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.footer-icons a.instagram:hover
+{
+  background-color:#e46408
+}
 @media (max-width: 880px) {
 
 	.footer-vinilos{
