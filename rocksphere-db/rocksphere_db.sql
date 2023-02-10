@@ -1,0 +1,285 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 10-02-2023 a las 23:05:17
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `rocksphere_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `albums`
+--
+
+CREATE TABLE `albums` (
+  `id_album` int(11) NOT NULL,
+  `title` varchar(45) NOT NULL,
+  `company` varchar(20) NOT NULL,
+  `year` smallint(4) NOT NULL,
+  `price` int(10) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `id_genre` int(11) NOT NULL,
+  `id_artist` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `albums`
+--
+
+INSERT INTO `albums` (`id_album`, `title`, `company`, `year`, `price`, `image`, `id_genre`, `id_artist`) VALUES
+(1, '13', 'Elektra Records', 1969, 8990, '13-the-doors.jpg', 1, 3),
+(2, 'Abbey Road', 'Columbia Records', 1969, 9990, 'abbey-road-the-beatles.jpg', 1, 1),
+(3, 'Born in the USA', 'Columbia Records', 1984, 7990, 'born-bruce-springsteen.jpg', 1, 6),
+(4, 'Brain Salad Surgery', 'Atlantic Records', 1973, 8590, 'brain-salad-emerson-lake-palmer.jpg', 6, 5),
+(5, 'Dark Side of the Moon', 'AbbeyRoad Records', 1973, 8690, 'darksideportada.jpg', 1, 2),
+(6, 'Disraeli Gears', 'Atlantic Records', 1967, 6990, 'disraeli-cream.jpg', 1, 9),
+(7, 'England\'s Newest', 'London Records', 1964, 11500, 'eng-the-rolling-stones.jpg', 1, 4),
+(8, 'Highway to Hell', 'Atlantic Records', 1979, 11500, 'highway-ac-dc.jpg', 1, 12),
+(9, 'Love', 'AbbeyRoad Records', 2006, 10990, 'love-the-beatles.jpg', 1, 1),
+(10, 'A night at the Opera', 'Emi Records', 1975, 10990, 'opera-queen.jpg', 1, 13),
+(11, 'A day at the Races', 'Elektra Records', 1976, 7990, 'races-queen.jpg', 1, 13),
+(12, 'Sticky Fingers', 'Rolling Stones Recor', 1979, 10990, 'sticky-fingers-the-rolling-stones.jpg', 1, 4),
+(13, 'The Razors Edge', 'Atlantic Records', 1979, 9990, 'the-razors-ac-dc.jpg', 1, 12),
+(14, 'The Wall', 'Columbia Records', 1979, 11590, 'the-wall-pink-floyd.jpg', 1, 2),
+(15, 'Tommy', 'Sound Lab records', 1969, 11990, 'tommy-the-who.jpg', 6, 14),
+(16, 'Weird', 'Columbia Records', 1967, 7990, 'weird-the-doors.jpg', 1, 3),
+(17, 'Wish You Were Here', 'Columbia Records', 1975, 10990, 'wish-pink-floyd.jpg', 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `artists`
+--
+
+CREATE TABLE `artists` (
+  `id_artist` int(11) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `id_genre` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `artists`
+--
+
+INSERT INTO `artists` (`id_artist`, `name`, `id_genre`) VALUES
+(1, 'The Beatles', 3),
+(2, 'Pink Floyd', 1),
+(3, 'The Doors', 1),
+(4, 'Rolling Stones', 1),
+(5, 'Emerson Lake and Palmer', 6),
+(6, 'Bruce Springsteen', 1),
+(7, 'Eric Clapton', 1),
+(8, 'Fletwood Mac', 1),
+(9, 'Cream', 1),
+(10, 'David Bowie', 1),
+(11, 'Roxy Music', 2),
+(12, 'Ac Dc', 7),
+(13, 'Queen', 1),
+(14, 'The Who', 8);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `detailorders`
+--
+
+CREATE TABLE `detailorders` (
+  `id_detailorder` int(11) NOT NULL,
+  `quantity` int(10) NOT NULL,
+  `total` int(11) NOT NULL,
+  `id_order` int(11) NOT NULL,
+  `id_album` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `genres`
+--
+
+CREATE TABLE `genres` (
+  `id_genre` int(11) NOT NULL,
+  `name` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `genres`
+--
+
+INSERT INTO `genres` (`id_genre`, `name`) VALUES
+(1, 'Rock'),
+(2, 'Blues'),
+(3, 'Pop'),
+(4, 'Jazz'),
+(5, 'HipHop'),
+(6, 'Rock Sinfónico'),
+(7, 'Heavy Metal'),
+(8, 'Hard Rock');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `orders`
+--
+
+CREATE TABLE `orders` (
+  `id_order` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `payment` varchar(20) NOT NULL,
+  `total` int(10) NOT NULL,
+  `id_user` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `first_name` varchar(20) NOT NULL,
+  `last_name` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `address` varchar(45) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `zip_code` int(10) NOT NULL,
+  `image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `albums`
+--
+ALTER TABLE `albums`
+  ADD PRIMARY KEY (`id_album`),
+  ADD KEY `id_artist` (`id_artist`),
+  ADD KEY `id_genre` (`id_genre`);
+
+--
+-- Indices de la tabla `artists`
+--
+ALTER TABLE `artists`
+  ADD PRIMARY KEY (`id_artist`),
+  ADD KEY `id_genre` (`id_genre`);
+
+--
+-- Indices de la tabla `detailorders`
+--
+ALTER TABLE `detailorders`
+  ADD PRIMARY KEY (`id_detailorder`),
+  ADD KEY `id_order` (`id_order`),
+  ADD KEY `id_album` (`id_album`);
+
+--
+-- Indices de la tabla `genres`
+--
+ALTER TABLE `genres`
+  ADD PRIMARY KEY (`id_genre`);
+
+--
+-- Indices de la tabla `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id_order`),
+  ADD KEY `id_user` (`id_user`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `albums`
+--
+ALTER TABLE `albums`
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT de la tabla `artists`
+--
+ALTER TABLE `artists`
+  MODIFY `id_artist` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de la tabla `detailorders`
+--
+ALTER TABLE `detailorders`
+  MODIFY `id_detailorder` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `genres`
+--
+ALTER TABLE `genres`
+  MODIFY `id_genre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `albums`
+--
+ALTER TABLE `albums`
+  ADD CONSTRAINT `albums_ibfk_1` FOREIGN KEY (`id_artist`) REFERENCES `artists` (`id_artist`),
+  ADD CONSTRAINT `albums_ibfk_2` FOREIGN KEY (`id_genre`) REFERENCES `genres` (`id_genre`);
+
+--
+-- Filtros para la tabla `artists`
+--
+ALTER TABLE `artists`
+  ADD CONSTRAINT `artists_ibfk_1` FOREIGN KEY (`id_genre`) REFERENCES `genres` (`id_genre`);
+
+--
+-- Filtros para la tabla `detailorders`
+--
+ALTER TABLE `detailorders`
+  ADD CONSTRAINT `detailorders_ibfk_1` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id_order`),
+  ADD CONSTRAINT `detailorders_ibfk_2` FOREIGN KEY (`id_album`) REFERENCES `albums` (`id_album`);
+
+--
+-- Filtros para la tabla `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
