@@ -16,7 +16,7 @@
     
     <div class="index-card contenedor-img-descripcion">
         <div class="index-card-image">    
-        <img src="/static/imagen/<%= vinilo.img %>" alt="">
+        <img src="/static/imagen/<%= album.imagen %>" alt="">
         </div>
 
 
@@ -25,24 +25,24 @@
 
 
 
-            <h4 class="tituloDisco"><%= vinilo.nombre%></h4>
-            <h4 class="tituloDisco"><%= vinilo.titulo%></h4>
+            <h4 class="tituloDisco"><%= album.name%></h4>
+            <h4 class="tituloDisco"><%= album.title%></h4>
             
-            <h3 class="precioDisco"> $ <%= vinilo.precio%></h3>  <i class="fas fa-shopping-cart"></i>
+            <h3 class="precioDisco"> $ <%= album.price%></h3>  <i class="fas fa-shopping-cart"></i>
         </article>
 
 
         <article class="descripcion">
             <ul>
-               <li>Nombre: <%= vinilo.nombre %></li> 
-               <li>Género: <%= vinilo.genero %></li>
-               <li>Sello: <%= vinilo.sello %></li>
-               <li>Año: <%= vinilo.año %></li>
+               <li>Nombre: <%= album.title %></li> 
+               <li>Género: <%= album.id_genre %></li>
+               <li>Sello: <%= album.company %></li>
+               <li>Año: <%= album.year %></li>
             </ul>
         </article>
         </div>
         
-        <form action="/products/delete/<%= vinilo.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <form action="/products/delete/<%= album.id_album %>?_method=DELETE" method="POST" enctype="multipart/form-data">
             <button type="submit">Eliminar</button>
         
 

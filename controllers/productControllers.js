@@ -2,18 +2,18 @@ const { generateKey } = require('crypto');
 const path = require('path');
 let db = require('../database/models');
 
-let productController = {
+let productController = {   
 
-    productList: function (req, res) {
+  productList: function (req, res) {
     db.Album.findAll()
-    .then(albumes => {
-      res.render('products', {albumes})
+    .then(album => {
+      res.render('products', {album})
     })
   },
 
- productCreate:(req,res)=>{
-    const genres = db.Genre.findAll()
-    const artist = db.Artist.findAll()
+  productCreate:(req,res)=>{
+    let genres = db.Genre.findAll()
+    let artist = db.Artist.findAll()
     Promise.all([genres, artist])
     .then( ([genres, artist]) => {
      res.render ("product-create-form", {genres, artist})
@@ -47,8 +47,41 @@ let productController = {
     })
     
   },
-  productDelete: function (req, res) {
-    Album.destroy({
+
+  productEdit: function (req, res) {
+    let genres = db.Genre.findAll()
+    let artist = db.Artist.findAll()
+    let albums = db.Album.findByPk(req.params.id)
+    Promise.all([albums, genres, artist])
+    .then( ([albumToEdit, genres, artist]) => {
+     res.render ("product-edit-form", {albumToEdit, genres, artist})
+  }) 
+  .catch(error => res.send(error))
+  }, 
+
+  productUpdate: function (req, res) {
+    db.Album.update ({
+      title: req.body.title,
+      company: req.body.company,
+      year: req.body.year,
+      price: req.body.price,
+      id_genre: req.body.genre,
+      id_artist: req.body.artist,
+      imagen: req.file ? req.file.filename : req.body.oldImagen,
+    }, {
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(() => res.redirect('/products'))
+    .catch(error => res.send(error))
+
+  },
+
+
+
+    productDelete: function (req, res) {
+    db.Album.destroy({
       where: {
         id : req.params.id
       }
@@ -56,9 +89,20 @@ let productController = {
     .then(() => res.redirect('/'))
     .catch(error => res.send(error))
   },
+
+  productDetail: function (req,res) {
+    db.Album.findByPk(req.params.id, {
+     // include : [{association : 'Genre'},
+      //           {association: 'Artist'}]
+    })
+    .then(album => {
+      res.render('productDetail', {album})
+    })
+    .catch(error => res.send(error))
+   
   
 }
-
+}
 module.exports = productController;
 
 
@@ -146,4 +190,6 @@ const productController={
   }
 
 
-module.exports = productController; */
+module.exports = productController; 
+
+*/

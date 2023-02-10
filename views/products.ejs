@@ -13,6 +13,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
   <link rel="stylesheet" href="/static/css/styles.css" />
+  <link rel="stylesheet" href="/static/css/stylesForm.css" />
   <title>Rocksphera</title>
 </head>
 
@@ -21,19 +22,23 @@
   <h3 class="index-h3">Productos</h3>
 
   <section class="index-section">
-
-        <% vinilos.forEach( vinilo=>{ %>
-          <div class="index-card">
-            <div class="index-card-image">
-              <a href="products/productDetail/<%=vinilo.id%>"> <img src="static/imagen/<%= vinilo.img %>" alt=""></a>
+    <h3 class="index-h3">LISTADO DE ALBUMS</h3>
+      <ul>
+        <% for ( let i =0; i < album.length; i++ ) { %>
+           <li>
+            <div class="index-card">
+                <div class="index-card-image">
+                  <a href="products/productDetail/<%=album.title%>"> 
+                </div>
             </div>
-          </div>
-          <div class="index-card-text">
-            <p>aca va una descripcion</p>
-          </div>
-          
-        
-          <%})%>
+           </li>
+
+           <div class="index-card-text">
+              <p>aca va una descripcion</p>
+           </div>
+                 
+          <% } %>
+      </ul>
 
     </section>
 

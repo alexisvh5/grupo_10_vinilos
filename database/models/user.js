@@ -1,7 +1,7 @@
 module.exports= (sequelize, dataTypes)=> { 
     let alias = "User"; 
     let columnas = {
-id:{
+id_user:{
 type: dataTypes.INTEGER,
 primaryKey: true,
 autoIncrement: true,

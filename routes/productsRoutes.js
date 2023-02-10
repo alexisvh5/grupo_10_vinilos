@@ -31,18 +31,18 @@ router.get('/create', productController.productCreate);
 router.post ('/',upload.single("imagen"),productController.productStore);
 
 //EDITAR UN PRODUCTO
-router.get('/:id/edit', productController.productList);
+router.get('/:id/edit', productController.productEdit);
 //router.put('/:id/edit', upload.single("imagen"), productController.productUpdate)
 //router.put('/', upload.any(),productController.productUpdate);
 
 //ELIMINAR UN PRODUCTO
 router.delete('/delete/:id', productController.productDelete);
-/*
 
-router.get("/productCart",productController.cart);
-router.get("/productDetail/:id",productController.detail)
-router.get("/productDetailrecome/:id", productController.detail);
-*/
+
+//router.get("/productCart",productController.cart);
+router.get("/productDetail/:id", productController.productDetail)
+//router.get("/productDetailrecome/:id", productController.detail);
+
 
 /*
 

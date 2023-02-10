@@ -24,7 +24,7 @@ id_genre:{
         timestamps: false
     };
 const Artist = sequelize.define(alias, columnas, config);
-
+/*
 Artist.associate = function (models) {
     Artist.hasMany(models.Album, {
         as: "albumArtist", //ver si esta bien ese nombre
@@ -32,7 +32,7 @@ Artist.associate = function (models) {
     })
 
 }
-
+*/
 
 return Artist 
 }
