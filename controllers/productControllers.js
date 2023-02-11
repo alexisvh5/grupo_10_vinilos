@@ -70,7 +70,7 @@ let productController = {
       imagen: req.file ? req.file.filename : req.body.oldImagen,
     }, {
       where: {
-        id: req.params.id
+        id_album: req.params.id_album
       }
     })
     .then(() => res.redirect('/products'))
@@ -83,7 +83,7 @@ let productController = {
     productDelete: function (req, res) {
     db.Album.destroy({
       where: {
-        id : req.params.id
+        id_album : req.params.id
       }
     })
     .then(() => res.redirect('/'))

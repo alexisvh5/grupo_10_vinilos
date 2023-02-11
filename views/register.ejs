@@ -1,137 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/stylesForm.css" >
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/stylesForm.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/static/css/styles.css" >
-   
-    <title>Rocksphere</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+
+  <title>Rocksphere</title>
 </head>
-<body>
-
-  
-  <%-include("./partials/header.ejs") %>
 
 <body>
-    <main>
-        <form class="formulario"action="/users/register" method="POST" enctype="multipart/form-data">
-        <h3 class="register-h3">Crea tu Cuenta</h3>
-        <div class="cajacampos">
-             <div>
+
+
+  <%-include(". /partials/header.ejs") %>
+
+    <body>
+      <main>
+        <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+          <h3 class="register-h3">Crea tu Cuenta</h3>
+          <div class="cajacampos">
+            <div>
               <label for="name" class="register-h4">Nombre y Apellido:</label>
-             <input 
-              type="text"
-              name="NombreyApellido" 
-              class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
-              value="<%= locals.oldData ? oldData.NombreyApellido : null %>"
-              />
+              <input type="text" name="NombreyApellido"
+                class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.NombreyApellido : null %>" />
               <% if (locals.errors && errors.NombreyApellido) { %>
                 <div class="text-danger">
-                <%= errors.NombreyApellido.msg %>
-              </div>
-              <% } %>
-             </div>
-             
+                  <%= errors.NombreyApellido.msg %>
+                </div>
+                <% } %>
+            </div>
 
-             <div>
+
+            <div>
               <label for="name" class="register-h4">E-mail:</label>
-             <input
-              type="e-mail"
-              name="email"
-              class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
-              value="<%= locals.oldData ? oldData.email : "" %>"/>
-                 
+              <input type="e-mail" name="email" class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.email : "" %>" />
+
               <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
-                <%= errors.email.msg %>
-              </div>
-              <% } %>
-             </div>
-             
-             <div>
+                  <%= errors.email.msg %>
+                </div>
+                <% } %>
+            </div>
+
+            <div>
               <label for="name" class="register-h4">Contraseña:</label>
-             <input 
-              type="password"
-              name="contrasena"
-              class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>"/>
-             
-              
+              <input type="password" name="contrasena"
+                class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" />
+
+
               <% if (locals.errors && errors.contrasena) { %>
                 <div class="text-danger">
-                <%= errors.contrasena.msg %>
-              </div>
-              <% } %>
-             </div>
+                  <%= errors.contrasena.msg %>
+                </div>
+                <% } %>
+            </div>
 
-             <div>
+            <div>
               <label for="name" class="register-h4">Confirmacion Contraseña:</label>
-             <input
-              type="password"
-              name="confirmacionContrasena"
-              class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>"
-              />   
+              <input type="password" name="confirmacionContrasena"
+                class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>" />
               <% if (locals.errors && errors.confirmarContrasena) { %>
                 <div class="text-danger">
-                <%= errors.confirmacionContrasena.msg %>
-              </div>
-              <% } %> 
-             </div>
-             
-             <div>
-                <label for="name" class="register-h4">Elegí tu categoria:</label>
-                <select class= "campo <%= locals.errors && errors.categoria ? 'is-invalid' : null %>" 
-                name="categoria" id="lang">
+                  <%= errors.confirmacionContrasena.msg %>
+                </div>
+                <% } %>
+            </div>
+
+            <div>
+              <label for="name" class="register-h4">Elegí tu categoria:</label>
+              <select class="campo <%= locals.errors && errors.categoria ? 'is-invalid' : null %>" name="categoria"
+                id="lang">
                 <option value="Rock">Rock</option>
                 <option value="Clásicos">Clásicos</option>
                 <option value="Metal">Metal</option>
                 <option value="Jazz">Jazz</option>
                 <option value="Blues">Blues</option>
-                </select> 
-                
-                
-                <% if (locals.errors && errors.categoria) { %>
-                  <div class="text-danger">
-                    <%= errors.categoria.msg %>
-                  </div>
-                  <% } %>
+              </select>
 
+
+              <% if (locals.errors && errors.categoria) { %>
+                <div class="text-danger">
+                  <%= errors.categoria.msg %>
                 </div>
-                
+                <% } %>
+
+            </div>
+
             <div>
               <label for="name" class="register-h4">Elegí tu foto de usuario:</label>
-                         
-                 <input 
-                 type="file"
-                 name="img"
-                 placeholder="Subi tu foto"
-                 class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>"
-                  >
+
+              <input type="file" name="img" placeholder="Subi tu foto"
+                class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>">
 
 
-            
-             
-             <div>
-             <button type="submit" class="button">Crear Cuenta</button> 
-             </div>
-             <div>
-             <button type="reset" class="button">Borrar</button>
-             </div>
-             <hr/>
-             <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
-             <p>¿Ya tienes cuenta?<a class="link" href="/users/login"> Iniciar sesión</a></p>
-             </div>
+
+
+              <div>
+                <button type="submit" class="button">Crear Cuenta</button>
+              </div>
+              <div>
+                <button type="reset" class="button">Borrar</button>
+              </div>
+              <hr />
+              <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
+              <p>¿Ya tienes cuenta?<a class="link" href="/users/login"> Iniciar sesión</a></p>
+            </div>
         </form>
-    </main>
+      </main>
 
-    <%-include("./partials/footer.ejs") %>
-    
+      <%-include(". /partials/footer.ejs") %>
+
     </body>
-    
-    
-    </html>
+
+
+</html>

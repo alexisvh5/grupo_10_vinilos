@@ -29,7 +29,7 @@ id_user:{
         timestamps: false
     };
 const Order = sequelize.define(alias, columnas, config);
-
+/*
 Order.associate = function (models) {
     Order.belongsTo(models.User, {
         as: "Users", 
@@ -42,5 +42,6 @@ Order.associate = function (models) {
     })
 
 }
+*/
 return Order
 }

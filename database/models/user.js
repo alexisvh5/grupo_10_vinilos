@@ -44,7 +44,7 @@ zip_code: {
         timestamps: false
     };
 const User = sequelize.define(alias, columnas, config);
-
+/*
 User.associate = function (models) {
     User.hasMany(models.Order, {
         as: "Orders", 
@@ -54,6 +54,6 @@ User.associate = function (models) {
 
 
 }
-
+*/
 return User 
 }

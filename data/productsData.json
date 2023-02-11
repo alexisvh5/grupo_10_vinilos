@@ -1,13 +1,13 @@
 [
  {
   "id": 1,
-  "nombre": "Pink floyd",
+  "nombre": "The Doors",
   "genero": "Rock",
-  "sello": "",
-  "año": 1994,
-  "precio": 4000,
-  "titulo": "The Wall",
-  "img": "the-wall-pink-floyd.jpg",
+  "sello": "Elektra Records",
+  "año": 1969,
+  "precio": 8990,
+  "titulo": 13,
+  "img": "13-the-doors.jpg",
   "recome": false
  },
  {
