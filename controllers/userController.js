@@ -3,6 +3,120 @@ let fs = require('fs');
 let path = require('path');
 const bcryptjs = require('bcryptjs');
 
+let db = require('../database/models');
+
+let userController = {
+
+  userList: (req, res) => {
+    db.User.findAll()
+      .then(user => {
+        res.render('userList', { user })
+      })
+  },
+
+  register: (req, res) => {
+    let genres = db.Genre.findAll()
+    //let artist = db.Artist.findAll()
+    //Promise.all([genres, artist])
+      .then((genres) => {
+        res.render("register", {genres})
+      })
+  },
+  
+    processRegister: function( req, res) {
+    let imagen;
+      console.log(req.file)
+    if(req.file != undefined) {
+      imagen = req.file.filename;
+    }else{
+      imagen = "13-the-doors.jpg"
+    }
+    console.log(req.body)
+      db.User.create({
+        name: req.body.NombreyApellido,
+        email: req.body.email,
+        contrasena: req.body.contrasena,
+        confContr: req.body.confirmacionContrasena,
+        id_genre: req.body.genre,
+        imagen: imagen
+  
+      }) 
+      .then(() => {
+        return res.redirect('/')
+      })
+      .catch(error => {
+        return  res.send(error)
+      })
+      
+    },
+
+    login: (req, res) => {
+      return res.render ("login")
+  },
+  profileEdit: (req, res) => {
+    let genres= db.Genre.findAll()
+    let user = db.User.findByPk(req.params.id)
+    Promise.all([user, genres])
+    .then( ([userToEdit, genres]) => {
+     res.render ("register-edit", {userToEdit, genres})
+  }) 
+  .catch(error => res.send(error))
+  }, 
+
+    
+  processLogin:(req, res)=>{
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+    return res.render ("login",{
+      errors: resultValidation.mapped(),
+    oldData: req.body,
+   })}
+   
+let userToLogin = user.findByField("email",req.body.email);
+
+
+if(userToLogin) {
+
+  let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
+
+if(isOkThePassword){
+
+delete  userToLogin.contrasena
+
+ req.session.userLogged= userToLogin;
+
+ if(req.body.remember_user){
+  res.cookie("userEmail", req.body.email,{maxAge: (1000*60)*60})
+ }
+ return res.redirect("/users/profile")
+
+}
+} 
+
+return res.render ("login",{
+  errors:{email:{msg:"Las credenciales son invalidas"}},oldData:req.body
+ })
+  },
+  profile:(req,res)=>{
+    console.log(req.cookies.userEmail)
+    res.render ("profile",{
+    user:req.session.userLogged
+   })},
+   logout: (req,res)=>{
+    res.clearCookie("userEmail");
+    req.session.destroy()
+  return res.redirect("/")}
+}
+
+  
+
+  module.exports = userController;
+
+
+/*
+
+ CONTROLLER CON JSON COMENTADO - SPRINT ANTERIOR
 
 let pathUsersJson = path.join(__dirname, "../data/users.json"); //datos en formato Json
 
@@ -113,3 +227,4 @@ return res.render ("login",{
 
 
 module.exports = userController;
+*/

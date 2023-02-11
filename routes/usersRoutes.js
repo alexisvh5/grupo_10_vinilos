@@ -65,12 +65,16 @@ const storage = multer.diskStorage ({
 
 var upload = multer({storage: storage});
 
-
+//LISTADO DE USUARIOS
+router.get('/list', userController.userList)
 
 //CREACION DE UN USUARIO - 
 router.get('/register', guestMiddleware, userController.register);
-router.post ('/register', upload.single('img'), validateCreateForm, userController.processRegister);
+router.post ('/register', upload.single('imagen'), validateCreateForm, userController.processRegister);
 
+//MODIFICACION PERFIL USUARIO
+router.get('/profileEdit/:id', userController.profileEdit);
+//router.post('/profileEdit', userController.profileStore);
 
 // LOGEO DE UN USUARIO 
 router.get('/login', guestMiddleware,userController.login);
