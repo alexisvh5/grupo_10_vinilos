@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/static/css/styles.css" />
-    <title>Detalle de producto</title>
-  </head>
-  <body>
-   
-    <%-include("./partials/header.ejs") %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <title>Detalle de producto</title>
+</head>
+
+<body>
+
+  <%-include(". /partials/header.ejs") %>
 
     <form action="products/productCart" method="POST">
       <div class="shopper">
         <h1>Mi carrito</h1>
         <div class="cart">
-<!--para agregar productos al carrito,imagen,descripcion,precio unitario con contador ,precio final y un remove por si quiere borrarlo-->
+          <!--para agregar productos al carrito,imagen,descripcion,precio unitario con contador ,precio final y un remove por si quiere borrarlo-->
           <div class="shop">
             <div class="box">
-              <img src="static/imagen/races-queen.jpg"/>
+              <img src="static/imagen/races-queen.jpg" />
 
               <div class="content">
                 <h3>Titulo</h3>
@@ -35,7 +34,7 @@
               </div>
             </div>
             <div class="box">
-              <img src="static/imagen/eric-clapton-for-sale.jpg"/>
+              <img src="static/imagen/eric-clapton-for-sale.jpg" />
 
               <div class="content">
                 <h3>Titulo</h3>
@@ -63,6 +62,7 @@
       </div>
     </form>
 
-    <%-include("./partials/footer.ejs") %>
-  </body>
+    <%-include(". /partials/footer.ejs") %>
+</body>
+
 </html>

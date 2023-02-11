@@ -5,106 +5,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/stylesForm.css" >
+    <link rel="stylesheet" href="/static/css/stylesForm.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
-  
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="/static/css/stylesForm.css" />
-  <link rel="stylesheet" href="/static/css/styles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/stylesForm.css" />
+    <link rel="stylesheet" href="/static/css/styles.css">
     <title>Rocksphera</title>
-    
+
 </head>
+
 <body>
-	
-    <form class = "formulario" action="/products/<%= albumToEdit.id%>" method="POST" enctype="multipart/form-data">
+
+    <form class="formulario" action="/products/<%= albumToEdit.id%>" method="POST" enctype="multipart/form-data">
         <h3 class="create-h3">Editar Producto</h3>
         <div class="cajacampos">
             <div>
                 <label for="name" class="register-h4">Titulo</label>
-                <input 
-                type="text"
-                 name="title"
-                 class="campo"
-                 value="<%= albumToEdit.title%>"
-                 required/>
+                <input type="text" name="title" class="campo" value="<%= albumToEdit.title%>" required />
             </div>
-    
+
             <div>
                 <label for="name" class="register-h4">Compañia</label>
-                <input 
-                 type="text"
-                 name="company"
-                 class="campo"
-                 value="<%= albumToEdit.company%>"
-                 required/>
+                <input type="text" name="company" class="campo" value="<%= albumToEdit.company%>" required />
             </div>
-    
+
             <div>
                 <label for="name" class="register-h4">Año</label>
-                <input 
-                 type="number"
-                 name="year"
-                 class="campo"
-                 value="<%= albumToEdit.year%>"
-                 required/>
+                <input type="number" name="year" class="campo" value="<%= albumToEdit.year%>" required />
             </div>
             <div>
                 <label for="name" class="register-h4">Precio</label>
-                <input 
-                 type="number"
-                 name="price"
-                 class="campo"
-                 value="<%= albumToEdit.price%>"
-                 required/>
+                <input type="number" name="price" class="campo" value="<%= albumToEdit.price%>" required />
             </div>
             <div>
-            <label for="name" class="register-h4">Género</label>
-        </div>
-        <div>
-            <select name="genre" style="width: 100%">
-                <option value="<%=albumToEdit.genre %>">Seleccione el género...</option>
-                <% for (let i = 0; i < genres.length; i++) { %>
-                <option value="<%=genres[i].id_genre%>">
-                    <%=genres[i].name%>
-                </option>
-                <% } %>
-            </select> 
-             required/>
-        </div>
-        <div>
-            <label for="name" class="register-h4">Artista</label>
-        </div>
+                <label for="name" class="register-h4">Género</label>
+            </div>
+            <div>
+                <select name="genre" style="width: 100%">
+                    <option value="<%=albumToEdit.genre %>">Seleccione el género...</option>
+                    <% for (let i=0; i < genres.length; i++) { %>
+                        <option value="<%=genres[i].id_genre%>">
+                            <%=genres[i].name%>
+                        </option>
+                        <% } %>
+                </select>
+                required/>
+            </div>
+            <div>
+                <label for="name" class="register-h4">Artista</label>
+            </div>
             <select name="artist" style="width: 100%">
-                <option value="<%=albumToEdit.artist %>" >Seleccione el artista...</option>
-                <% for (let i = 0; i < artist.length; i++) { %>
-                <option value="<%=artist[i].id_artist%>">
-                    <%=artist[i].name%>
-                </option>
-                <% } %>
-            </select> 
-             required/>
-
-        <div>
+                <option value="<%=albumToEdit.artist %>">Seleccione el artista...</option>
+                <% for (let i=0; i < artist.length; i++) { %>
+                    <option value="<%=artist[i].id_artist%>">
+                        <%=artist[i].name%>
+                    </option>
+                    <% } %>
+            </select>
+            required/>
 
             <div>
-                <label for="imagen" class="register-h4">Imagen</label>
-                <input 
-                 type="file"
-                 name="imagen"
-                 placeholder="Imagen"
-                 class="campo"
-                 required/>
+
+                <div>
+                    <label for="imagen" class="register-h4">Imagen</label>
+                    <input type="file" name="imagen" placeholder="Imagen" class="campo" required />
+                </div>
+
+
+                <button class="button">Guardar</button>
             </div>
-           
-           
-            <button class="button">Guardar</button>
-            </div>
-        </form>
-    
-        
-        <!-- /todos los productos -->
-    
-        
-    </body>	
-    </html>
+    </form>
+
+
+    <!-- /todos los productos -->
+
+
+</body>
+
+</html>

@@ -19,29 +19,23 @@
 
 <body>
 
-  <h3 class="index-h3">Productos</h3>
+ 
 
-  <section class="index-section">
+  
     <h3 class="index-h3">LISTADO DE ALBUMS</h3>
-      <ul>
-        <% for ( let i =0; i < album.length; i++ ) { %>
-           <li>
-            <div class="index-card">
-                <div class="index-card-image">
-                  <a href="products/productDetail/<%=album.title%>"> 
-                </div>
-            </div>
-           </li>
+    <ul>
+      <% for ( let i = 0; i < album.length; i++ ) { %>
+        <li class="index-h3">
+          <a href="/products/productDetail/<%=album[i].id_album%>"><%= album[i].title %></a> 
+        </li>
 
-           <div class="index-card-text">
-              <p>aca va una descripcion</p>
-           </div>
-                 
-          <% } %>
-      </ul>
+        
+        <% } %>
+    </ul>
 
-    </section>
+ 
 
 
-    </body>
-    </html>
+</body>
+
+</html>
