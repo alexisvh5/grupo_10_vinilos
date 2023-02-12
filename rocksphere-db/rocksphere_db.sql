@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-02-2023 a las 03:03:57
+-- Tiempo de generación: 12-02-2023 a las 19:55:09
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -33,7 +33,7 @@ CREATE TABLE `albums` (
   `company` varchar(20) NOT NULL,
   `year` smallint(4) NOT NULL,
   `price` int(10) NOT NULL,
-  `imagen` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
   `id_genre` int(11) NOT NULL,
   `id_artist` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -42,7 +42,7 @@ CREATE TABLE `albums` (
 -- Volcado de datos para la tabla `albums`
 --
 
-INSERT INTO `albums` (`id_album`, `title`, `company`, `year`, `price`, `imagen`, `id_genre`, `id_artist`) VALUES
+INSERT INTO `albums` (`id_album`, `title`, `company`, `year`, `price`, `image`, `id_genre`, `id_artist`) VALUES
 (1, '13', 'Elektra Records', 1969, 8990, '13-the-doors.jpg', 1, 3),
 (2, 'Abbey Road', 'Columbia Records', 1969, 9990, 'abbey-road-the-beatles.jpg', 1, 1),
 (3, 'Born in the USA', 'Columbia Records', 1984, 7990, 'born-bruce-springsteen.jpg', 1, 6),
@@ -59,7 +59,8 @@ INSERT INTO `albums` (`id_album`, `title`, `company`, `year`, `price`, `imagen`,
 (14, 'The Wall', 'Columbia Records', 1979, 11590, 'the-wall-pink-floyd.jpg', 1, 2),
 (15, 'Tommy', 'Sound Lab records', 1969, 11990, 'tommy-the-who.jpg', 6, 14),
 (16, 'Weird', 'Columbia Records', 1967, 7990, 'weird-the-doors.jpg', 1, 3),
-(17, 'Wish You Were Here', 'Columbia Records', 1975, 10990, 'wish-pink-floyd.jpg', 1, 2);
+(17, 'Wish You Were Here', 'Columbia Records', 1975, 10990, 'wish-pink-floyd.jpg', 1, 2),
+(18, 'Changes One', 'RCA Records', 1976, 11990, 'imagen-1676081467503.jpg', 3, 10);
 
 -- --------------------------------------------------------
 
@@ -154,12 +155,12 @@ CREATE TABLE `orders` (
 
 CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
-  `last_name` varchar(20) NOT NULL,
+  `name` varchar(40) NOT NULL,
   `email` varchar(20) NOT NULL,
   `address` varchar(45) NOT NULL,
-  `city` varchar(20) NOT NULL,
-  `zip_code` int(10) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `passConfirm` varchar(20) NOT NULL,
+  `id_genre` int(11) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -207,7 +208,8 @@ ALTER TABLE `orders`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `id_genre` (`id_genre`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -217,7 +219,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `albums`
 --
 ALTER TABLE `albums`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `artists`
@@ -278,6 +280,12 @@ ALTER TABLE `detailorders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_genre`) REFERENCES `genres` (`id_genre`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
