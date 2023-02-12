@@ -35,6 +35,9 @@ router.get('/edit/:id', productController.productEdit);
 router.post('/edit/:id', upload.single("imagen"), productController.productUpdate)
 //router.put('/', upload.any(),productController.productUpdate);
 
+//BUSCAR UN PRODUCTO
+router.get('/search_results', productController.productSearch);
+
 //ELIMINAR UN PRODUCTO
 router.delete('/delete/:id', productController.productDelete);
 

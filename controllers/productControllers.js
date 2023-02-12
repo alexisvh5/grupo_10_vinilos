@@ -1,34 +1,36 @@
 const { generateKey } = require('crypto');
 const path = require('path');
 let db = require('../database/models');
+//Con esto se logra activar los operadores en sus querys (like - count - max)
+const Op = db.Sequelize.Op;
 
-let productController = {   
+let productController = {
 
   productList: function (req, res) {
     db.Album.findAll()
-    .then(album => {
-      res.render('products', {album})
-    })
+      .then(album => {
+        res.render('products', { album })
+      })
   },
 
-  productCreate:(req,res)=>{
+  productCreate: (req, res) => {
     let genres = db.Genre.findAll()
     let artist = db.Artist.findAll()
     Promise.all([genres, artist])
-    .then( ([genres, artist]) => {
-     res.render ("product-create-form", {genres, artist})
-  }) 
-  }, 
+      .then(([genres, artist]) => {
+        res.render("product-create-form", { genres, artist })
+      })
+  },
 
-  productStore: function( req, res) {
-  let imagen;
+  productStore: function (req, res) {
+    let imagen;
     console.log(req.file)
-  if(req.file != undefined) {
-    imagen = req.file.filename;
-  }else{
-    imagen = "13-the-doors.jpg"
-  }
-  console.log(req.body)
+    if (req.file != undefined) {
+      imagen = req.file.filename;
+    } else {
+      imagen = "13-the-doors.jpg"
+    }
+    console.log(req.body)
     db.Album.create({
       title: req.body.title,
       company: req.body.company,
@@ -38,14 +40,14 @@ let productController = {
       id_artist: req.body.artist,
       imagen: imagen
 
-    }) 
-    .then(() => {
-      return res.redirect('/')
     })
-    .catch(error => {
-      return  res.send(error)
-    })
-    
+      .then(() => {
+        return res.redirect('/')
+      })
+      .catch(error => {
+        return res.send(error)
+      })
+
   },
 
   productEdit: function (req, res) {
@@ -53,14 +55,14 @@ let productController = {
     let artist = db.Artist.findAll()
     let albums = db.Album.findByPk(req.params.id)
     Promise.all([albums, genres, artist])
-    .then( ([albumToEdit, genres, artist]) => {
-     res.render ("product-edit-form", {albumToEdit, genres, artist})
-  }) 
-  .catch(error => res.send(error))
-  }, 
+      .then(([albumToEdit, genres, artist]) => {
+        res.render("product-edit-form", { albumToEdit, genres, artist })
+      })
+      .catch(error => res.send(error))
+  },
 
   productUpdate: function (req, res) {
-    db.Album.update ({
+    db.Album.update({
       title: req.body.title,
       company: req.body.company,
       year: req.body.year,
@@ -73,35 +75,50 @@ let productController = {
         id_album: req.params.id_album
       }
     })
-    .then(() => res.redirect('/products'))
-    .catch(error => res.send(error))
+      .then(() => res.redirect('/products'))
+      .catch(error => res.send(error))
 
   },
 
 
 
-    productDelete: function (req, res) {
+  productDelete: function (req, res) {
     db.Album.destroy({
       where: {
-        id_album : req.params.id
+        id_album: req.params.id
       }
     })
-    .then(() => res.redirect('/'))
-    .catch(error => res.send(error))
+      .then(() => res.redirect('/'))
+      .catch(error => res.send(error))
   },
 
-  productDetail: function (req,res) {
+  productDetail: function (req, res) {
     db.Album.findByPk(req.params.id, {
-     // include : [{association : 'Genre'},
+      // include : [{association : 'Genre'},
       //           {association: 'Artist'}]
     })
-    .then(album => {
-      res.render('productDetail', {album})
+      .then(album => {
+        res.render('productDetail', { album })
+      })
+      .catch(error => res.send(error))
+
+
+  },
+  productSearch: (req, res) => {
+    db.Album.findAll({
+      where: {
+        title: { [Op.like]: `%${req.query.search}%` }
+      }
     })
-    .catch(error => res.send(error))
-   
-  
-}
+      .then(resultado => {
+        res.render('products', { album: resultado });
+      })
+      .catch(error => res.send(error))
+
+
+  }
+
+
 }
 module.exports = productController;
 
@@ -133,11 +150,11 @@ const productController={
 
   },
   productDelete:(req,res)=>{ 
-		let id = req.params.id;
-		let finalProducts = vinilos.filter(product => product.id != id);
-		fs.writeFileSync(pathJson, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/');
-	},
+    let id = req.params.id;
+    let finalProducts = vinilos.filter(product => product.id != id);
+    fs.writeFileSync(pathJson, JSON.stringify(finalProducts, null, ' '));
+    res.redirect('/');
+  },
   productCreate:(req,res)=>{
     res.render ("product-create-form")
 
