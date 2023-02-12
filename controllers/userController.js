@@ -37,6 +37,7 @@ let userController = {
         email: req.body.email,
         contrasena: req.body.contrasena,
         confContr: req.body.confirmacionContrasena,
+        address: req.body.domicilio,
         id_genre: req.body.genre,
         imagen: imagen
   

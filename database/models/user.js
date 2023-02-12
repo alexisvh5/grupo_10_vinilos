@@ -28,6 +28,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
 
         },
+        address: {
+            type: dataTypes.STRING,
+            allowNull: false
+
+        },
         
         id_genre: {
             type: dataTypes.INTEGER,
