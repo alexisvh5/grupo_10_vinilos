@@ -75,6 +75,18 @@
             </div>
 
             <div>
+              <label for="name" class="register-h4">Domicilio:</label>
+              <input type="text" name="domicilio"
+                class="campo <%=locals.errors && errors.domicilio ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.domicilio : null %>" />
+              <% if (locals.errors && errors.domicilio) { %>
+                <div class="text-danger">
+                  <%= errors.domicilio.msg %>
+                </div>
+                <% } %>
+            </div>
+
+            <div>
               <label for="name" class="register-h4">Elegí tu genero...</label>
               <div>
                 <select name="genre" style="width: 100%">
