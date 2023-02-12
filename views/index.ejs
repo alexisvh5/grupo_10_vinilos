@@ -18,31 +18,51 @@
 
 <body>
 
+  <div class="container-fluid p-0">
+
   <%- include("./partials/header.ejs") %> 
 
 
 
 
-  carrusel aca
+
 
   <h3 class="index-h3">Nuestros Recomendados</h3>
 
-  <section class="index-section">
 
-        <% vinilos.forEach( vinilo=>{ %>
-          <div class="index-card">
-            <div class="index-card-image">
-              <a href="/products/productDetail/<%=vinilo.id%>"> <img src="/static/imagen/<%= vinilo.img %>" alt=""></a>
-            </div>
-          </div>
-          <div class="index-card-text">
-            <p>aca va una descripcion</p>
-          </div>
-          
+<section class="index-section">
+
+  <% vinilos.forEach( vinilo=>{ %>
+
+    <div class="index-card">
+      <div class="index-card-image">
+        <img src="/static/imagen/<%= vinilo.img %>" alt="">
+        <p class="parrafo-card-nombre"><%= vinilo.nombre %></p>
+        <p class="parrafo-card-genero">Género: <%= vinilo.genero %>
+        </p>
+        <p class="parrafo-card-precio">Precio: $<%= vinilo.precio %>
+        </p>
+
+        <a  href="/products/productDetail/<%=vinilo.id%>"><button class="button_card" type="button"
+            >Comprar</button></a>
+        <br>
+      </div>
+    </div>
+    <div class="index-card-text">
+
+    </div>
+
+
+    <%})%>
+
+
+</section>
+
+      
+
         
-          <%})%>
 
-    </section>
+   
 
     <h3 class="index-h3">Una Oportunidad Increible</h3>
 
@@ -54,7 +74,7 @@
         </div>
       </div>
       <div class="index-card-text">
-        <p>aca va una descripcion</p>
+      
       </div>
       
     
@@ -62,6 +82,9 @@
 
 
       <%-include("./partials/footer.ejs") %>
+
+    </div>
+     
 </body>
 
 
