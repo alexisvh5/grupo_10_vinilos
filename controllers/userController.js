@@ -64,6 +64,26 @@ let userController = {
   .catch(error => res.send(error))
   }, 
 
+  profileStore: (req, res) => {
+    db.User.update({
+        name: req.body.NombreyApellido,
+        email: req.body.email,
+        contrasena: req.body.contrasena,
+        confContr: req.body.confirmacionContrasena,
+        address: req.body.domicilio,
+        id_genre: req.body.genre,
+        imagen: req.file ? req.file.filename : req.body.oldImagen,
+    }, {
+      where: {
+        id_user: req.params.id
+      }
+    })
+    .then(() => res.redirect('/'))
+    .catch(error => res.send(error))
+    
+
+  },
+
     
   processLogin:(req, res)=>{
     const resultValidation = validationResult(req);

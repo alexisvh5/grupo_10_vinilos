@@ -22,7 +22,8 @@
 
     <body>
       <main>
-        <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+        <form class="formulario" action="/users/profileEdit/<%=userToEdit.id_user%>?_method=PUT
+          " method="POST" enctype="multipart/form-data" >
           <h3 class="register-h3">Editá tu Cuenta</h3>
           <div class="cajacampos">
             <div>

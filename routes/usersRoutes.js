@@ -74,7 +74,7 @@ router.post ('/register', upload.single('imagen'), validateCreateForm, userContr
 
 //MODIFICACION PERFIL USUARIO
 router.get('/profileEdit/:id', userController.profileEdit);
-//router.post('/profileEdit', userController.profileStore);
+router.put('/profileEdit/:id', upload.single("imagen"),userController.profileStore);
 
 // LOGEO DE UN USUARIO 
 router.get('/login', guestMiddleware,userController.login);
