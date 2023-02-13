@@ -18,7 +18,9 @@
 
 <body>
 
-    <form class="formulario" action="/products/<%= albumToEdit.id%>" method="POST" enctype="multipart/form-data">
+    <form class="formulario" action="/products/edit/<%= albumToEdit.id_album%>?_method=PUT
+        " method="POST" enctype="multipart/form-data" >
+
         <h3 class="create-h3">Editar Producto</h3>
         <div class="cajacampos">
             <div>

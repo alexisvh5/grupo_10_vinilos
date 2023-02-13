@@ -72,8 +72,7 @@ let productController = {
       imagen: req.file ? req.file.filename : req.body.oldImagen,
     }, {
       where: {
-        id_album: req.params.id_album
-      }
+        id_album: req.params.id      }
     })
       .then(() => res.redirect('/products'))
       .catch(error => res.send(error))
@@ -94,7 +93,7 @@ let productController = {
 
   productDetail: function (req, res) {
     db.Album.findByPk(req.params.id, {
-      // include : [{association : 'Genre'},
+      //include : {association : 'Genre'},
       //           {association: 'Artist'}]
     })
       .then(album => {

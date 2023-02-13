@@ -32,7 +32,7 @@ router.post ('/',upload.single("imagen"),productController.productStore);
 
 //EDITAR UN PRODUCTO
 router.get('/edit/:id', productController.productEdit);
-router.post('/edit/:id', upload.single("imagen"), productController.productUpdate)
+router.put('/edit/:id', upload.single("imagen"), productController.productUpdate)
 //router.put('/', upload.any(),productController.productUpdate);
 
 //BUSCAR UN PRODUCTO
