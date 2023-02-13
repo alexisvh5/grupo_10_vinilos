@@ -66,6 +66,14 @@ width: 20px;
 
 /**FIN HEADER*/
 
+/** CARRUSEL**/
+
+._imagen-carousel {
+    background-size: contain;
+}
+
+/** FIN CARRUSEL **/
+
 /* CARDS INDEX*/
 
 .index-section {
