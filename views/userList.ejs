@@ -16,25 +16,36 @@
   <link rel="stylesheet" href="/static/css/stylesForm.css" />
   <title>Rocksphera</title>
 </head>
-
+<%-include("./partials/header.ejs") %>
 <body>
 
- 
 
-  
-    <h3 class="index-h3">LISTADO DE USUARIOS</h3>
+
+
+  <h3 class="index-h3">LISTADO DE USUARIOS</h3>
+
+  <article class="index-h3">
     <ul>
-      <% for ( let i = 0; i < user.length; i++ ) { %>
-        <li class="index-h3">
-          <a href="#"<%=user[i].id_user%>><%= user[i].name %></a> 
-        </li>
+      <% for ( let i=0; i < user.length; i++ ) { %>
 
-        
+        <li>Nombre: <%= user[i].name %>
+        </li>
+        <ul>
+
+          <li>Email: <%= user[i].email %>
+          </li>
+          <li>Domicilio: <%= user[i].address %>
+          </li>
+          <li>Genero: <%= user[i].id_genre%>
+          </li>
+        </ul>
+
         <% } %>
     </ul>
+  </article>
 
- 
 
+  <%-include("./partials/footer.ejs") %>
 
 </body>
 

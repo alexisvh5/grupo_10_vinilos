@@ -27,96 +27,81 @@
           <div class="cajacampos">
             <div>
               <label for="name" class="register-h4">Nombre y Apellido:</label>
-              <input type="text" name="NombreyApellido"
-                class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
-                value="<%= locals.oldData ? oldData.NombreyApellido : null %>" />
-              <% if (locals.errors && errors.NombreyApellido) { %>
-                <div class="text-danger">
-                  <%= errors.NombreyApellido.msg %>
-                </div>
-                <% } %>
+              <input type="text" name="NombreyApellido" class="campo" value="<%=userToEdit.name%>" required />
             </div>
 
 
             <div>
               <label for="name" class="register-h4">E-mail:</label>
-              <input type="e-mail" name="email" class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
-                value="<%= locals.oldData ? oldData.email : "" %>" />
+              <input type="e-mail" name="email" class="campo" value="<%= userToEdit.email%>" required />
 
-              <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                  <%= errors.email.msg %>
-                </div>
-                <% } %>
             </div>
 
             <div>
               <label for="name" class="register-h4">Contraseña:</label>
-              <input type="password" name="contrasena"
-                class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" />
+              <input type="password" name="contrasena" class="campo" value="<%= userToEdit.contrasena%>" required />
 
-
-              <% if (locals.errors && errors.contrasena) { %>
-                <div class="text-danger">
-                  <%= errors.contrasena.msg %>
-                </div>
-                <% } %>
             </div>
 
             <div>
               <label for="name" class="register-h4">Confirmacion Contraseña:</label>
               <input type="password" name="confirmacionContrasena"
-                class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>" />
-              <% if (locals.errors && errors.confirmarContrasena) { %>
-                <div class="text-danger">
-                  <%= errors.confirmacionContrasena.msg %>
-                </div>
-                <% } %>
+                class="campo" value="<%= userToEdit.confContr%>" required />
+
             </div>
+            <div>
+              <label for="name" class="register-h4">Domicilio</label>
+              <input type="text" name="domicilio"
+                class="campo" value="<%= userToEdit.address%>" required />
+
+            </div>
+
+
+              
 
             <div>
               <label for="name" class="register-h4">Elegí tu genero...</label>
               <div>
                 <select name="genre" style="width: 100%">
-                    <option value="#">Seleccione el género...</option>
-                    <% for (let i=0; i < genres.length; i++) { %>
-                        <option value="<%=genres[i].id_genre%>">
-                            <%=genres[i].name%>
-                        </option>
-                        <% } %>
+                  <option value="#">Seleccione el género...</option>
+                  <% for (let i=0; i < genres.length; i++) { %>
+                    <option value="<%=genres[i].id_genre%>">
+                      <%=genres[i].name%>
+                    </option>
+                    <% } %>
                 </select>
                 required/>
-            </div>
-            <div>
+              </div>
+              <div>
 
 
-              <% if (locals.errors && errors.categoria) { %>
-                <div class="text-danger">
-                  <%= errors.categoria.msg %>
+                <% if (locals.errors && errors.categoria) { %>
+                  <div class="text-danger">
+                    <%= errors.categoria.msg %>
+                  </div>
+                  <% } %>
+
+              </div>
+
+              <div>
+                <label for="name" class="register-h4">Elegí tu foto de usuario:</label>
+
+                <input type="file" name="imagen" placeholder="Subi tu foto"
+                  class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>">
+
+
+
+
+                <div>
+                  <button type="submit" class="button">Guardar cambios</button>
                 </div>
-                <% } %>
-
-            </div>
-
-            <div>
-              <label for="name" class="register-h4">Elegí tu foto de usuario:</label>
-
-              <input type="file" name="imagen" placeholder="Subi tu foto"
-                class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>">
-
-
-
-
-              <div>
-                <button type="submit" class="button">Crear Cuenta</button>
+                <div>
+                  <button type="reset" class="button">Borrar</button>
+                </div>
+                <hr />
+                <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
+                <p>¿Ya tienes cuenta?<a class="link" href="/users/login"> Iniciar sesión</a></p>
               </div>
-              <div>
-                <button type="reset" class="button">Borrar</button>
-              </div>
-              <hr />
-              <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
-              <p>¿Ya tienes cuenta?<a class="link" href="/users/login"> Iniciar sesión</a></p>
-            </div>
         </form>
       </main>
 
