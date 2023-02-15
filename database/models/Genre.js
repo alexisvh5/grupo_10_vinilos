@@ -1,32 +1,34 @@
-module.exports= (sequelize, dataTypes)=> { 
-    let alias = "Genre"; 
+module.exports = (sequelize, dataTypes) => {
+    let alias = "Genre";
     let columnas = {
-id_genre:{
-type: dataTypes.INTEGER,
-primaryKey: true,
-autoIncrement: true,
-allowNull: false
-},
-name: {
-    type: dataTypes.STRING,
-    allowNull: false
-},
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
+        },
+        name: {
+            type: dataTypes.STRING,
+            allowNull: false
+        },
 
     };
 
     let config = {
-
-        timestamps: false
-    };
-const Genre = sequelize.define(alias, columnas, config); // aca cambie el nombre de la variable User por Genre
-/*
-Genre.associate = function (models) {
-    Genre.hasMany(models.Album, {
-        as: "Album", //ver si esta bien ese nombre
+        tablename: "genres",
+        timestamps: false,
         
-    })
 
-}
-*/
-return Genre
+    };
+    const Genre = sequelize.define(alias, columnas, config); // aca cambie el nombre de la variable User por Genre
+
+    Genre.associate = function (models) {
+        Genre.hasMany(models.Album, {
+            as: "Album", //ver si esta bien ese nombre
+
+        })
+
+    }
+
+    return Genre
 }

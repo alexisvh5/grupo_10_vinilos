@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Album";
     let cols = {
 
-        id_album: {
+        id: {
             type: dataTypes.INTEGER(11),
             primaryKey: true,
             autoIncrement: true,
@@ -29,12 +29,12 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
 
         },
-        id_genre: {
+        idGenre: {
             type: dataTypes.INTEGER,
             allowNull: false
 
         },
-        id_artist: {
+        idArtist: {
             type: dataTypes.INTEGER,
             allowNull: false
 
@@ -46,23 +46,27 @@ module.exports = (sequelize, dataTypes) => {
     
     }
     let config = { 
-        timestamps: false
+        tablename: "albums",
+        timestamps: false,
+        
+
     }
 
 const Album = sequelize.define(alias, cols, config);
-/*
+
 Album.associate = function (models) {
     Album.belongsTo(models.Genre, {
         as: "Genre", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
-        foreingKey: 'id_genre'
+        foreingKey: 'idGenre'
     })
-}
+
 
     Album.belongsTo(models.Artist, {
         as: "artist", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
-        foreingKey: 'id_artist'
+        foreingKey: 'idArtist'
     })
-
+}
+/*
     Album.hasMany(models.Detailorder, {
         as: "AlbumDetail",
         foreingKey: "id_album"

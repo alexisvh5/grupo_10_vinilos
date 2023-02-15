@@ -68,8 +68,8 @@ let userController = {
     db.User.update({
         name: req.body.NombreyApellido,
         email: req.body.email,
-        contrasena: req.body.contrasena,
-        confContr: req.body.confirmacionContrasena,
+        contrasena: req.body.bcryptjs.hashSync(req.body.contrasena,10),
+        confContr: req.body.bcryptjs.hashSync(req.body.confirmacionContrasena,10),
         address: req.body.domicilio,
         id_genre: req.body.genre,
         imagen: req.file ? req.file.filename : req.body.oldImagen,

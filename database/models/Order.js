@@ -1,7 +1,7 @@
 module.exports= (sequelize, dataTypes)=> { 
     let alias = "Order"; 
     let columnas = {
-id_order:{
+id:{
 type: dataTypes.INTEGER(11),
 primaryKey: true,
 autoIncrement: true
@@ -18,7 +18,7 @@ total: {
     type:dataTypes.INTEGER,
     allowNull: false
 },
-id_user:{
+idUser:{
     type: dataTypes.INTEGER,
     allowNull: false
 }
