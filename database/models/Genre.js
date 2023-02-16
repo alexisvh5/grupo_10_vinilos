@@ -24,8 +24,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Genre.associate = function (models) {
         Genre.hasMany(models.Album, {
-            as: "Album", //ver si esta bien ese nombre
-            foreingKey: 'idGenre'
+            as: "album", //ver si esta bien ese nombre
+            foreignKey: 'idGenre'
 
         })
 

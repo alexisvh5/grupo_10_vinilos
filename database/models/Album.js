@@ -56,14 +56,14 @@ const Album = sequelize.define(alias, cols, config);
 
 Album.associate = function (models) {
     Album.belongsTo(models.Genre, {
-        as: "Genre", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
-        foreingKey: 'idGenre'
+        as: "genre", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
+        foreignKey: 'idGenre'
     })
 
 
     Album.belongsTo(models.Artist, {
         as: "artist", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
-        foreingKey: 'idArtist'
+        foreignKey: 'idArtist'
     })
 }
 /*

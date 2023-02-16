@@ -28,8 +28,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Artist.associate = function (models) {
         Artist.hasMany(models.Album, {
-            as: "albumArtist", //ver si esta bien ese nombre
-            foreingKey: 'idArtist'
+            as: "album", //ver si esta bien ese nombre
+            foreignKey: 'idArtist'
         })
 
     }
