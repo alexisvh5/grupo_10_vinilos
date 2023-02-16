@@ -93,11 +93,11 @@ let productController = {
 
   productDetail: function (req, res) {
     db.Album.findByPk(req.params.id, {
-      include : [{association : 'genre'},
+      include : [ {association : 'genre'},
                  {association: 'artist'}]
     })
       .then(album => {
-        res.render('productDetail', { album, genre, artist })
+        res.render('productDetail', { album })
       })
       .catch(error => res.send(error))
 

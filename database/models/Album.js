@@ -56,13 +56,13 @@ const Album = sequelize.define(alias, cols, config);
 
 Album.associate = function (models) {
     Album.belongsTo(models.Genre, {
-        as: "genre", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
+        as: "genre", //nombre en minuscula y lo uso en include, association en controllers
         foreignKey: 'idGenre'
     })
 
 
     Album.belongsTo(models.Artist, {
-        as: "artist", //ver si esta bien ese nombre. Eso lo uso por ej en controlador con un findAll
+        as: "artist", //nombre en minuscula y lo uso en include, association en controllers
         foreignKey: 'idArtist'
     })
 }
