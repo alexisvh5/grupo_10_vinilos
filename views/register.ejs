@@ -89,10 +89,10 @@
            
 
             <div>
-              <label for="name" class="register-h4">Elegí tu genero...</label>
+              <label for="name" class="register-h4">Elegí tu genero favorito:</label>
               <div>
-                <select name="genre" style="width: 100%">
-                    <option value="#">Seleccione el género...</option>
+                <select name="genre" style="width: 100% ;height:42px">
+                    <option value="#"></option>
                     <% for (let i=0; i < genres.length; i++) { %>
                         <option value="<%=genres[i].id_genre%>">
                             <%=genres[i].name%>
