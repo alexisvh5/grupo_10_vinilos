@@ -9,7 +9,80 @@ body {
 }
 
 /*HEADER*/ 
+nav{
+   
+	background: #666;
+    width:100%;
+    height:120px;
+    box-sizing: border-box;
+    display:flex;
+}
+.imagen-header {
+    width:30%;
+    margin-top: 5px;
+    margin-left: 20px;
+    
+}
+.nav-links{
+    width:80%;
+    display:flex;
+    margin-right: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+.nav-links li a{
+   
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    padding:20px 10px;
+    font-weight:400;
+    
 
+}
+.nav-links li a user{
+    cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 5px;
+    font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	
+    margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+.nav-links li i {
+    color:white;
+    font-size: 20px;
+    
+}
+.nav-links li a user:hover{
+    color:#00aced;
+}
+/*style para hamburguer*/
+.hamburguer div{
+    width:30px;
+    height: 3px;
+    background-color:white;
+    margin:5px;
+    transition: all 0.35s ease;
+}	
+.hamburguer{
+    display:none;
+}
+/*FIN HEADER NUEVO*/
+
+
+    
+
+
+
+
+/*
 header{
     background-color:grey;
     margin:auto;
@@ -59,7 +132,7 @@ width: 20px;
     margin-top: 20px;
     margin-left: 30px;
     
-}
+}*/
 
 
 
@@ -295,7 +368,7 @@ footer{
 
     bottom: 0;
     width: 100%;
-    background-color: #053742;
+   
 }
 .footer-vinilos{
 	background: #666;
@@ -323,16 +396,13 @@ footer{
 .footer-vinilos .footer-left .imagen-header{
 	width: 40%;
     margin:0;
-   /* border:solid 1px red;*/
+ 
 }
-
-/* The company logo */
-
 .footer-vinilos h3{
 	color:  #ffffff;
-	
 	margin: 0;
 }
+
 
 
 /* Footer links */
@@ -351,18 +421,13 @@ footer{
 	color:  inherit;
 }
 
-.footer-vinilos .footer-rocksphere{
-	color: #ffff;
-	font-size: 14px;
-	font-weight: 400;
-	margin: 0;
-}
+
 
 /* Footer Center */
 
 .footer-vinilos .footer-center{
 	width: 35%;
-    /*border:solid 1px red;*/
+  
 }
 
 .footer-vinilos .footer-center i{
@@ -429,7 +494,7 @@ footer{
 
 .footer-vinilos .footer-right{
 	width: 20%;
-   /* border:solid 1px red;*/
+    padding-top:20px;
 }
 
 .footer-vinilos .footer-company-about{
@@ -459,13 +524,11 @@ footer{
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 5px;
-
-	font-size: 20px;
+    font-size: 20px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
-	margin-right: 3px;
+    margin-right: 3px;
 	margin-bottom: 5px;
 }
 .footer-icons a.facebook:hover
@@ -480,6 +543,13 @@ footer{
 {
   background-color:#e46408
 }
+.footer-vinilos .footer-rocksphere{
+	color: #ffff;
+	font-size: 12px;
+	font-weight: 400;
+    text-align: center;
+	margin-top:10px;
+}
 @media (max-width: 880px) {
 
 	.footer-vinilos{
@@ -487,30 +557,30 @@ footer{
 	}
 
 	.footer-vinilos .footer-left,
-	.footer-vinilos .footer-center,
 	.footer-vinilos .footer-right{
 		display: block;
 		width: 100%;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 		text-align: center;
 	}
+    .footer-company-about{
+        text-align: center;
+        padding:0 100px;
+    }
 
 	.footer-vinilos .footer-center i{
 		margin-left: 0;
         text-align: center;
 	}
-
-}
-/*FIN FOOTER*/
-
-
-
-
-
-
-
-
-.footer-fixed{
+    .footer-vinilos .footer-center{
+        display:none;
+    }
+    .footer-vinilos .footer-links{
+        color:  #ffffff;
+        margin-top: 0px;
+        padding: 0;
+    }
+   .footer-fixed{
     position: fixed;
     color: white;
     right:40px;
@@ -518,7 +588,83 @@ footer{
     font-size:30px;
     color: greenyellow;
     
-}/*
+}
+}
+/*FIN FOOTER*/
+@media (max-width: 880px) {
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburguer{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%,-50%);
+        z-index:2;
+        transition: all 0.7s ease;
+
+    }
+    .imagen-header {
+        width:40%;
+        margin-top: 2px;
+        margin-left: 50px;
+      
+        
+    }
+     .nav-links{
+        background-color:rgb(70, 66, 66);
+        position: fixed;
+        opacity: 1;
+        height:100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+     }
+
+     .nav-links.open{
+        clip-path: circle(1000px al 90% -10%);
+        -webkit-clip-path: circle(1000px al 90% -10%);
+        pointer-events: all;
+
+     }
+     .nav-links li{
+        opacity: 0;
+     }
+     .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+     }
+     .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+     }
+     .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.5s;
+     }
+     .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.6s;
+        margin:0;
+
+     }
+     .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.7s;
+     }
+     .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.8s;
+     }
+      .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+     }
+     li.fade{
+        opacity: 1;
+     }
+
+
+/*
 
 .footer-fixed:hover {
     transition: .6s;
@@ -552,7 +698,7 @@ footer{
 
 
 /*FIN FOOTER */
-
+}
 /*----product detail----*/
 .tituloPrecio{
     display: flex;
