@@ -220,7 +220,7 @@ width: 20px;
     left: 60%;
     top: 90%;
    border: none;
-border-radius: 50%;
+   border-radius: 50%;
     background-color:rgb(183, 130, 232);
     color: rgb(244, 242, 242);
     transition: all 100ms ease;
@@ -550,6 +550,15 @@ footer{
     text-align: center;
 	margin-top:10px;
 }
+.footer-fixed{
+    position: fixed;
+    color: white;
+    right:40px;
+    bottom: 40px;
+    font-size:30px;
+    color: greenyellow;
+    
+}
 @media (max-width: 880px) {
 
 	.footer-vinilos{
@@ -580,15 +589,7 @@ footer{
         margin-top: 0px;
         padding: 0;
     }
-   .footer-fixed{
-    position: fixed;
-    color: white;
-    right:40px;
-    bottom: 40px;
-    font-size:30px;
-    color: greenyellow;
-    
-}
+ 
 }
 /*FIN FOOTER*/
 @media (max-width: 880px) {
