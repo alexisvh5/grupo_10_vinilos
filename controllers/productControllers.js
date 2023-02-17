@@ -36,8 +36,8 @@ let productController = {
       company: req.body.company,
       year: req.body.year,
       price: req.body.price,
-      id_genre: req.body.genre,
-      id_artist: req.body.artist,
+      idGenre: req.body.genre,
+      idArtist: req.body.artist,
       imagen: imagen
 
     })
@@ -67,12 +67,12 @@ let productController = {
       company: req.body.company,
       year: req.body.year,
       price: req.body.price,
-      id_genre: req.body.genre,
-      id_artist: req.body.artist,
+      idGenre: req.body.genre,
+      idArtist: req.body.artist,
       imagen: req.file ? req.file.filename : req.body.oldImagen,
     }, {
       where: {
-        id_album: req.params.id      }
+        id: req.params.id      }
     })
       .then(() => res.redirect('/products'))
       .catch(error => res.send(error))
@@ -84,7 +84,7 @@ let productController = {
   productDelete: function (req, res) {
     db.Album.destroy({
       where: {
-        id_album: req.params.id
+        id: req.params.id
       }
     })
       .then(() => res.redirect('/'))

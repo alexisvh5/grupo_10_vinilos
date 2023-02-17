@@ -18,7 +18,7 @@
 
 <body>
 
-    <form class="formulario" action="/products/edit/<%= albumToEdit.id_album%>?_method=PUT
+    <form class="formulario" action="/products/edit/<%= albumToEdit.id%>?_method=PUT
         " method="POST" enctype="multipart/form-data" >
 
         <h3 class="create-h3">Editar Producto</h3>
@@ -48,7 +48,7 @@
                 <select name="genre" style="width: 100%">
                     <option value="<%=albumToEdit.genre %>">Seleccione el género...</option>
                     <% for (let i=0; i < genres.length; i++) { %>
-                        <option value="<%=genres[i].id_genre%>">
+                        <option value="<%=genres[i].id%>">
                             <%=genres[i].name%>
                         </option>
                         <% } %>
@@ -61,7 +61,7 @@
             <select name="artist" style="width: 100%">
                 <option value="<%=albumToEdit.artist %>">Seleccione el artista...</option>
                 <% for (let i=0; i < artist.length; i++) { %>
-                    <option value="<%=artist[i].id_artist%>">
+                    <option value="<%=artist[i].id%>">
                         <%=artist[i].name%>
                     </option>
                     <% } %>
