@@ -38,7 +38,7 @@ let userController = {
         contrasena: req.body.contrasena,
         confContr: req.body.confirmacionContrasena,
         address: req.body.domicilio,
-        id_genre: req.body.genre,
+        idGenre: req.body.genre,
         imagen: imagen
   
       }) 
@@ -68,14 +68,14 @@ let userController = {
     db.User.update({
         name: req.body.NombreyApellido,
         email: req.body.email,
-        contrasena: req.body.bcryptjs.hashSync(req.body.contrasena,10),
-        confContr: req.body.bcryptjs.hashSync(req.body.confirmacionContrasena,10),
+        contrasena: req.body.contrasena,
+        confContr: req.body.confirmacionContrasena,
         address: req.body.domicilio,
-        id_genre: req.body.genre,
+        id: req.body.genre,
         imagen: req.file ? req.file.filename : req.body.oldImagen,
     }, {
       where: {
-        id_user: req.params.id
+        id: req.params.id
       }
     })
     .then(() => res.redirect('/'))

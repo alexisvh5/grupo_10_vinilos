@@ -24,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Genre.associate = function (models) {
         Genre.hasMany(models.Album, {
-            as: "album", //ver si esta bien ese nombre
+            as: "album", //nombre en minuscula y lo uso en include, association en controllers
             foreignKey: 'idGenre'
 
         })

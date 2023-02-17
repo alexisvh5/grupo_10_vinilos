@@ -22,7 +22,7 @@
 
     <body>
       <main>
-        <form class="formulario" action="/users/profileEdit/<%=userToEdit.id_user%>?_method=PUT
+        <form class="formulario" action="/users/profileEdit/<%=userToEdit.id%>?_method=PUT
           " method="POST" enctype="multipart/form-data" >
           <h3 class="register-h3">Editá tu Cuenta</h3>
           <div class="cajacampos">
@@ -66,7 +66,7 @@
                 <select name="genre" style="width: 100%">
                   <option value="#">Seleccione el género...</option>
                   <% for (let i=0; i < genres.length; i++) { %>
-                    <option value="<%=genres[i].id_genre%>">
+                    <option value="<%=genres[i].id%>">
                       <%=genres[i].name%>
                     </option>
                     <% } %>
