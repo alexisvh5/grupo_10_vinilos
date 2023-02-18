@@ -5,6 +5,7 @@ const indexRouter= require("./routes/index");
 const productsRoutes = require("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
 const session = require ("express-session");    
+const productsAPIRouter = require('./routes/api/productsRoutes')
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cookies = require("cookie-parser");
@@ -50,6 +51,10 @@ app.use('/products', productsRoutes);
 //RUTAS DE USUARIOS
 
 app.use('/users', usersRoutes)
+
+//Rutas de ls APIs
+app.use('/api/products', productsAPIRouter)
+
 
 //middlewares
 //app.use(logMiddleware); Comentado para no interferir subir al git
