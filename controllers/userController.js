@@ -46,7 +46,7 @@ let userController = {
      )}
 
     let imagen;
-      console.log(req.file)
+      //console.log(req.file)
     if(req.file != undefined) {
       imagen = req.file.filename;
     }else{

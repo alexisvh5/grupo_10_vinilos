@@ -32,22 +32,27 @@ router.get('/check', function (req, res) {
 
 //Validaciones
 const validateCreateForm = [
-    body('NombreyApellido').notEmpty().withMessage('Debes completar el campo de Nombre y Apellido'),
+    body('NombreyApellido').notEmpty().withMessage('Debes completar el campo de Nombre y Apellido').bail().isLength({min:2}).withMessage('El campo Nombre y Apellido debe contener mas de 2 caracteres'),
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido').bail(),
+        //FALTA VALIDACION QUE NO PUEDEN REPETIRSE LOS MAILS YA REGISTRADOS
     body('domicilio').notEmpty().withMessage('Debes completar el domicilio'),
-    body('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail(),
+    body('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail().isLength({min:8}).withMessage('La contraseña debe contener mas de 8 caracteres'),
     body('confirmacionContrasena').notEmpty().withMessage('Debes repetir la contraseña elegida').bail(),
-    body('genre').notEmpty().withMessage('Debes elegir un genero').bail()
-
+    body('genre').notEmpty().withMessage('Debes elegir un genero').bail(),
+    
+    //FALTA LA VALIDACION DE LOS FORMATOS DE LA IMAGEN
 ];
 
 const validateCreateFormlogin = [
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido').bail(),
+        // FALTA VALIDACION QUE DEBE EXISTIR EN LA BASE DE DATOS
+
     body('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail()
+       // FALTA VALIDACION QUE DEBE COINCIDIR CON LA EXISTENTE EN BASE.
 ];
 
 
