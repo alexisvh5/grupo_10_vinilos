@@ -29,19 +29,20 @@ idUser:{
         timestamps: false
     };
 const Order = sequelize.define(alias, columnas, config);
-/*
+
 Order.associate = function (models) {
     Order.belongsTo(models.User, {
-        as: "Users", 
-        foreingKey: 'id_user'
+        as: "users", 
+        foreingKey: 'idUser'
     })
+
 
     Order.hasMany(models.Detailorder, {
         as: "detailOrder",
-        foreingKey: "id_order"
+        foreingKey: "idOrder"
     })
 
 }
-*/
+
 return Order
 }

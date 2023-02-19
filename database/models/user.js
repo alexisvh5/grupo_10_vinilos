@@ -33,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
 
         },
-        
+
         idGenre: {
             type: dataTypes.INTEGER,
             allowNull: false
@@ -44,24 +44,24 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         }
 
-        }
-  
+    }
+
 
     let config = {
 
         timestamps: false
     };
     const User = sequelize.define(alias, columnas, config);
-    /*
+
     User.associate = function (models) {
         User.hasMany(models.Order, {
-            as: "Orders", 
-            foreingKey: 'id_user'
+            as: "orders",
+            foreingKey: 'idUser'
         })
-    
-    
-    
+
+
+
     }
-    */
+
     return User
 }
