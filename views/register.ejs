@@ -18,8 +18,9 @@
 
 
 
-  <%-include("./partials/header.ejs") %>
+<%-include("./partials/header.ejs") %>
 
+<<<<<<< HEAD
     <body>
       <main>
         <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
@@ -125,21 +126,130 @@
 
               <div>
                 <button type="submit" class="button">Crear Cuenta</button>
+=======
+  <body>
+    <main>
+      <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+        <h3 class="register-h3">Crea tu Cuenta</h3>
+        <div class="cajacampos">
+          <div>
+            <label for="name" class="register-h4">Nombre y Apellido:</label>
+            <input type="text" name="NombreyApellido"
+              class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
+              value="<%= locals.oldData ? oldData.NombreyApellido : null %>" />
+            <% if (locals.errors && errors.NombreyApellido) { %>
+              <div class="text-danger">
+                <%= errors.NombreyApellido.msg %>
+>>>>>>> f0bb4648b24614ee82dda52d707f3a27c34861ae
               </div>
-              <div>
-                <button type="reset" class="button">Borrar</button>
+              <% } %>
+          </div>
+
+
+          <div>
+            <label for="name" class="register-h4">E-mail:</label>
+            <input type="e-mail" name="email" class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
+              value="<%= locals.oldData ? oldData.email : "" %>" />
+
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger">
+                <%= errors.email.msg %>
               </div>
+<<<<<<< HEAD
               <hr />
               <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
               <p>¿Ya tienes cuenta?<a class="link" href="/users/login"> Iniciar sesión</a></p>
             
+=======
+              <% } %>
+          </div>
+          <div>
+            <label for="name" class="register-h4">Domicilio:</label>
+            <input type="text" name="domicilio"
+              class="campo <%=locals.errors && errors.domicilio ? 'is-invalid' : null%>"
+              value="<%= locals.oldData ? oldData.domicilio : null %>" />
+            <% if (locals.errors && errors.domicilio) { %>
+              <div class="text-danger">
+                <%= errors.domicilio.msg %>
+              </div>
+              <% } %>
+          </div>
+
+
+          <div>
+            <label for="name" class="register-h4">Contraseña:</label>
+            <input type="password" name="contrasena"
+              class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" />
+
+
+            <% if (locals.errors && errors.contrasena) { %>
+              <div class="text-danger">
+                <%= errors.contrasena.msg %>
+              </div>
+              <% } %>
+          </div>
+
+          <div>
+            <label for="name" class="register-h4">Confirmacion Contraseña:</label>
+            <input type="password" name="confirmacionContrasena"
+              class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>" />
+            <% if (locals.errors && errors.confirmarContrasena) { %>
+              <div class="text-danger">
+                <%= errors.confirmacionContrasena.msg %>
+              </div>
+              <% } %>
+          </div>
+
+
+
+          <div>
+            <label for="name" class="register-h4">Elegí tu género favorito:</label>
+            <div>
+              <select name="genre" style="width: 100% ;height:42px">
+                <option value="#"></option>
+                <% for (let i=0; i < genres.length; i++) { %>
+                  <option value="<%=genres[i].id%>">
+                    <%=genres[i].name%>
+                  </option>
+                  <% } %>
+              </select>
+
+>>>>>>> f0bb4648b24614ee82dda52d707f3a27c34861ae
             </div>
-        </form>
-      </main>
 
-      <%-include("./partials/footer.ejs") %>
+            <% if (locals.errors && errors.genre) { %>
+              <div class="text-danger">
+                <%= errors.genre.msg %>
+              </div>
+              <% } %>
 
-    </body>
+          </div>
+
+          <div>
+            <label for="name" class="register-h4">Elegí tu foto de usuario:</label>
+
+            <input type="file" name="imagen" placeholder="Subi tu foto"
+              class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>">
+
+
+
+
+            <div>
+              <button type="submit" class="button">Crear Cuenta</button>
+            </div>
+            <div>
+              <button type="reset" class="button">Borrar</button>
+            </div>
+            <hr />
+            <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
+            <p>¿Ya tienes cuenta?<a class="link" href="/users/login"> Iniciar sesión</a></p>
+          </div>
+      </form>
+    </main>
+
+    <%-include("./partials/footer.ejs") %>
+
+  </body>
 
 
 </html>

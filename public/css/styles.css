@@ -547,10 +547,7 @@ footer{
 }
 /*FIN FOOTER..............................................................................*/
 @media (max-width: 880px) {
-    
-    nav{
-        
-    }
+  
     .hamburguer{
         display:block;
         position: absolute;

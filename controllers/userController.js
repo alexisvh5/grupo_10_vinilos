@@ -3,6 +3,10 @@ let fs = require('fs');
 let path = require('path');
 const bcryptjs = require('bcryptjs');
 
+const user = require ('../models/Users');// para validaciones en el backend
+
+const {validationResult} = require ('express-validator');
+
 let db = require('../database/models');
 
 let userController = {
@@ -15,7 +19,7 @@ let userController = {
   },
 
   register: (req, res) => {
-    let genres = db.Genre.findAll()
+    db.Genre.findAll()
     //let artist = db.Artist.findAll()
     //Promise.all([genres, artist])
       .then((genres) => {
@@ -24,8 +28,25 @@ let userController = {
   },
   
     processRegister: function( req, res) {
+      let genres =  db.Genre.findAll()
+
+      const resultValidation = validationResult(req);
+
+      if (resultValidation.errors.length > 0) {
+        return res.render ('register',{genres,
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })}
+
+      let userInDB = user.findByField("email", req.body.email);
+
+      if (userInDB) {
+        return res.render ('register',{
+        errors:{email:{msg:"Este email ya se encuentra registrado"}},oldData: req.body}
+     )}
+
     let imagen;
-      console.log(req.file)
+      //console.log(req.file)
     if(req.file != undefined) {
       imagen = req.file.filename;
     }else{
@@ -35,8 +56,8 @@ let userController = {
       db.User.create({
         name: req.body.NombreyApellido,
         email: req.body.email,
-        contrasena: req.body.contrasena,
-        confContr: req.body.confirmacionContrasena,
+        contrasena: bcryptjs.hashSync(req.body.contrasena, 10),//req.body.contrasena,
+        confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10) ,//req.body.confirmacionContrasena,
         address: req.body.domicilio,
         idGenre: req.body.genre,
         imagen: imagen
@@ -68,10 +89,10 @@ let userController = {
     db.User.update({
         name: req.body.NombreyApellido,
         email: req.body.email,
-        contrasena: req.body.contrasena,
-        confContr: req.body.confirmacionContrasena,
+        contrasena: bcryptjs.hashSync(req.body.contrasena, 10),// req.body.contrasena,
+        confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10), //req.body.confirmacionContrasena,
         address: req.body.domicilio,
-        id: req.body.genre,
+        idGenre: req.body.genre,
         imagen: req.file ? req.file.filename : req.body.oldImagen,
     }, {
       where: {

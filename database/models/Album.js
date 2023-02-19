@@ -65,14 +65,14 @@ Album.associate = function (models) {
         as: "artist", //nombre en minuscula y lo uso en include, association en controllers
         foreignKey: 'idArtist'
     })
-}
-/*
+
+
     Album.hasMany(models.Detailorder, {
-        as: "AlbumDetail",
-        foreingKey: "id_album"
+        as: "album",
+        foreingKey: "idAlbum"
     })
 }
-*/
+
     return Album;
 
  }

@@ -33,20 +33,21 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const Detailorder = sequelize.define(alias, columnas, config);
-    /*
-    Detailorder.associate = (models)=>{ 
+
+    Detailorder.associate = (models) => {
         Detailorder.belongsTo(models.Order, {
-        as: "OrderDetail",
-        foreingKey: "id_order"
-    })
-    
-    Detailorder.belongsTo(models.Album, {
-        as: "DetailAlbum",
-        foreingKey: "id_album"
-    })
-    
-    
+            as: "order",
+            foreingKey: "idOrder"
+        })
+
+
+        Detailorder.belongsTo(models.Album, {
+            as: "album",
+            foreingKey: "idAlbum"
+        })
+
+
     }
-    */
+
     return Detailorder
 }
