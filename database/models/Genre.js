@@ -28,6 +28,12 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'idGenre'
 
         })
+        Genre.hasMany(models.User, {
+            as: "user", 
+            foreignKey: 'idGenre'
+        })
+        
+        
 
     }
 

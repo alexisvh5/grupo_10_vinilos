@@ -58,6 +58,10 @@ module.exports = (sequelize, dataTypes) => {
             as: "orders",
             foreingKey: 'idUser'
         })
+        User.belongsTo(models.Genre, {
+            as: "genre", //nombre en minuscula y lo uso en include, association en controllers
+            foreignKey: 'idGenre'
+        })
 
 
 
