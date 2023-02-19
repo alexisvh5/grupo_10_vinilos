@@ -35,8 +35,8 @@ let userController = {
       db.User.create({
         name: req.body.NombreyApellido,
         email: req.body.email,
-        contrasena: req.body.contrasena,
-        confContr: req.body.confirmacionContrasena,
+        contrasena: bcryptjs.hashSync(req.body.contrasena, 10),//req.body.contrasena,
+        confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10) ,//req.body.confirmacionContrasena,
         address: req.body.domicilio,
         idGenre: req.body.genre,
         imagen: imagen
@@ -68,8 +68,8 @@ let userController = {
     db.User.update({
         name: req.body.NombreyApellido,
         email: req.body.email,
-        contrasena: req.body.contrasena,
-        confContr: req.body.confirmacionContrasena,
+        contrasena: bcryptjs.hashSync(req.body.contrasena, 10),// req.body.contrasena,
+        confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10), //req.body.confirmacionContrasena,
         address: req.body.domicilio,
         id: req.body.genre,
         imagen: req.file ? req.file.filename : req.body.oldImagen,
