@@ -305,31 +305,7 @@ hr{
   
 }
 
-@media (max-width: 880px){
-.formulario{
-    background-image: none;
-    background-color:black;
-}
-.login-h3,.register-h3{
-    width: 60%;
-    margin:auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    color:white;
-    font-size: 20px;
-}
-.cajacampos{
-    width:60%;
-    padding:15px;
-    margin:auto;
-    margin-bottom: 10px;
-    display:flex;
-    flex-direction: column;
-   
-}
 
-}
 /*FIN FORMULARIOS.........................................................*/
 
 /*FOOTER .................................................................*/
@@ -615,6 +591,31 @@ footer{
         opacity: 1;
      }
 }
+@media (max-width: 880px){
+    .formulario{
+        background-image: none;
+        background-color:black;
+    }
+    .login-h3,.register-h3{
+        width: 60%;
+        margin:auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        color:white;
+        font-size: 20px;
+    }
+    .cajacampos{
+        width:60%;
+        padding:15px;
+        margin:auto;
+        margin-bottom: 10px;
+        display:flex;
+        flex-direction: column;
+       
+    }
+    
+    }
 
 
 /*FIN FOOTER */
