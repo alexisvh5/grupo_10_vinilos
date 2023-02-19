@@ -92,7 +92,7 @@ let userController = {
         contrasena: bcryptjs.hashSync(req.body.contrasena, 10),// req.body.contrasena,
         confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10), //req.body.confirmacionContrasena,
         address: req.body.domicilio,
-        id: req.body.genre,
+        idGenre: req.body.genre,
         imagen: req.file ? req.file.filename : req.body.oldImagen,
     }, {
       where: {
