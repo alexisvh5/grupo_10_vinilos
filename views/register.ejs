@@ -79,7 +79,7 @@
             <label for="name" class="register-h4">Confirmacion Contraseña:</label>
             <input type="password" name="confirmacionContrasena"
               class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>" />
-            <% if (locals.errors && errors.confirmarContrasena) { %>
+            <% if (locals.errors && errors.confirmacionContrasena) { %>
               <div class="text-danger">
                 <%= errors.confirmacionContrasena.msg %>
               </div>
