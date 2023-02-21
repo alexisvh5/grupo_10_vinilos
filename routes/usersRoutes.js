@@ -53,7 +53,21 @@ const validateCreateForm = [
     }).withMessage('Las contraseñas deben ser iguales'),
     body('genre').notEmpty().withMessage('Debes elegir un genero').bail(),
 
-    //FALTA LA VALIDACION DE LOS FORMATOS DE LA IMAGEN
+    body('imagen').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+            }
+        }
+
+        return true;
+    }),
 ];
 
 const validateCreateFormlogin = [

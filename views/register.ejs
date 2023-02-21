@@ -112,10 +112,15 @@
 
           <div>
             <label for="name" class="register-h4">Elegí tu foto de usuario:</label>
-
             <input type="file" name="imagen" placeholder="Subi tu foto"
-              class="campo<%= locals.errors && errors.img ? 'is-invalid' : null%>">
-
+            class="campo <%=locals.errors && errors.imagen ? 'is-invalid' : null%>"
+            value="<%= locals.oldData ? oldData.imagen : null %>" />
+          <% if (locals.errors && errors.imagen) { %>
+            <div class="text-danger">
+              <%= errors.imagen.msg %>
+            </div>
+            <% } %>
+          </div>
 
 
 

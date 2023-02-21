@@ -22,6 +22,21 @@ const validateCreateProduct = [
     body('price')
     .notEmpty().withMessage('Debes completar el precio del album').bail()
     .isLength({ min:4}).withMessage('El precio del album debe tener al menos 4 caracteres').bail(),
+    body('imagen').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+            }
+        }
+
+        return true;
+    }),
 
     
 

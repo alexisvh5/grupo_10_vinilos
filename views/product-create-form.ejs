@@ -69,11 +69,8 @@
                   <%= errors.price.msg %>
                 </div>
                 <% } %>
-
-
-
-
             </div>
+            
             <div>
                 <label for="name" class="register-h4">Género</label>
             </div>
@@ -103,7 +100,17 @@
 
             <div>
                 <label for="imagen" class="register-h4">Imagen</label>
-                <input type="file" name="imagen" placeholder="Imagen" class="campo" required />
+                <input type="file" name="imagen" placeholder="Imagen" 
+                class="campo <%=locals.errors && errors.imagen ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.imagen : null %>" />
+              <% if (locals.errors && errors.imagen) { %>
+                <div class="text-danger">
+                  <%= errors.imagen.msg %>
+                </div>
+                <% } %>
+
+
+
             </div>
 
 
