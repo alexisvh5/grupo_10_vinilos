@@ -32,27 +32,52 @@ router.get('/check', function (req, res) {
 
 //Validaciones
 const validateCreateForm = [
-    body('NombreyApellido').notEmpty().withMessage('Debes completar el campo de Nombre y Apellido').bail().isLength({min:2}).withMessage('El campo Nombre y Apellido debe contener mas de 2 caracteres'),
+    body('NombreyApellido')
+        .notEmpty().withMessage('Debes completar el campo de Nombre y Apellido').bail()
+        .isLength({ min: 2 }).withMessage('El campo Nombre y Apellido debe contener mas de 2 caracteres'),
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido').bail(),
-        //FALTA VALIDACION QUE NO PUEDEN REPETIRSE LOS MAILS YA REGISTRADOS
+    //FALTA VALIDACION QUE NO PUEDEN REPETIRSE LOS MAILS YA REGISTRADOS
     body('domicilio').notEmpty().withMessage('Debes completar el domicilio'),
-    body('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail().isLength({min:8}).withMessage('La contraseña debe contener mas de 8 caracteres'),
+    body('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail()
+        .isLength({ min: 8 }).withMessage('La contraseña debe contener mas de 8 caracteres'),
     body('confirmacionContrasena').notEmpty().withMessage('Debes repetir la contraseña elegida').bail(),
+
+    body('confirmacionContrasena').custom((value, { req }) => {
+        if (req.body.contrasena == value) {
+            return true    // Si yo retorno un true  no se muestra el error     
+        } else {
+            return false   // Si retorno un false si se muestra el error
+        }
+    }).withMessage('Las contraseñas deben ser iguales'),
     body('genre').notEmpty().withMessage('Debes elegir un genero').bail(),
-    
-    //FALTA LA VALIDACION DE LOS FORMATOS DE LA IMAGEN
+
+    body('imagen').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+            }
+        }
+
+        return true;
+    }),
 ];
 
 const validateCreateFormlogin = [
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido').bail(),
-        // FALTA VALIDACION QUE DEBE EXISTIR EN LA BASE DE DATOS
+    // FALTA VALIDACION QUE DEBE EXISTIR EN LA BASE DE DATOS
 
     body('contrasena').notEmpty().withMessage('Debes completar el campo contraseña').bail()
-       // FALTA VALIDACION QUE DEBE COINCIDIR CON LA EXISTENTE EN BASE.
+    // FALTA VALIDACION QUE DEBE COINCIDIR CON LA EXISTENTE EN BASE.
 ];
 
 

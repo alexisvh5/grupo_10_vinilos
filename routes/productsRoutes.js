@@ -5,6 +5,45 @@ const productController= require("../controllers/productControllers");
 const multer= require ('multer');
 let path = require('path');
 
+//Express Validator
+const {body} = require('express-validator');
+
+//Validaciones
+const validateCreateProduct = [
+    body('title')
+    .notEmpty().withMessage('Debes completar el título del album').bail()
+    .isLength({ min:5}).withMessage('El titulo del album debe tener al menos 5 caracteres').bail(),
+    body('company')
+    .notEmpty().withMessage('Debes completar el la compañia del album').bail()
+    .isLength({ min:6}).withMessage('La compañia debe tener al menos 6 caracteres').bail(),
+    body('year')
+    .notEmpty().withMessage('Debes completar el año del album').bail()
+    .isLength({ min:4}).withMessage('El año debe tener al menos 4 caracteres').bail(),
+    body('price')
+    .notEmpty().withMessage('Debes completar el precio del album').bail()
+    .isLength({ min:4}).withMessage('El precio del album debe tener al menos 4 caracteres').bail(),
+    body('imagen').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+            }
+        }
+
+        return true;
+    }),
+
+    
+
+
+]
+
+
 
 // ***Multer***
 
@@ -28,7 +67,7 @@ router.get ('/', productController.productList); //si funciona, es la ruta /prod
 
 //CREACION DE UN PRODUCTO
 router.get('/create', productController.productCreate);
-router.post ('/',upload.single("imagen"),productController.productStore);
+router.post ('/',upload.single("imagen"),validateCreateProduct, productController.productStore);
 
 //EDITAR UN PRODUCTO
 router.get('/edit/:id', productController.productEdit);

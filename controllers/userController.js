@@ -3,157 +3,178 @@ let fs = require('fs');
 let path = require('path');
 const bcryptjs = require('bcryptjs');
 
-const user = require ('../models/Users');// para validaciones en el backend
+const user = require('../models/Users');// para validaciones en el backend
 
-const {validationResult} = require ('express-validator');
+const { validationResult } = require('express-validator');
 
-let db = require('../database/models');
+//let db = require('../database/models');
+const { User, Genre } = require('../database/models')
 
 let userController = {
 
   userList: (req, res) => {
-    db.User.findAll()
+    User.findAll()
       .then(user => {
         res.render('userList', { user })
       })
   },
 
   register: (req, res) => {
-    db.Genre.findAll()
-    //let artist = db.Artist.findAll()
-    //Promise.all([genres, artist])
+    Genre.findAll()
+      //let artist = db.Artist.findAll()
+      //Promise.all([genres, artist])
       .then((genres) => {
-        res.render("register", {genres})
+        res.render("register", { genres })
       })
   },
-  
-    processRegister: function( req, res) {
-      let genres =  db.Genre.findAll()
 
-      const resultValidation = validationResult(req);
+  processRegister: function (req, res) {
+    let genres = Genre.findAll()
 
-      if (resultValidation.errors.length > 0) {
-        return res.render ('register',{genres,
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render('register', {
+        genres,
         errors: resultValidation.mapped(),
         oldData: req.body,
-      })}
+      })
+    }
 
-      let userInDB = user.findByField("email", req.body.email);
+    let userInDB = user.findByField("email", req.body.email);
 
-      if (userInDB) {
-        return res.render ('register',{
-        errors:{email:{msg:"Este email ya se encuentra registrado"}},oldData: req.body}
-     )}
+    if (userInDB) {
+      return res.render('register', {
+        errors: { email: { msg: "Este email ya se encuentra registrado" } }, oldData: req.body
+      }
+      )
+    }
 
     let imagen;
-      //console.log(req.file)
-    if(req.file != undefined) {
+    //console.log(req.file)
+    if (req.file != undefined) {
       imagen = req.file.filename;
-    }else{
+    } else {
       imagen = "13-the-doors.jpg"
     }
     console.log(req.body)
-      db.User.create({
-        name: req.body.NombreyApellido,
-        email: req.body.email,
-        contrasena: bcryptjs.hashSync(req.body.contrasena, 10),//req.body.contrasena,
-        confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10) ,//req.body.confirmacionContrasena,
-        address: req.body.domicilio,
-        idGenre: req.body.genre,
-        imagen: imagen
-  
-      }) 
+    User.create({
+      name: req.body.NombreyApellido,
+      email: req.body.email,
+      contrasena: bcryptjs.hashSync(req.body.contrasena, 10),//req.body.contrasena,
+      confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10),//req.body.confirmacionContrasena,
+      address: req.body.domicilio,
+      idGenre: req.body.genre,
+      imagen: imagen
+
+    })
       .then(() => {
         return res.redirect('/')
       })
       .catch(error => {
-        return  res.send(error)
+        return res.send(error)
       })
-      
-    },
 
-    login: (req, res) => {
-      return res.render ("login")
+  },
+
+  login: (req, res) => {
+    return res.render("login")
   },
   profileEdit: (req, res) => {
-    let genres= db.Genre.findAll()
-    let user = db.User.findByPk(req.params.id)
+    let genres = Genre.findAll()
+    let user = User.findByPk(req.params.id)
     Promise.all([user, genres])
-    .then( ([userToEdit, genres]) => {
-     res.render ("register-edit", {userToEdit, genres})
-  }) 
-  .catch(error => res.send(error))
-  }, 
+      .then(([userToEdit, genres]) => {
+        res.render("register-edit", { userToEdit, genres })
+      })
+      .catch(error => res.send(error))
+  },
 
   profileStore: (req, res) => {
-    db.User.update({
-        name: req.body.NombreyApellido,
-        email: req.body.email,
-        contrasena: bcryptjs.hashSync(req.body.contrasena, 10),// req.body.contrasena,
-        confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10), //req.body.confirmacionContrasena,
-        address: req.body.domicilio,
-        idGenre: req.body.genre,
-        imagen: req.file ? req.file.filename : req.body.oldImagen,
+    User.update({
+      name: req.body.NombreyApellido,
+      email: req.body.email,
+      contrasena: bcryptjs.hashSync(req.body.contrasena, 10),// req.body.contrasena,
+      confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10), //req.body.confirmacionContrasena,
+      address: req.body.domicilio,
+      idGenre: req.body.genre,
+      imagen: req.file ? req.file.filename : req.body.oldImagen,
     }, {
       where: {
         id: req.params.id
       }
     })
-    .then(() => res.redirect('/'))
-    .catch(error => res.send(error))
-    
+      .then(() => res.redirect('/'))
+      .catch(error => res.send(error))
+
 
   },
 
-    
-  processLogin:(req, res)=>{
+
+  processLogin: (req, res) => {
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-    return res.render ("login",{
-      errors: resultValidation.mapped(),
-    oldData: req.body,
-   })}
-   
-let userToLogin = user.findByField("email",req.body.email);
+      return res.render("login", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })
+    }
 
+    let userToLogin = User.findOne({    //antes:  let userToLogin = user.findByField("email",req.body.email);
+      where: {
+        email: req.body.email
+      }
 
-if(userToLogin) {
+    })
+      .then(() => {
+        console.log(userToLogin)
+      })
+      .catch(error => {
+        return res.send(error)
+      })
 
-  let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
+    if (userToLogin) {
 
-if(isOkThePassword){
+      let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
 
-delete  userToLogin.contrasena
+      if (isOkThePassword) {
 
- req.session.userLogged= userToLogin;
+        delete userToLogin.contrasena
 
- if(req.body.remember_user){
-  res.cookie("userEmail", req.body.email,{maxAge: (1000*60)*60})
- }
- return res.redirect("/users/profile")
+        req.session.userLogged = userToLogin;
 
-}
-} 
+        if (req.body.remember_user) {
+          res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 })
+        }
+        return res.redirect("/users/profile")
 
-return res.render ("login",{
-  errors:{email:{msg:"Las credenciales son invalidas"}},oldData:req.body
- })
+      }
+    }
+
+    return res.render("login", {
+      errors: { email: { msg: "Las credenciales son invalidas" } }, oldData: req.body
+    })
   },
-  profile:(req,res)=>{
+
+
+
+  profile: (req, res) => {
     console.log(req.cookies.userEmail)
-    res.render ("profile",{
-    user:req.session.userLogged
-   })},
-   logout: (req,res)=>{
+    res.render("profile", {
+      user: req.session.userLogged
+    })
+  },
+  logout: (req, res) => {
     res.clearCookie("userEmail");
     req.session.destroy()
-  return res.redirect("/")}
+    return res.redirect("/")
+  }
 }
 
-  
 
-  module.exports = userController;
+
+module.exports = userController;
 
 
 /*

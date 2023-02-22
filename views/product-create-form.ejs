@@ -22,22 +22,55 @@
         <div class="cajacampos">
             <div>
                 <label for="name" class="register-h4">Titulo</label>
-                <input type="text" name="title" class="campo" required />
+                <input type="text" name="title" 
+                class="campo <%=locals.errors && errors.title ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.title : null %>" />
+              <% if (locals.errors && errors.title) { %>
+                <div class="text-danger">
+                  <%= errors.title.msg %>
+                </div>
+                <% } %>
+
             </div>
 
             <div>
                 <label for="name" class="register-h4">Compañia</label>
-                <input type="text" name="company" class="campo" required />
+                <input type="text" name="company" 
+                class="campo <%=locals.errors && errors.company ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.company : null %>" />
+              <% if (locals.errors && errors.company) { %>
+                <div class="text-danger">
+                  <%= errors.company.msg %>
+                </div>
+                <% } %>
+
+
             </div>
 
             <div>
                 <label for="name" class="register-h4">Año</label>
-                <input type="number" name="year" class="campo" required />
-            </div>
+                <input type="number" name="year" 
+                class="campo <%=locals.errors && errors.year ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.year : null %>" />
+              <% if (locals.errors && errors.year) { %>
+                <div class="text-danger">
+                  <%= errors.year.msg %>
+                </div>
+                <% } %>
+
+               </div>
             <div>
                 <label for="name" class="register-h4">Precio</label>
-                <input type="number" name="price" class="campo" required />
+                <input type="number" name="price" 
+                class="campo <%=locals.errors && errors.price ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.price : null %>" />
+              <% if (locals.errors && errors.price) { %>
+                <div class="text-danger">
+                  <%= errors.price.msg %>
+                </div>
+                <% } %>
             </div>
+            
             <div>
                 <label for="name" class="register-h4">Género</label>
             </div>
@@ -67,7 +100,17 @@
 
             <div>
                 <label for="imagen" class="register-h4">Imagen</label>
-                <input type="file" name="imagen" placeholder="Imagen" class="campo" required />
+                <input type="file" name="imagen" placeholder="Imagen" 
+                class="campo <%=locals.errors && errors.imagen ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.imagen : null %>" />
+              <% if (locals.errors && errors.imagen) { %>
+                <div class="text-danger">
+                  <%= errors.imagen.msg %>
+                </div>
+                <% } %>
+
+
+
             </div>
 
 

@@ -3,6 +3,7 @@ const path = require('path');
 let db = require('../database/models');
 //Con esto se logra activar los operadores en sus querys (like - count - max)
 const Op = db.Sequelize.Op;
+const { validationResult } = require('express-validator');
 
 let productController = {
 
@@ -23,6 +24,21 @@ let productController = {
   },
 
   productStore: function (req, res) {
+    let genres = db.Genre.findAll();
+    let artist = db.Artist.findAll();
+
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render('product-create-form', {
+        genres,
+        artist,
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })
+    }
+
+
     let imagen;
     console.log(req.file)
     if (req.file != undefined) {
