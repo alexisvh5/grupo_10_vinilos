@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
     const errorText = document.getElementById("parrafoError");
   
     form.addEventListener("submit", (e) => {
-      e.preventDefault();
+   
   
       let regEx =
         /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
@@ -41,13 +41,17 @@ window.addEventListener("load", () => {
       errorText.innerHTML = textoError.join()
       errorText.style.color = "red"; 
     });
+
+
     
-   /* if(textoError.length > 0) {
+    
+    if(textoError.length > 0) {
+      e.preventDefault();
   
-      let listaError = document.querySelector("parrafoError")
+      /*let listaError = document.querySelector("parrafoError")
       for (let i = 0; i <textoError.length; i++){
           listaError.innerHTML += "<li>+ errores[i] +</li>"
       }
     }*/
-    
+  }
   });
