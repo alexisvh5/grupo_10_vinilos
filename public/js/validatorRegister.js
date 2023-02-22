@@ -42,12 +42,12 @@ window.addEventListener("load", () => {
       errorText.style.color = "red"; 
     });
     
-    if(textoError.length > 0) {
+   /* if(textoError.length > 0) {
   
       let listaError = document.querySelector("parrafoError")
       for (let i = 0; i <textoError.length; i++){
           listaError.innerHTML += "<li>+ errores[i] +</li>"
       }
-    }
+    }*/
     
   });

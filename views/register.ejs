@@ -22,12 +22,12 @@
 
   <body>
     <main>
-      <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+      <form id="formulario" class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
         <h3 class="register-h3">Crea tu Cuenta</h3>
         <div class="cajacampos">
           <div>
             <label for="name" class="register-h4">Nombre y Apellido:</label>
-            <input type="text" name="NombreyApellido"
+            <input id="name" type="text" name="NombreyApellido"
               class="campo <%=locals.errors && errors.NombreyApellido ? 'is-invalid' : null%>"
               value="<%= locals.oldData ? oldData.NombreyApellido : null %>" />
             <% if (locals.errors && errors.NombreyApellido) { %>
@@ -35,12 +35,13 @@
                 <%= errors.NombreyApellido.msg %>
               </div>
               <% } %>
+              <p id="parrafoError"></p>
           </div>
 
 
           <div>
             <label for="name" class="register-h4">E-mail:</label>
-            <input type="e-mail" name="email" class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
+            <input id="email" type="e-mail" name="email" class="campo <%= locals.errors && errors.email ? 'is-invalid' : null%>"
               value="<%= locals.oldData ? oldData.email : "" %>" />
 
             <% if (locals.errors && errors.email) { %>
@@ -48,10 +49,11 @@
                 <%= errors.email.msg %>
               </div>
               <% } %>
+              <p id="parrafoError"></p>
           </div>
           <div>
             <label for="name" class="register-h4">Domicilio:</label>
-            <input type="text" name="domicilio"
+            <input id="address" type="text" name="domicilio"
               class="campo <%=locals.errors && errors.domicilio ? 'is-invalid' : null%>"
               value="<%= locals.oldData ? oldData.domicilio : null %>" />
             <% if (locals.errors && errors.domicilio) { %>
@@ -59,12 +61,13 @@
                 <%= errors.domicilio.msg %>
               </div>
               <% } %>
+              <p id="parrafoError"></p>
           </div>
 
 
           <div>
             <label for="name" class="register-h4">Contraseña:</label>
-            <input type="password" name="contrasena"
+            <input id="password" type="password" name="contrasena"
               class="campo <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" />
 
 
@@ -73,17 +76,19 @@
                 <%= errors.contrasena.msg %>
               </div>
               <% } %>
+              <p id="parrafoError"></p>
           </div>
 
           <div>
             <label for="name" class="register-h4">Confirmacion Contraseña:</label>
-            <input type="password" name="confirmacionContrasena"
+            <input id="confPass" type="password" name="confirmacionContrasena"
               class="campo <%= locals.errors && errors.confirmacionContrasena ? 'is-invalid' : null %>" />
             <% if (locals.errors && errors.confirmarContrasena) { %>
               <div class="text-danger">
                 <%= errors.confirmacionContrasena.msg %>
               </div>
               <% } %>
+              <p id="parrafoError"></p>
           </div>
 
 
