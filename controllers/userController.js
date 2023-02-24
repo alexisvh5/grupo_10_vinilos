@@ -132,19 +132,16 @@ let userController = {
         oldData: req.body,
       })
     }
-
-    let userToLogin =await User.findOne({    //antes:  let userToLogin = user.findByField("email",req.body.email);
+    
+    let userToLogin = await User.findOne({
       where: {
         email: req.body.email
       }
-
     })
-      .then(() => {
-        console.log(userToLogin)
+      .then((data) => {
+     console.log(data)
       })
-      .catch(error => {
-        return res.send(error)
-      })
+      .catch(error=>{console.log(error)})
 
     if (userToLogin) {
 
