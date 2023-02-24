@@ -145,8 +145,8 @@ let userController = {
 
     if (userToLogin) {
 
-      console.log(userToLogin.contrasena)
-      console.log(req.body.contrasena)
+      console.log(userToLogin.contrasena, "miraloco")
+      console.log(req.body.contrasena,"paaaaaaaaaaaa")
 
       let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
 
@@ -164,9 +164,10 @@ let userController = {
       }
     }
 
-    return res.render("login", {
-      errors: { email: { msg: "Las credenciales son invalidas" } }, oldData: req.body
-    })
+    return res.render('login', {
+      errors: { email: { msg: "Este email ya se encuentra registrado" } }, oldData: req.body
+    }
+    )
   },
 
 
