@@ -28,7 +28,7 @@ let userController = {
       })
   },
 
-  processRegister: function (req, res) {
+  processRegister: async function (req, res) {
     let genres = Genre.findAll()
 
     const resultValidation = validationResult(req);
@@ -41,17 +41,26 @@ let userController = {
       })
     }
 
-    let userInDB = user.findByField("email", req.body.email);
-
+    let userInDB = await User.findOne({
+      where: {
+        email: req.body.email
+      }
+    })
+      .then((data) => {
+        return data
+      })
+    console.log(userInDB, 'aqui')
     if (userInDB) {
       return res.render('register', {
+        genres,
         errors: { email: { msg: "Este email ya se encuentra registrado" } }, oldData: req.body
       }
       )
     }
 
+
     let imagen;
-    //console.log(req.file)
+    //console.log(req.file)s
     if (req.file != undefined) {
       imagen = req.file.filename;
     } else {
