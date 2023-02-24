@@ -392,6 +392,11 @@ footer{
 .footer-vinilos .footer-center i.fa-map-marker{
 	font-size: 17px;
 	line-height: 38px;
+  
+}
+.footer-vinilos .footer-center i.fa-map-marker-alt:hover
+{
+  background-color:#700e3e;
 }
 .footer-vinilos .footer-center p{
 	display: inline-block;
@@ -400,6 +405,8 @@ footer{
 	vertical-align: middle;
 	margin:0;
 }
+
+
 .footer-vinilos .footer-center p span{
 	display:block;
 	font-weight: normal;
