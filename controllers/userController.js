@@ -47,8 +47,11 @@ let userController = {
       }
     })
       .then((data) => {
-        return data
+     console.log(data)
       })
+      .catch(error=>{console.log(error)})
+
+
     console.log(userInDB, 'aqui')
     if (userInDB) {
       return res.render('register', {
@@ -120,7 +123,7 @@ let userController = {
   },
 
 
-  processLogin: (req, res) => {
+  processLogin:  async function(req, res) {
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
@@ -130,7 +133,7 @@ let userController = {
       })
     }
 
-    let userToLogin = User.findOne({    //antes:  let userToLogin = user.findByField("email",req.body.email);
+    let userToLogin =await User.findOne({    //antes:  let userToLogin = user.findByField("email",req.body.email);
       where: {
         email: req.body.email
       }
@@ -144,6 +147,9 @@ let userController = {
       })
 
     if (userToLogin) {
+
+      console.log(userToLogin.contrasena)
+      console.log(req.body.contrasena)
 
       let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
 
