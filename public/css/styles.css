@@ -529,6 +529,69 @@ footer{
  
 }
 /*FIN FOOTER..............................................................................*/
+
+/*LISTADO DE ALBUMS.......................................................................*/
+.listado{
+    padding:20px 10px;
+    /*border:1px solid red;*/
+    width: 100%;
+    background-image: url("/static/imagen/fondoformulario.jpg");
+    background-size: contain;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.listado-title{
+    width: 60%;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    color:white;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-top:10px;
+    /*border:solid 1px blue;*/
+       
+}
+.listado-title{
+    width: 30%;
+    margin:auto;
+    margin-top: 10px;
+    
+    text-align: center;
+    color:white;
+    font-size: 30px;
+}
+.cajalistados{
+    width:30%;
+    padding:15px;
+    margin:auto;
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+   
+}
+.cajalistados li{
+    width: 100%;
+    margin-left:40px;
+    color:white;
+    list-style: none;
+    font-size:20px;
+}
+.title{
+    text-decoration: none;
+    color:white;
+}
+.title:hover{
+    color :#6d4a5b;
+
+
+}
+/*FIN LISTADO DE ALBUMS................................................*/
+
 @media (max-width: 880px) {
   
     .hamburguer{
@@ -613,6 +676,30 @@ footer{
         font-size: 20px;
     }
     .cajacampos{
+        width:60%;
+        padding:15px;
+        margin:auto;
+        margin-bottom: 10px;
+        display:flex;
+        flex-direction: column;
+       
+    }
+
+
+    .listado{
+        background-image: none;
+        background-image: url("/static/imagen/fondoformulario.jpg");
+    }
+    .listado-title{
+        width: 60%;
+        margin:auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        color:white;
+        font-size: 20px;
+    }
+    .cajalistados{
         width:60%;
         padding:15px;
         margin:auto;
@@ -863,3 +950,28 @@ padding-inline-start: 20px;
 .blanco{
     color: aliceblue;
 }
+/*gif music
+<div style="padding-top:56.200%;position:relative;"><iframe src="https://gifer.com/embed/1fTO" 
+width="100%" height="100%" style='position:absolute;top:0;left:0;
+' frameBorder="0" allowFullScreen></iframe></div>
+<p><a href="https://gifer.com">via GIFER</a></p><iframe src="https://gifer.com/embed/1fTO"
+ width=480 height=269.760 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">via GIFER</a></p>
+
+
+
+ <iframe src="https://gifer.com/embed/FiOG" width=480 height=270.000 frameBorder="0" allowFullScreen>
+ </iframe><p><a href="https://gifer.com">via GIFER</a></p>
+ 
+ 
+ 
+ <div style="padding-top:56.250%;position:relative;"><iframe src="https://gifer.com/embed/FiOG" 
+ width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen>
+ </iframe></div><p><a href="https://gifer.com">via GIFER</a></p>
+ 
+ 
+
+
+<iframe src="https://gifer.com/embed/FiOG" width=480 height=270.000 frameBorder="0" allowFullScreen>
+</iframe><p><a href="https://gifer.com">via GIFER</a></p>
+
+ */

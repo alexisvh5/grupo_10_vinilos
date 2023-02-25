@@ -20,25 +20,27 @@
 <body>
 
  
-
-  
-    <h3 class="index-h3">LISTADO DE ALBUMS</h3>
-    <ul>
+<div class ="listado">
+ 
+    <h3 class="listado-title">Listado de albums</h3>
+    <div class="cajalistados">
+    <ul  >
       <% for ( let i = 0; i < album.length; i++ ) { %>
-        <li class="index-h3">
-          <a href="/products/productDetail/<%=album[i].id%>"><%= album[i].title %></a> 
+        <li class="listado-albums">
+          <a class="title" href="/products/productDetail/<%=album[i].id%>"><%= album[i].title %></a> 
         </li>
 
         
         <% } %>
     </ul>
-
-    <h2>Buscar...</h2>
-    <form action="/products/search_results" method="GET">
-      <input type="search" name="search">
+        
+   <!---- <form action="/products/search_results" method="GET">
+      <input type="search"  name="search">
       <button type="submit">Buscar</button>
-    </form>
-
+    </form>---->
+  </div>
+  
+</div>
  
     <%-include("./partials/footer.ejs") %>
 
