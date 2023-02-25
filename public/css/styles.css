@@ -102,8 +102,9 @@ nav{
 }
 .index-h3 {
     color:white;
-    margin-top: 10px;
-    margin-left: 10px;/*aca corregi falta subir*/
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 .index-oportunidad {
     display: flex;
@@ -113,16 +114,20 @@ nav{
     width: 100%;
 }
 .parrafo-card-nombre {
-    font-size: 12px;
+    font-size: 14px;
     color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
 }
 .parrafo-card-genero { 
     font-size: 12px;
+    margin-left: 5px;
     color: grey;
 }
 .parrafo-card-precio {
     font-size: 16px;
+    margin-left: 5px;
     color: #700e3e;
 }
 .button_card {
@@ -288,7 +293,7 @@ nav{
 
 
 }
-/*FIN LISTADO DE ALBUMS................................................*/
+/*FIN LISTADO DE ALBUMS........................................................*/
 
 /*FORMULARIOS..................................................................*/
 .formulario{
@@ -441,9 +446,6 @@ footer{
 	color:  #ffffff;
 	margin: 0;
 }
-
-
-
 /* Footer links */
 
 .footer-vinilos .footer-links{
@@ -589,8 +591,8 @@ footer{
     font-size:30px;
     color: greenyellow;
 }
-/*FIN FOOTER..................................................*/
-/*MEDIA ...........................................*/
+/*FIN FOOTER...................................................*/
+/*MEDIA .......................................................*/
 @media (max-width: 880px) {
 
 	.footer-vinilos{
@@ -760,7 +762,7 @@ footer{
     margin-bottom: 10px;
     text-align: center;
     color:white;
-    font-size: 20px;
+    font-size: 25px;
    
    }
    .cajadetail{
@@ -1026,9 +1028,7 @@ media768................................................................
 
 */
 
-.blanco{
-    color: aliceblue;
-}
+
 /*gif music
 <div style="padding-top:56.200%;position:relative;"><iframe src="https://gifer.com/embed/1fTO" 
 width="100%" height="100%" style='position:absolute;top:0;left:0;
