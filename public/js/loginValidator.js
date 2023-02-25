@@ -19,7 +19,7 @@ window.addEventListener("load", ()=>{
       if( email.value == ""){
         errores.push("Ingresa tu correo electrónico")
       }else if(!regEx.test(email.value)){
-        errores.push("debes ingresar un correo valido") 
+        errores.push("Debes ingresar un correo valido") 
       }; 
 
       if (pass.value = ""){

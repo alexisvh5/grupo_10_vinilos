@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
       }; 
 
       if(!extensiones.includes(image.value.split('.').pop())){
-errores.push("debes cargar un archivo .jpg, .jpeg, .png, .gif")
+errores.push("Debes cargar un archivo .jpg, .jpeg, .png, .gif")
       }; 
 
       

@@ -17,9 +17,9 @@ window.addEventListener('load', ()=>{
         };
 
         if (img.value ===""){
-            errores.push("debes incluir una imagen")
+            errores.push("Debes incluir una imagen")
         } else if(!extensiones.includes(img.value.split(".").pop())){
-            errores.push("debes cargar un archivo .jpg, .jpeg, .png, .gif")
+            errores.push("Debes cargar un archivo .jpg, .jpeg, .png, .gif")
         }; 
 
         if (errores.value > 0){
