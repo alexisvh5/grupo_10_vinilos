@@ -20,7 +20,7 @@
 
 <body>
     <main>
-        <form class="formulario" method="POST"action="/users/login">
+        <form id="formularioLog" class="formulario" method="POST"action="/users/login">
           
             <h3 class="register-h3">Ingresá a tu cuenta!</h3>
           
@@ -29,7 +29,7 @@
             
             <div>
               <label for="name" class="register-h4">E-mail:</label>
-              <input
+              <input id="emailLog"
                type="e-mail"
                name="email"
                             
@@ -44,7 +44,7 @@
 
              <div>
              <label for="name" class="register-h4">Contraseña:</label>
-             <input 
+             <input id="passLog"
               type="password"
               name="contrasena"
               
@@ -72,11 +72,16 @@
              <p>Al registrarte aceptas nuestros términos y condiciones de uso y privacidad.</p>
              <p>¿No tienes cuenta?<a class="link" href="/users/register"> Registrate!</a></p>
             
+             <section class="errores">
+              <ul></ul>
+             </section>
              </div>
         </form>
     </main>
 
     <%-include("./partials/footer.ejs") %>
+
+    <script src="/static/js/loginValidator.js"></script>
     
     </body>
     

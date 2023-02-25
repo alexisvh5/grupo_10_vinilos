@@ -17,12 +17,12 @@
 
 <body>
 
-    <form class="formulario" action="/products" method="POST" enctype="multipart/form-data">
+    <form id="formCreate" class="formulario" action="/products" method="POST" enctype="multipart/form-data">
         <h3 class="create-h3">Crear Producto</h3>
         <div class="cajacampos">
             <div>
                 <label for="name" class="register-h4">Titulo</label>
-                <input type="text" name="title" 
+                <input id="nameCreate" type="text" name="title" 
                 class="campo <%=locals.errors && errors.title ? 'is-invalid' : null%>"
                 value="<%= locals.oldData ? oldData.title : null %>" />
               <% if (locals.errors && errors.title) { %>
@@ -100,7 +100,7 @@
 
             <div>
                 <label for="imagen" class="register-h4">Imagen</label>
-                <input type="file" name="imagen" placeholder="Imagen" 
+                <input id="imageCreate" type="file" name="imagen" placeholder="Imagen" 
                 class="campo <%=locals.errors && errors.imagen ? 'is-invalid' : null%>"
                 value="<%= locals.oldData ? oldData.imagen : null %>" />
               <% if (locals.errors && errors.imagen) { %>
@@ -115,12 +115,16 @@
 
 
             <button class="button">Guardar</button>
+
+            <section class="errores"><ul></ul></section>
+
         </div>
     </form>
 
 
     <!-- /todos los productos -->
 
+<script src="/static/js/createValidator.js"></script>
 
 </body>
 

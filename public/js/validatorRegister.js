@@ -1,55 +1,52 @@
 window.addEventListener("load", () => {
   const name = document.getElementById("name");
   const email = document.getElementById("email");
-  const address = document.getElementById("address");
   const pass = document.getElementById("password");
-  const configpass = document.getElementById("confPass");
   const form = document.getElementById("formulario");
-  const errorText = document.getElementById("parrafoError");
+  const image = document.getElementById("image")
+  const listaErrores = document.querySelector("section.errores ul")
 
-  form.addEventListener("submit", (e) => {
-    //if (textoError.length > 0) {
-      e.preventDefault();
-   // }
+  form.addEventListener("submit", (e)=>{
 
+    e.preventDefault()
+      
+    
+    let errores =[]
+    
+  
+  let extensiones = ["jpg", "jpeg", "png", "gif"]
+  ; 
     let regEx =
       /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
     let regExPass =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
-    textoError = [];
 
-    if (name.value.length < 8) {
-      textoError.push("El nombre debe tener al menos 8 caracteres");
-    }
+      if (name.value.length < 2){
+        errores.push("El campo nombre debe tener entre 2 y 50 caracteres")
+      }; 
 
-    if (!regEx.test(email.value)) {
-      textoError.push("debe introducir un correo valido");
-    }
-    if (address.value.length < 1) {
-      textoError.push("debe introducir una direccion");
-    }
+      if (!regEx.test(email.value)){
+        errores.push("Debe incluir un correo valido")
+      }; 
 
-    if (!regExPass.test(pass.value)) {
-      textoError.push(
-        "La contraseña debe tener de 8 a 15 caracteres incluir mayuscula, minuscula, numeros y al menos un caracter especial"
-      );
-    }
+      if (!regExPass.test(pass.value)){
+        errores.push("La contraseña debe tener entre 8 y 15 caracteres incluir mayuscula, minuscula, un número y al menos un caracter especial")
+      }; 
 
-    if (!regExPass.test(configpass.value)) {
-      textoError.push("debes repetir el password");
-    }
+      if(!extensiones.includes(image.value.split('.').pop())){
+errores.push("debes cargar un archivo .jpg, .jpeg, .png, .gif")
+      }; 
 
-    if (textoError == 0) {
-      form.submit();
-    }
+      
+if (errores.length > 0){ 
+  errores.forEach(error => {
+    listaErrores.innerHTML += "<li style= color:red>" + error +"</li>"
+  })
+ }; 
+  
+  if (errores == 0 ){
+        form.submit()
+       }
 
-    //errorText.innerHTML = textoError.join();
-    errorText.style.color = "red";
-  });
-
-  /*let listaError = document.querySelector("parrafoError")
-      for (let i = 0; i <textoError.length; i++){
-          listaError.innerHTML += "<li>+ errores[i] +</li>"
-      }
-    }*/
+  })
 });
