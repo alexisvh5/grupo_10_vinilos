@@ -43,3 +43,8 @@ https://trello.com/b/rsvcWN2g/sprint-6
 
 -------------------------------------------------------------------------
 
+SPRINT 7
+ENLACE AL TABLERO DE TRABAJO:
+https://trello.com/b/fz1XGQhX/sprint-7
+
+-------------------------------------------------------------------------
