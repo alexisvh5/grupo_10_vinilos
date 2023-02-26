@@ -230,6 +230,10 @@ nav{
         transition:background-color 450ms;
         cursor:pointer;
     }
+    .cajadetail button a {
+        color:white;
+        text-decoration:none;
+    }
     .button:hover{
        background-color:#700e3e;
     }
