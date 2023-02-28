@@ -122,54 +122,46 @@ let userController = {
 
   },
 
-
-  processLogin:  async function(req, res) {
-    const resultValidation = validationResult(req);
+  processLogin: async function (req, res) {
+    const resultValidation = validationResult(req)
 
     if (resultValidation.errors.length > 0) {
-      return res.render("login", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      })
+        return res.render('login', {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+        })
     }
-    
+
     let userToLogin = await User.findOne({
-      where: {
-        email: req.body.email
-      }
+        where: {
+            email: req.body.email,
+        },
     })
-      .then((data) => {
-     console.log(data)
-      })
-      .catch(error=>{console.log(error)})
+        .then((user) => {
+            if (user) {
+                let isOkThePassword = bcryptjs.compareSync(
+                    req.body.contrasena,
+                    user.contrasena
+                )
 
-    if (userToLogin) {
+                if (isOkThePassword) {
+                    delete user.contrasena
 
-      console.log(userToLogin.contrasena, "miraloco")
-      console.log(req.body.contrasena,"paaaaaaaaaaaa")
+                    req.session.userLogged = user
 
-      let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
-
-      if (isOkThePassword) {
-
-        delete userToLogin.contrasena
-
-        req.session.userLogged = userToLogin;
-
-        if (req.body.remember_user) {
-          res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 })
-        }
-        return res.redirect("/users/profile")
-
-      }
-    }
-
-    return res.render('login', {
-      errors: { email: { msg: "Este email ya se encuentra registrado" } }, oldData: req.body
-    }
-    )
-  },
-
+                    if (req.body.remember_user) {
+                        res.cookie('userEmail', req.body.email, {
+                            maxAge: 1000 * 60 * 60,
+                        })
+                    }
+                    return res.redirect('/users/profile')
+                }
+            }
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+},
 
 
   profile: (req, res) => {
