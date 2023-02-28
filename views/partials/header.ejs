@@ -1,16 +1,8 @@
 <header>
-  <nav>
-    <div class="logo">
-        <img class="imagen-header" src="/static/imagen/imagen-header-Logo.png" alt="Rocksphere">
-    </div>
-    <div class="hamburguer">
-      <div class ="bars1"></div>
-      <div class ="bars2"></div>
-      <div class ="bars3"></div>
-  
-    </div>
-  
-    <ul class ="nav-links">
+  <!-- <nav>
+    
+
+<ul class ="nav-links">
       <li><a href="/" class="link-1">Nosotros</a></li>
       <li><a href="/products">Productos</a> </li>
       <li><a href="/contact">Contacto</a> </li> 
@@ -19,24 +11,31 @@
      
     </ul>
   
-  
+ 
   
   </nav>
-  <!---<div>
-
-    <img class="imagen-header" src="/static/imagen/imagen-header-Logo.png" alt="">
+-->  
 
 
+    <nav>
 
+      <div class="logo">
+        <img class="imagen-header" src="/static/imagen/imagen-header-Logo.png" alt="Rocksphere">
+    </div>
+    <div class="hamburguer">
+      <div class ="bars1"></div>
+      <div class ="bars2"></div>
+      <div class ="bars3"></div>
+  
+      
+    </div>
 
-
-    <nav class="nav-header">
-      <div class="nav-header-register">
+      <div class ="nav-links">
         <ul class="ul-registro-head">
           <% if (locals.isLogged) { %>
             <li>
-              <a href="/users/profile"><img src="/static/imagen/<%=locals.userLogged.img%> " alt="imagen usuario" />
-                <p>Hola!<%=locals.userLogged.NombreyApellido %>
+              <a href="/users/profile"><img src="/static/imagen/<%=locals.userLogged.imagen%> " alt="imagen usuario" />
+                <p>Hola!<%=locals.userLogged.name %>
                 </p>
               </a>
             </li>
@@ -82,5 +81,5 @@
       </div>
     </nav>
   </div>
-  -->
+ 
 </header>
