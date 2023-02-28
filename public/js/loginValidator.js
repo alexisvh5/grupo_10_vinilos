@@ -16,15 +16,11 @@ window.addEventListener("load", ()=>{
       let regExPass =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
 
-      if( email.value == ""){
-        errores.push("Ingresa tu correo electrónico")
-      }else if(!regEx.test(email.value)){
+      if(!regEx.test(email.value)){
         errores.push("Debes ingresar un correo valido") 
       }; 
 
-      if (pass.value = ""){
-        errores.push("Debes introducir tu contraseña")
-      }else if (!regExPass.test(pass.value)){
+      if (!regExPass.test(pass.value)){
         errores.push("La contraseña debe tener entre 8 y 15 caracteres incluir mayuscula, minuscula, un número y al menos un caracter especial")
       }; 
 
