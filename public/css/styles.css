@@ -15,13 +15,14 @@ nav{
     display:flex;
 }
 .imagen-header {
-    width:3%;
+    width:30%;
     margin-top: 5px;
     margin-left: 2%;
 }
-.nav-links{
-    width:80%;
+.nav-links ul{
+    width:90%;
     display:flex;
+    border:1px solid red;
     margin-right: 10px;
     justify-content: space-evenly;
     align-items: center;
@@ -52,6 +53,101 @@ nav{
 .nav-links li a user:hover{
     color:#00aced;
 }
+/*...............LOGIN.................*/
+.profile-container{
+    padding:10px 10px;
+    width: 100%;
+    background-image: url("/static/imagen/tarjeta.jpg");
+    background-size: 100%;
+   
+   }
+
+   .profile-container .register-h3{
+    margin-top:25px;
+   
+   }
+   .profile-detail{
+   width:40%;
+   padding:10px;
+   margin:auto;
+   margin-top: 35px;
+   margin-bottom: 100px;
+   background-color:white;
+   border-radius: 3px;
+   display:flex;
+   justify-content:space-around;
+   gap:10px;
+   }
+   .profile-image{
+    width:50%;
+   
+   }
+  
+   .profile-img{
+    width:80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 100%;
+    border:solid 1px black;
+   }
+   .profile_name{
+    width:80%;
+    margin-top: 10px;
+    /*border: 1px solid red;*/
+
+   }
+   .profile_name h2{
+    font-size:1px;
+    margin-top: 10px;
+    font-size: 18px;
+   }
+   .profile_name hr{
+    width: 100%;
+    margin:auto;
+}
+   
+   .profile_text h2{
+    width:60%;
+    margin-top: 30px;
+    font-size: 16px;
+    /*border: 1px solid red;*/
+
+    
+   }
+
+/*.profile{
+    width: 40%;
+    padding:20px 10px;
+    background-color: white;
+    margin:auto;
+    border:1px solid rgb(72, 255, 0);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_name h2{
+    width:100%;
+    margin: auto;
+    font-size: 22px;
+    color:black;
+    border:1px solid red;
+}
+ .profile_image{
+   margin:auto;
+    border-radius:100%;
+    border:1px solid red;
+}
+.profile hr{
+    color:white;
+     /*color: #700e3e;*/
+   /* width: 80%;
+    font-weight:600;
+}
+.profile_text{
+    width:80%;
+
+}*/
 /*style para hamburguer*/
 .hamburguer div{
     width:30px;
@@ -114,7 +210,7 @@ nav{
     width: 100%;
 }
 .parrafo-card-nombre {
-    font-size: 14px;
+    font-size: 16px;
     color: black;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -122,7 +218,7 @@ nav{
 }
 .parrafo-card-genero { 
     font-size: 12px;
-    margin-left: 5px;
+    margin-left: 10px;
     color: grey;
 }
 .parrafo-card-precio {

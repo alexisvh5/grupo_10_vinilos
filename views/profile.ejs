@@ -22,13 +22,27 @@
     <%- include("./partials/header.ejs") %> 
 
 
-    <div>
-    <H1>Hola! <%=user.name%> </H1>
-    <img src="/static/imagen/users/<%=user.imagen%>" width="40%" height="40%" alt="img  user">
-    <br>
-    <br>
-    <h3><%=user.email%></h3>
+    <div class="profile-container">
+      <h3 class="register-h3">Bienvenido!</h3>
+      
+    <div class="profile-detail">
+      <div class="profile_image" ><img class="profile-img"src="/static/imagen/users/<%=user.imagen%>" alt="imguser"></div>
+      <div class="profile_name"><h2>Hola <%=locals.user.name%> ! </h2>
+        <hr>
+      <div class="profile_text">
+        <h2><%=locals.user.email%></h2>
+        <h2>llllllll</h2>
+        <h2>llllllll</h2>
+      </div>
     </div>
+     
+    </div>
+
+    
+   
+  
+    
+    
     <%-include("./partials/footer.ejs") %>
 </body>
 </html>

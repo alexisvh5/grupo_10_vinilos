@@ -14,7 +14,7 @@
  {
   "id": 2,
   "nombre": "The Beatles",
-  "genero": "Rock",
+  "genero": "Pop",
   "sello": "Columbia Records",
   "año": 1969,
   "precio": 9990,
@@ -26,7 +26,7 @@
  {
   "id": 3,
   "nombre": "Bruce Springsteen",
-  "genero": "Indie",
+  "genero": "Rock",
   "sello": "Columbia Records",
   "año": 1984,
   "precio": 7990,
@@ -50,7 +50,7 @@
  {
   "id": 5,
   "nombre": "Pink Floyd",
-  "genero": "Progesive",
+  "genero": "Rock",
   "sello": "Columbia Records",
   "año": 1972,
   "precio": 8690,
@@ -62,7 +62,7 @@
  {
   "id": 6,
   "nombre": "Cream",
-  "genero": "blues",
+  "genero": "Rock",
   "sello": "Atlantic Records",
   "año": 1967,
   "precio": 6990,
@@ -74,7 +74,7 @@
  {
   "id": 7,
   "nombre": "The Rolling Stones",
-  "genero": "rock",
+  "genero": "Rock",
   "sello": "",
   "año": 1964,
   "precio": 11500,
@@ -86,7 +86,7 @@
  {
   "id": 8,
   "nombre": "AC/DC",
-  "genero": "rock",
+  "genero": "Rock",
   "sello": "",
   "año": 1979,
   "precio": 11500,
@@ -97,8 +97,8 @@
  },
  {
   "id": 9,
-  "nombre": "The Beatles- Cirque Du Solei",
-  "genero": "rock",
+  "nombre": "The Beatles",
+  "genero": "Rock",
   "sello": "Abbey Road Records",
   "año": 2006,
   "precio": 10990,
@@ -110,7 +110,7 @@
  {
   "id": 10,
   "nombre": "Queen",
-  "genero": "rock",
+  "genero": "Rock",
   "sello": "",
   "año": 1975,
   "precio": 10990,
@@ -122,7 +122,7 @@
  {
   "id": 11,
   "nombre": "Queen",
-  "genero": "rock",
+  "genero": "Rock",
   "sello": "Elektra Records",
   "año": 1976,
   "precio": 7990,
@@ -134,7 +134,7 @@
  {
     "id": 12,
     "nombre": "The Rolling Stones",
-    "genero": "rock",
+    "genero": "Rock",
     "sello": "",
     "año": 1979,
     "precio": 10990,
