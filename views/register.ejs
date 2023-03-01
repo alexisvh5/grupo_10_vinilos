@@ -100,9 +100,19 @@
                 <% for (let i=0; i < genres.length; i++) { %>
                   <option value="<%=genres[i].id%>">
                     <%=genres[i].name%>
+
+
+
                   </option>
                   <% } %>
               </select>
+              <class="campo <%= locals.errors && errors.genre ? 'is-invalid' : null %>" />
+            <% if (locals.errors && errors.genre) { %>
+              <div class="text-danger">
+                <%= errors.genre.msg %>
+              </div>
+              <% } %>
+            
 
             </div>
 
