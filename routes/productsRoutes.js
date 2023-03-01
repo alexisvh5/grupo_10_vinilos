@@ -69,6 +69,7 @@ router.get ('/', productController.productList); //si funciona, es la ruta /prod
 router.get('/create', productController.productCreate);
 router.post ('/',upload.single("imagen"),validateCreateProduct, productController.productStore);
 
+
 //EDITAR UN PRODUCTO
 router.get('/edit/:id', productController.productEdit);
 router.put('/edit/:id', upload.single("imagen"), productController.productUpdate)
@@ -78,7 +79,9 @@ router.put('/edit/:id', upload.single("imagen"), productController.productUpdate
 router.get('/search_results', productController.productSearch);
 
 //ELIMINAR UN PRODUCTO
+router.get('/delete/:id', productController.productDelete);
 router.delete('/delete/:id', productController.productDelete);
+
 
 
 //router.get("/productCart",productController.cart);
