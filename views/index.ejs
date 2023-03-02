@@ -67,11 +67,12 @@
       <div class="index-card-image">
         <a href="/products/productDetail/<%=vinilo.id%>"><img src="/static/imagen/<%= vinilo.img%>" alt=""></a>
         <p class="parrafo-card-nombre"><%= vinilo.nombre %></p>
+        <hr />
         <p class="parrafo-card-genero">Género: <%= vinilo.genero %>
         </p>
         <p class="parrafo-card-precio">$<%= vinilo.precio %>
         </p>
-
+        <a class="mas" href="/products/productDetail/<%=vinilo.id%>">+</a>
     
         <br>
       </div>

@@ -24,6 +24,7 @@ nav{
     display:flex;
     border:1px solid red;
     margin-right: 10px;
+    margin-top: 30px;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
@@ -36,23 +37,12 @@ nav{
     padding:20px 10px;
     font-weight:400;
 }
-.nav-links li a user{
-    cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 5px;
-    font-size: 20px;
-	color: #ffffff;
-	text-align: center;
-	margin-right: 3px;
-	margin-bottom: 5px;
-}
+
 .nav-links li i {
     color:white;
     font-size: 20px;
 }
-.nav-links li a user:hover{
-    color:#00aced;
-}
+
 /*...............LOGIN.................*/
 .profile-container{
     padding:10px 10px;
@@ -179,22 +169,27 @@ nav{
 .index-card {
     width: 200px;
     height: 320px;
-    background-color: rgb(180, 179, 168);
+  
+   /* background-color: rgb(180, 179, 168);*/
+   background-color: white;
+   border-radius: 4px;
     border: 1px solid rgb(72, 73, 72);
     margin-bottom: 15px;
-    transition: all 400ms ease;
+   /* transition: all 400ms ease;*/
     position: relative;
 }
-.index-card:hover {
+/*.index-card:hover {
     transform: translateY(-2%);
-}
+}*/
 .index-card img {
     width: 100%;
+    
     height: 200px;
 }
 .index-card-text {
     font-size: 18px;
     color: aliceblue;
+    
 }
 .index-h3 {
     color:white;
@@ -218,14 +213,35 @@ nav{
 }
 .parrafo-card-genero { 
     font-size: 12px;
-    margin-left: 10px;
+    margin-bottom:5px;
+    margin-left: 15px;
     color: grey;
 }
 .parrafo-card-precio {
     font-size: 16px;
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-top: 15px;
     color: #700e3e;
 }
+.index-card hr{
+    color :black;
+    width: 90%;
+    margin:auto;
+}
+.mas{
+    position : absolute;
+    cursor: pointer;
+    color:#6d4a5b;
+    right: 28px;
+    bottom: 10px;
+    font-size: 35px;
+    text-decoration:none;
+}
+.mas:hover{
+    font-size: 45px;
+    color:#a9336c;
+}
+
 .button_card {
     position: absolute;
     left: 60%;
@@ -305,6 +321,7 @@ nav{
     }
    .caja-comprar{
     width:100%;
+    margin-top: 5px;
     }
     .caja-comprar h3{
         font-size:18px;
@@ -392,6 +409,27 @@ nav{
     color :#6d4a5b;
 
 
+}
+.cajalistados button{
+    border:none;
+    width:60%;
+    margin-left:50px;
+    color:white;
+    font-size: 14px;
+    background-color:#656769;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding:10px;
+    border-radius: 5px;
+    transition:background-color 450ms;
+    cursor:pointer;
+}
+.cajalistados button a {
+    color:white;
+    text-decoration:none;
+}
+.cajalistados button:hover{
+   background-color:#502b3d;
 }
 /*FIN LISTADO DE ALBUMS........................................................*/
 

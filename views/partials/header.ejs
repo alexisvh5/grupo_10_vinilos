@@ -35,20 +35,22 @@
           <li><a href="/products">Productos</a> </li>
           <li><a href="/contact">Contacto</a></li>
           <li><a href="/products/productCart">Compras</a></li>
-
+        
+        
           <% if (locals.isLogged) { %>
-           <div> <li>
+      <div> <li>
               <a href="/users/profile"><img src="/static/imagen/users/<%=locals.userLogged.imagen%>" 
                 alt="imagen usuario" width="50%" style =border-radius:100% />
-                Hola!<%=locals.userLogged.name %>
+             <!--   Hola!<%=locals.userLogged.name %>-->
               </a>
               </li>
+              
               <li>
               <a href="/users/logout">
                 Logout
               </a>
             </li>
-          </div>
+      </div>
 
             <% } else { %>
               <li>
@@ -57,15 +59,13 @@
                 </a>
               </li>
               <li>
-                <a href="/users/login">
-                  Login
-                </a>
-              </li>
+                <a class ="user" href="/users/login"><i class="fas fa-user"></i></a></li>
+                
           
               <% } %>
 
              
-        </ul>
+       
       </div>
 
     </nav>
