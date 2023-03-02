@@ -77,7 +77,8 @@ let userController = {
       confContr: bcryptjs.hashSync(req.body.confirmacionContrasena, 10),//req.body.confirmacionContrasena,
       address: req.body.domicilio,
       idGenre: req.body.genre,
-      imagen: imagen
+      imagen: imagen,
+      role:1
 
     })
       .then(() => {
@@ -111,6 +112,7 @@ let userController = {
       address: req.body.domicilio,
       idGenre: req.body.genre,
       imagen: req.file ? req.file.filename : req.body.oldImagen,
+      role:1
     }, {
       where: {
         id: req.params.id

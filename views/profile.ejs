@@ -31,8 +31,17 @@
         <hr>
       <div class="profile_text">
         <h2><%=locals.user.email%></h2>
-        <h2>llllllll</h2>
-        <h2>llllllll</h2>
+  
+        
+        <% if (locals.userLogged.role == 9) { %>
+       
+          <button><a href="/products/create"></a>Crear Album</button>
+
+          <% } else { %>
+         
+        <button>comprar</button>
+            <% } %>
+        
       </div>
     </div>
      
