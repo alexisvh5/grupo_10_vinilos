@@ -21,25 +21,35 @@
 
     <%- include("./partials/header.ejs") %> 
 
-
-    <div class="profile-container">
-      <h3 class="register-h3">Bienvenido!</h3>
+ <% if (locals.userLogged.role == 9) { %>
+  <div class="profile-container">
+    <h3 class="register-h3">Bienvenido!</h3>
+    
+  <div class="profile-detail">
+    <div class="profile_image" ><img class="profile-img"src="/static/imagen/users/<%=user.imagen%>" alt="imguser"></div>
+    <div class="profile_name"><h2>Hola <%=locals.user.name%> ! </h2>
+      <hr>
+    <div class="profile_text">
       
-    <div class="profile-detail">
-      <div class="profile_image" ><img class="profile-img"src="/static/imagen/users/<%=user.imagen%>" alt="imguser"></div>
-      <div class="profile_name"><h2>Hola <%=locals.user.name%> ! </h2>
-        <hr>
-      <div class="profile_text">
-        <h2><%=locals.user.email%></h2>
-  
-        
-        <% if (locals.userLogged.role == 9) { %>
-       
-          <button><a href="/products/create"></a>Crear Album</button>
+    
+       <p>Usuario administrador: <%=locals.user.email%><p>
+     <br>
+    
+        <button><a href="/products/create">Crear Album</a></button>
 
           <% } else { %>
+            <div class="profile-container">
+              <h3 class="register-h3">Bienvenido!</h3>
+              
+            <div class="profile-detail">
+              <div class="profile_image" ><img class="profile-img"src="/static/imagen/users/<%=user.imagen%>" alt="imguser"></div>
+              <div class="profile_name"><h2>Hola <%=locals.user.name%> ! </h2>
+                <hr>
+              <div class="profile_text">
+                <h2>Usuario: <%=locals.user.email%></h2>
+                <br>
          
-        <button>comprar</button>
+        <button ><a href="#">comprar</a></button>
             <% } %>
         
       </div>

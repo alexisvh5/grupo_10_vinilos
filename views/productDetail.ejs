@@ -15,6 +15,8 @@
   <body>
     <%-include("./partials/header.ejs") %>
 
+   <<% if (locals.userLogged.role == 9) { %>
+
     <div class="detail-container">
       <h3 class="register-h3">Buena elección!</h3>
       <div class="cajadetail">
@@ -44,16 +46,63 @@
           </article>
         
 
+          <form action="/products/delete/<%= album.id%>?_method=DELETE" method="POST"
+            enctype="multipart/form-data">
+            <button type="submit">Eliminar album</button>
+        </form>
         
-          <button type="submit" class="button"><a href="/products">Volver al listado</a>
-         
-          </button>
-        
-        
-          <button type="submit" class="button"><a href="/products/edit/<%=album.id%>">editar</a> </button>
+          <button type="submit" class="button"><a href="/products/edit/<%=album.id%>">Editar album</a> </button>
         
       </div>
     </div>
+
+    <% } else { %>
+
+      <div class="detail-container">
+        <h3 class="register-h3">Buena elección!</h3>
+        <div class="cajadetail">
+          <div class="card-image">
+            <img
+              class="cardimg"
+              src="/static/imagen/<%= album.imagen %>"
+              alt=""
+            />
+          </div>
+  
+          <div class="caja-text">
+            <article class="tituloPrecio">
+              <h4 class="tituloDisco"><%= album.title%></h4>
+            </article>
+            <hr />
+            <article class="descripcion">
+              <ul>
+                <li>Artista: <%= album.artist.name %></li>
+                <li>Genero: <%= album.genre.name %></li>
+                <li>Sello: <%= album.company %></li>
+                <li>Año: <%= album.year %></li>
+              </ul>
+            </article>
+            <br>
+            <article class="caja-comprar">
+              <h3 class="precioDisco">$ <%= album.price%></h3>
+            </article>
+          
+  
+          
+            <button type="submit" class="button"><a href="/products">Volver al listado</a>
+           
+            </button>
+          
+            <button type="submit" class="button"><a href="#>">Comprar</a> </button>
+     
+          
+        </div>
+      </div>
+
+   <% } %>
+     
+
+   
 
     <!----- <form action="/products/delete/<%= album.id%>?_method=DELETE" method="POST"
             enctype="multipart/form-data">

@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
@@ -13,16 +15,26 @@ nav{
     height:120px;
     box-sizing: border-box;
     display:flex;
+    justify-content: space-between;
+}
+
+.imagenUser{
+    border-radius:80% ;
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+
 }
 .imagen-header {
-    width:30%;
-    margin-top: 5px;
+    height: 100%;
+    width:100%;
     margin-left: 2%;
 }
 .nav-links ul{
     width:90%;
     display:flex;
-    border:1px solid red;
+ 
     margin-right: 10px;
     margin-top: 30px;
     justify-content: space-evenly;
@@ -37,7 +49,12 @@ nav{
     padding:20px 10px;
     font-weight:400;
 }
-
+.parrafoHola{
+    color: #700e3e;
+    font-weight: bold;
+    font-size: 10px ;
+    text-align: center;
+}
 .nav-links li i {
     color:white;
     font-size: 20px;
