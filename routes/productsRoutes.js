@@ -1,28 +1,28 @@
-const express= require("express");
-const router=express.Router();
+const express = require("express");
+const router = express.Router();
 const mainController = require("../controllers/mainController");
-const productController= require("../controllers/productControllers");
+const productController = require("../controllers/productControllers");
 const adminMiddleware = require("../middlewares/adminMiddleware")
-const multer= require ('multer');
+const multer = require('multer');
 let path = require('path');
 
 //Express Validator
-const {body} = require('express-validator');
+const { body } = require('express-validator');
 
 //Validaciones
 const validateCreateProduct = [
     body('title')
-    .notEmpty().withMessage('Debes completar el título del album').bail()
-    .isLength({ min:5}).withMessage('El titulo del album debe tener al menos 5 caracteres').bail(),
+        .notEmpty().withMessage('Debes completar el título del album').bail()
+        .isLength({ min: 5 }).withMessage('El titulo del album debe tener al menos 5 caracteres').bail(),
     body('company')
-    .notEmpty().withMessage('Debes completar el la compañia del album').bail()
-    .isLength({ min:6}).withMessage('La compañia debe tener al menos 6 caracteres').bail(),
+        .notEmpty().withMessage('Debes completar el la compañia del album').bail()
+        .isLength({ min: 6 }).withMessage('La compañia debe tener al menos 6 caracteres').bail(),
     body('year')
-    .notEmpty().withMessage('Debes completar el año del album').bail()
-    .isLength({ min:4}).withMessage('El año debe tener al menos 4 caracteres').bail(),
+        .notEmpty().withMessage('Debes completar el año del album').bail()
+        .isLength({ min: 4 }).withMessage('El año debe tener al menos 4 caracteres').bail(),
     body('price')
-    .notEmpty().withMessage('Debes completar el precio del album').bail()
-    .isLength({ min:4}).withMessage('El precio del album debe tener al menos 4 caracteres').bail(),
+        .notEmpty().withMessage('Debes completar el precio del album').bail()
+        .isLength({ min: 4 }).withMessage('El precio del album debe tener al menos 4 caracteres').bail(),
     body('imagen').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
@@ -39,10 +39,40 @@ const validateCreateProduct = [
         return true;
     }),
 
-    
+]
 
+const validateEditProduct = [
+    body('title')
+        .notEmpty().withMessage('Debes completar el título del album').bail()
+        .isLength({ min: 5 }).withMessage('El titulo del album debe tener al menos 5 caracteres').bail(),
+    body('company')
+        .notEmpty().withMessage('Debes completar el la compañia del album').bail()
+        .isLength({ min: 6 }).withMessage('La compañia debe tener al menos 6 caracteres').bail(),
+    body('year')
+        .notEmpty().withMessage('Debes completar el año del album').bail()
+        .isLength({ min: 4 }).withMessage('El año debe tener al menos 4 caracteres').bail(),
+    body('price')
+        .notEmpty().withMessage('Debes completar el precio del album').bail()
+        .isLength({ min: 4 }).withMessage('El precio del album debe tener al menos 4 caracteres').bail(),
+    body('imagen').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+            }
+        }
+
+        return true;
+    }),
 
 ]
+
+
 
 
 
@@ -50,30 +80,30 @@ const validateCreateProduct = [
 
 
 
-const storage = multer.diskStorage ({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'public/imagen')
     },
     filename: function (req, file, cb) {
-        cb(null, 
-           file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+        cb(null,
+            file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 })
-          
 
-var upload = multer({storage: storage});
+
+var upload = multer({ storage: storage });
 
 // LISTADO DE TODOS LOS PRODUCTOS
-router.get ('/', productController.productList); //si funciona, es la ruta /products
+router.get('/', productController.productList); //si funciona, es la ruta /products
 
 //CREACION DE UN PRODUCTO
 router.get('/create', adminMiddleware, productController.productCreate);
-router.post ('/',upload.single("imagen"),validateCreateProduct, productController.productStore);
+router.post('/create', upload.single("imagen"), validateCreateProduct, productController.productStore);
 
 
 //EDITAR UN PRODUCTO
-router.get('/edit/:id',adminMiddleware, productController.productEdit);
-router.put('/edit/:id', upload.single("imagen"), productController.productUpdate)
+router.get('/edit/:id', adminMiddleware, productController.productEdit);
+router.put('/edit/:id', upload.single("imagen"), validateEditProduct, productController.productUpdate)
 //router.put('/', upload.any(),productController.productUpdate);
 
 //BUSCAR UN PRODUCTO

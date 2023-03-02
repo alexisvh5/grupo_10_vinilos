@@ -67,6 +67,16 @@ let productController = {
   },
 
   productEdit: function (req, res) {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render('product-edit-form', {
+        genres,
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })
+    }
+
     let genres = db.Genre.findAll()
     let artist = db.Artist.findAll()
     let albums = db.Album.findByPk(req.params.id)

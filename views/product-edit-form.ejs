@@ -25,21 +25,21 @@
         <div class="cajacampos">
             <div>
                 <label for="name" class="register-h4">Titulo</label>
-                <input type="text" name="title" class="campo" value="<%= albumToEdit.title%>" required />
+                <input type="text" name="title" class="campo" value="<%= albumToEdit.title%>" />
             </div>
 
             <div>
                 <label for="name" class="register-h4">Compañia</label>
-                <input type="text" name="company" class="campo" value="<%= albumToEdit.company%>" required />
+                <input type="text" name="company" class="campo" value="<%= albumToEdit.company%>" />
             </div>
 
             <div>
                 <label for="name" class="register-h4">Año</label>
-                <input type="number" name="year" class="campo" value="<%= albumToEdit.year%>" required />
+                <input type="number" name="year" class="campo" value="<%= albumToEdit.year%>" />
             </div>
             <div>
                 <label for="name" class="register-h4">Precio</label>
-                <input type="number" name="price" class="campo" value="<%= albumToEdit.price%>" required />
+                <input type="number" name="price" class="campo" value="<%= albumToEdit.price%>" />
             </div>
             <div>
                 <label for="name" class="register-h4">Género</label>
@@ -53,6 +53,13 @@
                         </option>
                         <% } %>
                 </select>
+                <class="campo <%=locals.errors && errors.genre ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.genre : null %>" />
+              <% if (locals.errors && errors.genre) { %>
+                <div class="text-danger">
+                  <%= errors.genre.msg %>
+                </div>
+                <% } %>
                 
             </div>
             <div>
@@ -66,6 +73,14 @@
                     </option>
                     <% } %>
             </select>
+            <class="campo <%=locals.errors && errors.artist ? 'is-invalid' : null%>"
+            value="<%= locals.oldData ? oldData.artist : null %>" />
+          <% if (locals.errors && errors.artist) { %>
+            <div class="text-danger">
+              <%= errors.artist.msg %>
+            </div>
+            <% } %>
+
             
 
             <div>
