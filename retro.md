@@ -96,10 +96,10 @@ Archivo retro.md
 5 - Dejar de hacer: 
     -----
 
-----------RETRO SPRINT -----------
+----------RETRO SPRINT 7-----------
 
 1 - Comenzar a hacer:
-    ---- 
+    ------ 
 2 - Hacer mas:
     Planificar con más tiempo
     
