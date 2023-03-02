@@ -42,7 +42,10 @@ module.exports = (sequelize, dataTypes) => {
         imagen: {
             type: dataTypes.STRING,
             allowNull: false
-        }
+        },
+           role: {
+            type: dataTypes.INTEGER,
+            allowNull: false}
 
     }
 

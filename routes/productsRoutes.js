@@ -2,6 +2,7 @@ const express= require("express");
 const router=express.Router();
 const mainController = require("../controllers/mainController");
 const productController= require("../controllers/productControllers");
+const adminMiddleware = require("../middlewares/adminMiddleware")
 const multer= require ('multer');
 let path = require('path');
 
@@ -66,12 +67,12 @@ var upload = multer({storage: storage});
 router.get ('/', productController.productList); //si funciona, es la ruta /products
 
 //CREACION DE UN PRODUCTO
-router.get('/create', productController.productCreate);
+router.get('/create', adminMiddleware, productController.productCreate);
 router.post ('/',upload.single("imagen"),validateCreateProduct, productController.productStore);
 
 
 //EDITAR UN PRODUCTO
-router.get('/edit/:id', productController.productEdit);
+router.get('/edit/:id',adminMiddleware, productController.productEdit);
 router.put('/edit/:id', upload.single("imagen"), productController.productUpdate)
 //router.put('/', upload.any(),productController.productUpdate);
 
