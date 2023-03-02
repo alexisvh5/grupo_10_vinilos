@@ -75,7 +75,7 @@
                 <label for="name" class="register-h4">Género</label>
             </div>
             <div>
-                <select name="genre" style="width: 100%">
+                <select name="genre" style="width: 100%" class="campo">
                     <option value="#">Seleccione el género...</option>
                     <% for (let i=0; i < genres.length; i++) { %>
                         <option value="<%=genres[i].id%>">
@@ -83,12 +83,20 @@
                         </option>
                         <% } %>
                 </select>
-                required/>
+                <class="campo <%=locals.errors && errors.genre ? 'is-invalid' : null%>"
+                value="<%= locals.oldData ? oldData.genre : null %>" />
+              <% if (locals.errors && errors.genre) { %>
+                <div class="text-danger">
+                  <%= errors.genre.msg %>
+                </div>
+                <% } %>
+
+                
             </div>
             <div>
                 <label for="name" class="register-h4">Artista</label>
             </div>
-            <select name="artist" style="width: 100%">
+            <select name="artist" style="width: 100%" class="campo">
                 <option value="#">Seleccione el artista...</option>
                 <% for (let i=0; i < artist.length; i++) { %>
                     <option value="<%=artist[i].id%>">
@@ -96,7 +104,7 @@
                     </option>
                     <% } %>
             </select>
-            required/>
+            
 
             <div>
                 <label for="imagen" class="register-h4">Imagen</label>

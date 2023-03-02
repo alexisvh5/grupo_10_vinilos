@@ -45,7 +45,7 @@
                 <label for="name" class="register-h4">Género</label>
             </div>
             <div>
-                <select name="genre" style="width: 100%">
+                <select name="genre" style="width: 100%" class="campo">
                     <option value="<%=albumToEdit.genre %>">Seleccione el género...</option>
                     <% for (let i=0; i < genres.length; i++) { %>
                         <option value="<%=genres[i].id%>">
@@ -53,12 +53,12 @@
                         </option>
                         <% } %>
                 </select>
-                required/>
+                
             </div>
             <div>
                 <label for="name" class="register-h4">Artista</label>
             </div>
-            <select name="artist" style="width: 100%">
+            <select name="artist" style="width: 100%" class="campo">
                 <option value="<%=albumToEdit.artist %>">Seleccione el artista...</option>
                 <% for (let i=0; i < artist.length; i++) { %>
                     <option value="<%=artist[i].id%>">
@@ -66,13 +66,20 @@
                     </option>
                     <% } %>
             </select>
-            required/>
+            
 
             <div>
 
                 <div>
                     <label for="imagen" class="register-h4">Imagen</label>
-                    <input type="file" name="imagen" placeholder="Imagen" class="campo" required />
+                    <input id="imageCreate" type="file" name="imagen" placeholder="Imagen" 
+                    class="campo <%=locals.errors && errors.imagen ? 'is-invalid' : null%>"
+                    value="<%= locals.oldData ? oldData.imagen : null %>" />
+                  <% if (locals.errors && errors.imagen) { %>
+                    <div class="text-danger">
+                      <%= errors.imagen.msg %>
+                    </div>
+                    <% } %>
                 </div>
 
 
