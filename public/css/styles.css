@@ -93,15 +93,18 @@ nav{
    }
    .profile-image{
     width:50%;
+    border:1px solid red;
    
    }
   
    .profile-img{
     width:80%;
+    border-radius: 100%;
+
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
-    border-radius: 100%;
+   
     border:solid 1px black;
    }
    .profile_name{
@@ -195,15 +198,15 @@ nav{
   
    /* background-color: rgb(180, 179, 168);*/
    background-color: white;
-   border-radius: 4px;
+   border-radius:0 0 4px 4px;
     border: 1px solid rgb(72, 73, 72);
     margin-bottom: 15px;
-   /* transition: all 400ms ease;*/
+    transition: all 400ms ease;
     position: relative;
 }
-/*.index-card:hover {
+.index-card:hover {
     transform: translateY(-2%);
-}*/
+}
 .index-card img {
     width: 100%;
     
@@ -306,8 +309,9 @@ nav{
    }
    .card-image{
     width:60%;
-    margin-top: 35px;
+    margin-top:20px;
     margin-left: 10px;
+
    }
   
    .cardimg{
@@ -331,8 +335,8 @@ nav{
     margin-bottom: 5px;
    }
    .caja-text .descripcion{
-    margin-left:-15px;
-   
+    margin-right: 40px;
+
     }
     .caja-text .descripcion li{
     list-style: none;    
@@ -341,6 +345,7 @@ nav{
 
     .caja-text hr{
         width: 90%;
+        margin-bottom: 5px;
     }
    .caja-comprar{
     width:100%;
@@ -349,13 +354,14 @@ nav{
     .caja-comprar h3{
         font-size:18px;
         font-weight: 400;
-        margin-left:20px;
-        margin-top: -10px;
+        margin-left:2px;
+        margin-top: -20px;
+     
     }
     .cajadetail button{
         border:none;
         width:60%;
-        margin-left:50px;
+        margin-left:45px;
         color:white;
         font-size: 14px;
         background-color:#656769;
@@ -795,14 +801,14 @@ footer{
         position: absolute;
         cursor: pointer;
         right: 5%;
-        top: 10%;
+        top: 5%;
         transform: translate(-5%,-50%);
         z-index:2;
         transition: all 0.7s ease;
 
     }
     .imagen-header {
-        width:40%;
+        width:50%;
         margin-top: 2px;
         margin-left: 50px;
       
@@ -952,23 +958,26 @@ footer{
    }
    
    .caja-text{
-    width:100%;
-    margin-top: 30px;
+    width:90%;
+    margin-top: 5px;
+    margin-left:0px;
+  
    }
    .tituloDisco
    {
     font-size:18px;
     font-weight:400 ;
-    margin-left: 15px;
+    margin-left: 25px;
   
     margin-bottom: 5px;
    }
    .caja-text .descripcion{
-    margin-left:-10px;
+    margin-left:15px;
     list-style: none;
     }
     .caja-text hr{
         width: 90%;
+        margin:auto;
     }
    .caja-comprar{
     width:90%;
@@ -976,13 +985,13 @@ footer{
     .caja-comprar h3{
         font-size:18px;
         font-weight: 400;
-        margin-left:25px;
-        margin-top: -10px;
+        margin-left:15px;
+        margin-top: -15px;
     }
     .cajadetail button{
         border:none;
         width:60%;
-        margin-left:50px;
+         text-align: center;
         color:white;
         font-size: 14px;
         background-color:#656769;
@@ -992,6 +1001,7 @@ footer{
         border-radius: 5px;
         transition:background-color 450ms;
         cursor:pointer;
+       
     }
     .button:hover{
        background-color:#700e3e;
