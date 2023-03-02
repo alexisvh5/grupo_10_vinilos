@@ -59,7 +59,16 @@ nav{
 }
 .liPerfil{
     display: block;
+
+    width:15%;
+    height: 50px;
+    margin-top:-5px;
+
    
+}
+.liPerfil .imagenUser{
+    width: 80%;
+    
 }
 .nav-links li i {
     color:white;
