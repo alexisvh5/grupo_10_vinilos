@@ -19,6 +19,7 @@ nav{
 }
 
 .imagenUser{
+    margin-bottom: 5px;
     border-radius:80% ;
     height: auto;
     width: auto;
@@ -51,9 +52,14 @@ nav{
 }
 .parrafoHola{
     color: #700e3e;
-    font-weight: bold;
-    font-size: 10px ;
+    font-weight:bold;
+    font-size: 11px ;
     text-align: center;
+   
+}
+.liPerfil{
+    display: block;
+   
 }
 .nav-links li i {
     color:white;

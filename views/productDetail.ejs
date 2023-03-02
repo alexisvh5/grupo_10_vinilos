@@ -23,7 +23,7 @@
         <div class="card-image">
           <img
             class="cardimg"
-            src="/static/imagen/<%= album.imagen %>"
+            src="/static/imagen/<%=album.imagen %>"
             alt=""
           />
         </div>
@@ -46,7 +46,7 @@
           </article>
         
 
-          <form action="/products/delete/<%= album.id%>?_method=DELETE" method="POST"
+          <form action="/products/delete/<%=album.id%>?_method=DELETE" method="POST"
             enctype="multipart/form-data">
             <button type="submit">Eliminar album</button>
         </form>
