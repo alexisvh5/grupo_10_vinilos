@@ -16,19 +16,17 @@ window.addEventListener('load', ()=>{
             errores.push("El nombre del album es obligatorio")
         };
 
-        if (img.value ===""){
-            errores.push("Debes incluir una imagen")
-        } else if(!extensiones.includes(img.value.split(".").pop())){
+        if(!extensiones.includes(img.value.split(".").pop())){
             errores.push("Debes cargar un archivo .jpg, .jpeg, .png, .gif")
         }; 
 
-        if (errores.value > 0){
-            errores.forEach( error => {
-                errorCreate.innerHTML += "<li style= color: red>"+ error+"</li>"
+        if(errores.length > 0){
+            errores.forEach(error => {
+                errorCreate.innerHTML += "<li style=color:red>"+ error +"</li>"
             })
-        }
+          }
 
-        if( errores == 0){
+        if( errores.length == 0){
             form.submit()
         }
 
