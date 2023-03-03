@@ -12,13 +12,11 @@ window.addEventListener('load', ()=>{
 
         let extensiones = ["jpg", "jpeg", "png", "gif"]
 
-        if(name.value.length === 0){
+        if(name.value.length == 0){
             errores.push("El nombre del album es obligatorio")
         };
 
-        if (img.value ===""){
-            errores.push("Debes incluir una imagen")
-        } else if(!extensiones.includes(img.value.split(".").pop())){
+        if(!extensiones.includes(img.value.split(".").pop())){
             errores.push("Debes cargar un archivo .jpg, .jpeg, .png, .gif")
         }; 
 
