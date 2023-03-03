@@ -12,7 +12,7 @@ window.addEventListener('load', ()=>{
 
         let extensiones = ["jpg", "jpeg", "png", "gif"]
 
-        if(name.value.length === 0){
+        if(name.value.length == 0){
             errores.push("El nombre del album es obligatorio")
         };
 
