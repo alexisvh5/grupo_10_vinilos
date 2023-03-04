@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <%- include("./partials/header.ejs") %> 
 
     <form class="formulario" action="/products/edit/<%=albumToEdit.id%>?_method=PUT
         " method="POST" enctype="multipart/form-data" >
@@ -100,6 +101,9 @@
 
                 <button class="button">Guardar</button>
             </div>
+            
+
+            
     </form>
 
 
@@ -107,5 +111,4 @@
 
 
 </body>
-
 </html>

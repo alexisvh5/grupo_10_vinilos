@@ -17,6 +17,8 @@
 
 <body>
 
+  <%- include("./partials/header.ejs") %> 
+
     <form id="formCreate" class="formulario" action="/products/create" method="POST" enctype="multipart/form-data">
         <h3 class="create-h3">Crear Producto</h3>
         <div class="cajacampos">
@@ -130,12 +132,18 @@
               <ul></ul>
              </section>
         </div>
+
+
     </form>
 
 
     <!-- /todos los productos -->
 
+    <%-include("./partials/footer.ejs") %>
+
+
 <script src="/static/js/createValidator.js"></script>
+
 
 </body>
 
