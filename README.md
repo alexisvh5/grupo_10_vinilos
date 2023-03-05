@@ -52,7 +52,7 @@ https://trello.com/b/fz1XGQhX/sprint-7
 SPRINT 8
 ENLACE AL PROYECTO CON REACT:
 
-https://github.com/AdriMendez/vinilosReact/tree/master
+https://github.com/AdriMendez/grupo10React.git
 
 
 
