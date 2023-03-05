@@ -1,5 +1,6 @@
 
-const express = require('express');
+const express = require ('express');
+const cors = require('cors');
 const path = require('path');   
 const indexRouter= require("./routes/index");
 const productsRoutes = require("./routes/productsRoutes");
@@ -23,6 +24,7 @@ saveUninitialized:false,
 
 app.use(cookies());
 app.use(userLoggedMiddleware);
+app.use(cors());
 
 
 

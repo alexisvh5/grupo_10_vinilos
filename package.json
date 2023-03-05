@@ -20,6 +20,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
@@ -30,5 +31,6 @@
     "nodemon": "^2.0.20",
     "sequelize": "^6.28.0",
     "sequelize-cli": "^6.5.2"
-  }
+  },
+  "proxi":"http://localhost:3003"
 }
