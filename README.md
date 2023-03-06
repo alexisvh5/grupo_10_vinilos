@@ -54,6 +54,12 @@ ENLACE AL PROYECTO CON REACT:
 
 https://github.com/AdriMendez/grupo10React.git
 
+-------------------------------------------------------------------------
 
+SPRINT 8
+ENLACE AL TABLERO DE TRABAJO:
+https://trello.com/b/jafXq58Z/sprint-8
+
+-------------------------------------------------------------------------
 
 
