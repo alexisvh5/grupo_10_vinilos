@@ -1,5 +1,9 @@
 
 const express = require('express');
+var cors = require('cors');
+
+
+
 const path = require('path');   
 const indexRouter= require("./routes/index");
 const productsRoutes = require("./routes/productsRoutes");
@@ -13,7 +17,7 @@ const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cookies = require("cookie-parser");
 
 const app = express(); 
-
+app.use(cors());
 app.use(session({
 secret:"shh",
 resave: false,
@@ -32,7 +36,6 @@ app.use( '/static', express.static(__dirname + '/public'));
 const  methodOverride = require ("method-override");
 const { urlencoded } = require('express');
 app.use (methodOverride("_method"));
-
 
 
 // TEMPLATE VIEWS

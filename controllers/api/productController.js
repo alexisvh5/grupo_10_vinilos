@@ -26,17 +26,26 @@ module.exports = {
                     meta: {
                         status: 200,
                         total: 1,
-                        url: "api/detail/{id}" 
+                        url: "api/detail/{id}"
                     },
                     data: album,
                 };
                 res.json(response)
             })
 
-    }
+    },
 
+    lastProduct: (req, res) => {
+        db.Album.max('id').then((maxID) => {
+            db.Album.findByPk(maxID).then((respuesta) => {
+                respuesta.imagen =
+                    "http://localhost:3000/imagen/products/" + respuesta.imagen;
+                res.json(respuesta)
 
-
+            });
+        });
+    },
+   
 
 }
 
