@@ -53,11 +53,7 @@ SPRINT 8
 ENLACE AL PROYECTO CON REACT:
 
 https://github.com/AdriMendez/grupo10React.git
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 6677ad4617856de89a36548f535bbc322bf62718
 
 
 
