@@ -1,9 +1,5 @@
 
 const express = require('express');
-var cors = require('cors');
-
-
-
 const path = require('path');   
 const indexRouter= require("./routes/index");
 const productsRoutes = require("./routes/productsRoutes");
@@ -11,7 +7,7 @@ const usersRoutes = require ("./routes/usersRoutes");
 const session = require ("express-session");    
 const productsAPIRouter = require('./routes/api/productsRoutes');
 const usersAPIRouter = require('./routes/api/usersRoutes');
-
+const cors = require('cors')
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cookies = require("cookie-parser");
@@ -27,6 +23,7 @@ saveUninitialized:false,
 
 app.use(cookies());
 app.use(userLoggedMiddleware);
+//app.use(cors());
 
 
 
