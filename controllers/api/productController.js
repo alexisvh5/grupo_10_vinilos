@@ -38,8 +38,8 @@ module.exports = {
     lastProduct: (req, res) => {
         db.Album.max('id').then((maxID) => {
             db.Album.findByPk(maxID).then((respuesta) => {
-                respuesta.imagen =
-                    "http://localhost:3000/imagen/products/" + respuesta.imagen;
+                respuesta.image =
+                    "http://localhost:3000/imagen/products/" + respuesta.image;
                 res.json(respuesta)
 
             });
